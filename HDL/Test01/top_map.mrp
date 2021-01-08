@@ -1,0 +1,180 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc6vlx240t
+Target Package : ff1156
+Target Speed   : -1
+Mapper Version : virtex6 -- $Revision: 1.55 $
+Mapped Date    : Thu Jan 07 14:48:22 2021
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of 301,440    0%
+  Number of Slice LUTs:                          0 out of 150,720    0%
+
+Slice Logic Distribution:
+  Number of occupied Slices:                     0 out of  37,680    0%
+  Number of LUT Flip Flop pairs used:            0
+
+IO Utilization:
+  Number of bonded IOBs:                         0 out of     600    0%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
+  Number of BUFG/BUFGCTRLs:                      0 out of      32    0%
+  Number of ILOGICE1/ISERDESE1s:                 0 out of     720    0%
+  Number of OLOGICE1/OSERDESE1s:                 0 out of     720    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     144    0%
+  Number of BUFIODQSs:                           0 out of      72    0%
+  Number of BUFRs:                               0 out of      36    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     768    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      20    0%
+  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of      18    0%
+  Number of IODELAYE1s:                          0 out of     720    0%
+  Number of MMCM_ADVs:                           0 out of      12    0%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       0 out of       4    0%
+
+Average Fanout of Non-Clock Nets:                40.00
+
+Peak Memory Usage:  482 MB
+Total REAL time to MAP completion:  36 secs 
+Total CPU time to MAP completion:   33 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:701 - Signal ADC_DCO_P connected to top level port ADC_DCO_P has
+   been removed.
+WARNING:MapLib:701 - Signal ADC_DCO_N connected to top level port ADC_DCO_N has
+   been removed.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ADC_D_p<7> has no load.
+INFO:LIT:395 - The above info message is repeated 33 more times for the
+   following (max. 5 shown):
+   ADC_D_p<6>,
+   ADC_D_p<5>,
+   ADC_D_p<4>,
+   ADC_D_p<3>,
+   ADC_D_p<2>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   3 block(s) removed
+   2 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "DCO_CLK_IN" (IBUFGDS) removed.
+ The signal "ADC_DCO_P" is loadless and has been removed.
+  Loadless block "ADC_DCO_P" (PAD) removed.
+ The signal "ADC_DCO_N" is loadless and has been removed.
+  Loadless block "ADC_DCO_N" (PAD) removed.
+
+Section 6 - IOB Properties
+--------------------------
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

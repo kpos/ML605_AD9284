@@ -1,0 +1,126 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Map Application Log File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc6vlx240t
+Target Package : ff1156
+Target Speed   : -1
+Mapper Version : virtex6 -- $Revision: 1.55 $
+Mapped Date    : Thu Jan 07 14:48:22 2021
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal ADC_DCO_P connected to top level port ADC_DCO_P has
+   been removed.
+WARNING:MapLib:701 - Signal ADC_DCO_N connected to top level port ADC_DCO_N has
+   been removed.
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 26 secs 
+Total CPU  time at the beginning of Placer: 24 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:d7) REAL time: 33 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:d7) REAL time: 34 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:3d50257e) REAL time: 34 secs 
+
+Phase 4.37  Local Placement Optimization
+Phase 4.37  Local Placement Optimization (Checksum:3d50257e) REAL time: 34 secs 
+
+Phase 5.2  Initial Placement for Architecture Specific Features
+Phase 5.2  Initial Placement for Architecture Specific Features
+(Checksum:3d50257e) REAL time: 34 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:3d50257e) REAL time: 34 secs 
+
+Phase 7.30  Global Clock Region Assignment
+Phase 7.30  Global Clock Region Assignment (Checksum:3d50257e) REAL time: 34 secs 
+
+Phase 8.3  Local Placement Optimization
+Phase 8.3  Local Placement Optimization (Checksum:3d50257e) REAL time: 35 secs 
+
+Phase 9.5  Local Placement Optimization
+Phase 9.5  Local Placement Optimization (Checksum:3d50257e) REAL time: 35 secs 
+
+Phase 10.8  Global Placement
+Phase 10.8  Global Placement (Checksum:3d50257e) REAL time: 35 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:3d50257e) REAL time: 35 secs 
+
+Phase 12.18  Placement Optimization
+Phase 12.18  Placement Optimization (Checksum:3d50257e) REAL time: 35 secs 
+
+Phase 13.5  Local Placement Optimization
+Phase 13.5  Local Placement Optimization (Checksum:3d50257e) REAL time: 35 secs 
+
+Phase 14.34  Placement Validation
+Phase 14.34  Placement Validation (Checksum:e31fab9) REAL time: 35 secs 
+
+Total REAL time to Placer completion: 35 secs 
+Total CPU  time to Placer completion: 32 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of 301,440    0%
+  Number of Slice LUTs:                          0 out of 150,720    0%
+
+Slice Logic Distribution:
+  Number of occupied Slices:                     0 out of  37,680    0%
+  Number of LUT Flip Flop pairs used:            0
+
+IO Utilization:
+  Number of bonded IOBs:                         0 out of     600    0%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
+  Number of BUFG/BUFGCTRLs:                      0 out of      32    0%
+  Number of ILOGICE1/ISERDESE1s:                 0 out of     720    0%
+  Number of OLOGICE1/OSERDESE1s:                 0 out of     720    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     144    0%
+  Number of BUFIODQSs:                           0 out of      72    0%
+  Number of BUFRs:                               0 out of      36    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     768    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      20    0%
+  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of      18    0%
+  Number of IODELAYE1s:                          0 out of     720    0%
+  Number of MMCM_ADVs:                           0 out of      12    0%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       0 out of       4    0%
+
+Average Fanout of Non-Clock Nets:                40.00
+
+Peak Memory Usage:  482 MB
+Total REAL time to MAP completion:  36 secs 
+Total CPU time to MAP completion:   33 secs 
+
+Mapping completed.
+See MAP report file "top_map.mrp" for details.

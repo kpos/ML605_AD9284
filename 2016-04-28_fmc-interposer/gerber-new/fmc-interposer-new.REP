@@ -1,0 +1,131 @@
+*************************************************************
+FileName = fmc-interposer-new.GBR
+AutoAperture = True
+*************************************************************
+Generating : Component Side
+      File : fmc-interposer-new.GTL
+
+    Adding Layer      : Component Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Ground Plane
+      File : fmc-interposer-new.GP1
+
+    Adding Layer      : Ground Plane
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Power Plane
+      File : fmc-interposer-new.GP2
+
+    Adding Layer      : Power Plane
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+*************************************************************
+
+*************************************************************
+Generating : Solder Side
+      File : fmc-interposer-new.GBL
+
+    Adding Layer      : Solder Side
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D30
+    D31
+    D32
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : fmc-interposer-new.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D18
+    D34
+    D35
+    D36
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : fmc-interposer-new.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D18
+    D34
+    D35
+    D36
+    D37
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : fmc-interposer-new.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D18
+*************************************************************
+
