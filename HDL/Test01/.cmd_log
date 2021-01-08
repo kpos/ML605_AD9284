@@ -1,0 +1,4 @@
+vhdtdtfi -lang verilog -prj Test01 -o D:/GIT/ML605_AD9284/HDL/Test01/.tfi -lib work D:/GIT/ML605_AD9284/HDL/Test01//top.v -module "" -template C:/FPGA/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work D:/GIT/ML605_AD9284/HDL/Test01/top.v -lang verilog -prj Test01 -o .spl -module {} -template C:/FPGA/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work D:/GIT/ML605_AD9284/HDL/Test01/top.v -lang verilog -prj Test01 -o .spl -module {} -template C:/FPGA/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lib work D:/GIT/ML605_AD9284/HDL/Test01/top.v -lang verilog -prj Test01 -o .spl -module {} -template C:/FPGA/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 

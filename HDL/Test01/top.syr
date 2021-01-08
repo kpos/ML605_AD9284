@@ -1,4 +1,4 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
@@ -115,7 +115,14 @@ Parsing module <top>.
 Elaborating module <top>.
 
 Elaborating module <IBUFGDS>.
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 33: Assignment to DCO_CLK ignored, since the identifier is never used
+
+Elaborating module <BUFR(SIM_DEVICE="VIRTEX6")>.
+
+Elaborating module <IBUFDS>.
+
+Elaborating module <IODELAYE1(CINVCTRL_SEL="FALSE",DELAY_SRC="I",HIGH_PERFORMANCE_MODE="TRUE",IDELAY_TYPE="DEFAULT",IDELAY_VALUE=0,ODELAY_TYPE="FIXED",ODELAY_VALUE=0,REFCLK_FREQUENCY=200.0,SIGNAL_PATTERN="DATA")>.
+
+Elaborating module <IDDR(INIT_Q1=1'b0,INIT_Q2=1'b0,DDR_CLK_EDGE="SAME_EDGE_PIPELINED",SRTYPE="ASYNC")>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -123,19 +130,27 @@ WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 33: Assig
 
 Synthesizing Unit <top>.
     Related source file is "D:\GIT\ML605_AD9284\HDL\Test01\top.v".
-WARNING:Xst:647 - Input <ADC_D_p> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <ADC_D_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <Switch> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <RST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+        C_IODELAY_GROUP = "adc_if_delay_group"
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[0].i_data_idelay>.
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[1].i_data_idelay>.
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[2].i_data_idelay>.
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[3].i_data_idelay>.
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[4].i_data_idelay>.
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[5].i_data_idelay>.
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[6].i_data_idelay>.
+    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[7].i_data_idelay>.
+    Found 8-bit register for signal <leds>.
     Summary:
-	no macro.
+	inferred   8 D-type flip-flop(s).
 Unit <top> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 1
+ 8-bit register                                        : 1
+
 =========================================================================
 
 =========================================================================
@@ -146,12 +161,23 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:1901 - Instance adc_input[0].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance adc_input[1].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance adc_input[2].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance adc_input[3].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance adc_input[4].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance adc_input[5].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance adc_input[6].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance adc_input[7].i_data_ddr in unit top of type IDDR has been replaced by IDDR_2CLK
 
 Optimizing unit <top> ...
 
@@ -164,7 +190,10 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+
 =========================================================================
 
 =========================================================================
@@ -186,8 +215,20 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# IO Buffers                       : 1
+# BELS                             : 3
+#      GND                         : 1
+#      INV                         : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 16
+#      FD                          : 8
+#      IDDR_2CLK                   : 8
+# IO Buffers                       : 17
+#      IBUFDS                      : 8
 #      IBUFGDS                     : 1
+#      OBUF                        : 8
+# Others                           : 9
+#      BUFR                        : 1
+#      IODELAYE1                   : 8
 
 Device utilization summary:
 ---------------------------
@@ -196,17 +237,21 @@ Selected Device : 6vlx240tff1156-1
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:               8  out of  301440     0%  
+ Number of Slice LUTs:                    1  out of  150720     0%  
+    Number used as Logic:                 1  out of  150720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:      9
+   Number with an unused Flip Flop:       1  out of      9    11%  
+   Number with an unused LUT:             8  out of      9    88%  
+   Number of fully used LUT-FF pairs:     0  out of      9     0%  
+   Number of unique control sets:         1
 
 IO Utilization: 
- Number of IOs:                          36
- Number of bonded IOBs:                   2  out of    600     0%  
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    600     4%  
+    IOB Flip Flops/Latches:               8
 
 Specific Feature Utilization:
 
@@ -228,24 +273,89 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+adc_dco_in_p                       | IBUFGDS+BUFR           | 9     |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+N0(XST_VCC:P)                      | NONE(adc_dco_bufr)     | 1     |
+N1(XST_GND:G)                      | NONE(adc_dco_bufr)     | 1     |
+-----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -1
 
    Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Minimum input arrival time before clock: 0.410ns
+   Maximum output required time after clock: 0.777ns
+   Maximum combinational path delay: 0.399ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'adc_dco_in_p'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.410ns (Levels of Logic = 0)
+  Source:            adc_input[0].i_data_ddr:Q1 (PAD)
+  Destination:       leds_0 (FF)
+  Destination Clock: adc_dco_in_p rising
+
+  Data Path: adc_input[0].i_data_ddr:Q1 to leds_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    IDDR_2CLK:Q1           1   0.000   0.399  adc_input[0].i_data_ddr (adc_data_p_s<0>)
+     FD:D                      0.011          leds_0
+    ----------------------------------------
+    Total                      0.410ns (0.011ns logic, 0.399ns route)
+                                       (2.7% logic, 97.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'adc_dco_in_p'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.777ns (Levels of Logic = 1)
+  Source:            leds_7 (FF)
+  Destination:       leds<7> (PAD)
+  Source Clock:      adc_dco_in_p rising
+
+  Data Path: leds_7 to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.375   0.399  leds_7 (leds_7)
+     OBUF:I->O                 0.003          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                      0.777ns (0.378ns logic, 0.399ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 24 / 16
+-------------------------------------------------------------------------
+Delay:               0.399ns (Levels of Logic = 0)
+  Source:            adc_input[0].i_data_idelay:DATAOUT (PAD)
+  Destination:       adc_input[0].i_data_ddr:D (PAD)
+
+  Data Path: adc_input[0].i_data_idelay:DATAOUT to adc_input[0].i_data_ddr:D
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    IODELAYE1:DATAOUT      1   0.000   0.399  adc_input[0].i_data_idelay (adc_data_idelay_s<0>)
+    IDDR_2CLK:D                0.000          adc_input[0].i_data_ddr
+    ----------------------------------------
+    Total                      0.399ns (0.000ns logic, 0.399ns route)
+                                       (0.0% logic, 100.0% route)
 
 =========================================================================
 
@@ -255,14 +365,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.79 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.65 secs
  
 --> 
 
-Total memory usage is 200168 kilobytes
+Total memory usage is 256168 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

@@ -1,0 +1,99 @@
+# ML605 <-> FMC interposer <-> AD9284-EBZ
+# Linie danych ADC -> FPGA - pary roznicowe
+#
+# Karta ML605 i jej podobne maja zasilanie 2V5 na liniach danych zlacz FMC
+#
+# Przetworniki ADxxxx-EBZ maja zasilanie 1V8 na liniach danych 
+# tak samo jak plyta AD-EVALCZ
+# Dla sygnalow roznicowych nie powinno byc problemu. Chociaz trzeba o tym pamietac.
+#
+NET "adc_data_in_p[0]" LOC = J30;
+NET "adc_data_in_p[0]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[0]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[0]" LOC = K29;
+NET "adc_data_in_n[0]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[0]" DIFF_TERM = "TRUE";
+NET "adc_data_in_p[1]" LOC = L25;
+NET "adc_data_in_p[1]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[1]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[1]" LOC = L26;
+NET "adc_data_in_n[1]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[1]" DIFF_TERM = "TRUE";
+NET "adc_data_in_p[2]" LOC = H34;
+NET "adc_data_in_p[2]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[2]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[2]" LOC = H33;
+NET "adc_data_in_n[2]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[2]" DIFF_TERM = "TRUE";
+NET "adc_data_in_p[3]" LOC = G32;
+NET "adc_data_in_p[3]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[3]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[3]" LOC = H32;
+NET "adc_data_in_n[3]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[3]" DIFF_TERM = "TRUE";
+NET "adc_data_in_p[4]" LOC = J31;
+NET "adc_data_in_p[4]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[4]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[4]" LOC = J32;
+NET "adc_data_in_n[4]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[4]" DIFF_TERM = "TRUE";
+NET "adc_data_in_p[5]" LOC = K28;
+NET "adc_data_in_p[5]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[5]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[5]" LOC = J29;
+NET "adc_data_in_n[5]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[5]" DIFF_TERM = "TRUE";
+NET "adc_data_in_p[6]" LOC = F31;
+NET "adc_data_in_p[6]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[6]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[6]" LOC = E31;
+NET "adc_data_in_n[6]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[6]" DIFF_TERM = "TRUE";
+NET "adc_data_in_p[7]" LOC = G31;
+NET "adc_data_in_p[7]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_p[7]" DIFF_TERM = "TRUE";
+NET "adc_data_in_n[7]" LOC = H30;
+NET "adc_data_in_n[7]" IOSTANDARD = LVDS_25;
+NET "adc_data_in_n[7]" DIFF_TERM = "TRUE";
+
+
+# Wyjscie zegara ADC -> FPGA - para roznicowa
+NET "adc_dco_in_p" LOC = F33;
+NET "adc_dco_in_p" IOSTANDARD = LVDS_25;
+NET "adc_dco_in_p" DIFF_TERM = "TRUE";
+NET "adc_dco_in_n" LOC = G33;
+NET "adc_dco_in_n" IOSTANDARD = LVDS_25;
+NET "adc_dco_in_n" DIFF_TERM = "TRUE";
+
+#INST adc_dco_bufr LOC= BUFR_X0Y3;
+
+
+TIMESPEC TS_ADC = PERIOD "ADCCLK" 4 ns HIGH 50 %;
+NET "adc_dco_in_p" TNM_NET = "ADCCLK";
+NET "adc_data_in_p[*]" TNM = "adc_data_in_pta_pads";
+NET "adc_data_in_n[*]" TNM = "adc_data_in_pta_pads";
+TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 1.62 ns BEFORE "adc_dco_in_p" RISING;
+TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 1.62 ns BEFORE "adc_dco_in_p" FALLING;
+
+
+# Powrot SPI z karty przetwornika
+#NET ADC_OUT_SCLK	LOC = M30 | IOSTANDARD = LVCMOS25 | TIG;
+#NET ADC_OUT_SDIO	LOC = R26 | IOSTANDARD = LVCMOS25;
+#NET ADC_OUT_CSB	LOC = N30 | IOSTANDARD = LVCMOS25;
+
+# Interfejs SPI
+#NET ADC_SPI_SDI	LOC = L31 | IOSTANDARD = LVCMOS25;
+#NET ADC_SPI_SDO	LOC = K32 | IOSTANDARD = LVCMOS25;
+#NET ADC_SPI_CLK	LOC = M31 | IOSTANDARD = LVCMOS25 | TIG;
+#NET ADC_SPI_CSB	LOC = M27 | IOSTANDARD = LVCMOS25;
+
+# PlanAhead Generated physical constraints 
+
+NET "leds[0]" LOC = AC22;
+NET "leds[1]" LOC = AC24;
+NET "leds[2]" LOC = AE22;
+NET "leds[3]" LOC = AE23;
+NET "leds[4]" LOC = AB23;
+NET "leds[5]" LOC = AG23;
+NET "leds[6]" LOC = AE24;
+NET "leds[7]" LOC = AD24;
