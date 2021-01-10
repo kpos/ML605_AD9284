@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Fri Jan 08 01:01:54 2021">
+  <application stringID="NgdBuild" timeStamp="Sun Jan 10 01:24:43 2021">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -67,24 +67,22 @@
       </section>
       <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFR" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFDS" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFGDS" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IDDR_2CLK" value="8"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IODELAYE1" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
       </section>
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFR" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFDS" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFGDS" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IDDR_2CLK" value="8"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="2"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IODELAYE1" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>

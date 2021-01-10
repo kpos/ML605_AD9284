@@ -3,28 +3,30 @@ Xilinx Mapping Report File for Design 'top'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol
-high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
--pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+Command Line   : map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication
+off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
 Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Fri Jan 08 01:01:56 2021
+Mapped Date    : Sun Jan 10 01:24:45 2021
 
-Interim Summary
----------------
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    8
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of 301,440    0%
   Number of Slice LUTs:                          0 out of 150,720    0%
 
 Slice Logic Distribution:
+  Number of occupied Slices:                     0 out of  37,680    0%
   Number of LUT Flip Flop pairs used:            0
 
 IO Utilization:
   Number of bonded IOBs:                        26 out of     600    4%
     Number of LOCed IOBs:                       26 out of      26  100%
-    IOB Flip Flops:                             16
+    IOB Flip Flops:                              8
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
@@ -33,8 +35,8 @@ Specific Feature Utilization:
   Number of ILOGICE1/ISERDESE1s:                 8 out of     720    1%
     Number used as ILOGICE1s:                    8
     Number used as ISERDESE1s:                   0
-  Number of OLOGICE1/OSERDESE1s:                 8 out of     720    1%
-    Number used as OLOGICE1s:                    8
+  Number of OLOGICE1/OSERDESE1s:                 1 out of     720    1%
+    Number used as OLOGICE1s:                    1
     Number used as OSERDESE1s:                   0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHCEs:                             0 out of     144    0%
@@ -55,18 +57,30 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
+Average Fanout of Non-Clock Nets:                2.08
 
-Design Summary
---------------
-Number of errors   :   2
-Number of warnings :   8
+Peak Memory Usage:  778 MB
+Total REAL time to MAP completion:  36 secs 
+Total CPU time to MAP completion:   36 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
 
 Section 1 - Errors
 ------------------
-ERROR:PhysDesignRules:2506 - Incorrect placement for a BUFR component. BUFR adc_dco_bufr in clock region
-   CLOCKREGION_X0Y3 is driven by a CCIO adc_dco_in_p in clock region CLOCKREGION_X0Y4. The BUFR should be placed in the
-   same clock region as the CCIO or the CLOCK_DEDICATED_ROUTE constraint should be used on the net <adc_dco_ibuf_s>. 
-ERROR:Pack:1642 - Errors in physical DRC.
 
 Section 2 - Warnings
 --------------------
@@ -116,10 +130,85 @@ VCC 		XST_VCC
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
 
-Section 12 - Configuration String Details
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| adc_data_in_n<0>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_n<1>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_n<2>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_n<3>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_n<4>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_n<5>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_n<6>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_n<7>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_data_in_p<0>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<1>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<2>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<3>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<4>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<5>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<6>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<7>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_dco_in_n                       | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| adc_dco_in_p                       | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
+| leds<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<4>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<5>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<6>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<7>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
 -----------------------------------------
 Use the "-detail" map option to print out Configuration Strings
 
-Section 13 - Control Set Information
+Section 12 - Control Set Information
 ------------------------------------
 Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

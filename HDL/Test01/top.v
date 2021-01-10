@@ -2,8 +2,8 @@
 `timescale 1ns/100ps
 
 module top (
-   //input clk,
-   //input rst,
+   input clk,
+   input rst,
   
    input [7:0] adc_data_in_p,
    input [7:0] adc_data_in_n,
@@ -12,9 +12,12 @@ module top (
   
    //input [7:0] switches,
 	
-   output reg [7:0] leds	
+   output  [7:0] leds	
 	);
 parameter C_IODELAY_GROUP = "adc_if_delay_group";
+
+wire reset;
+wire clock;
 
 wire  [7:0] adc_data_ibuf_s;
 wire  [7:0] adc_data_idelay_s;
@@ -27,23 +30,26 @@ reg   [31:0]   counter;
 
 
 
+
+
+
+// ADC inputs
+//
+// clock buffers  
+IBUFGDS i_clk_ibuf (
+ .I (adc_dco_in_p),
+ .IB (adc_dco_in_n),
+ .O (adc_dco_ibuf_s));
+
+BUFR  #(.SIM_DEVICE("VIRTEX6")) adc_dco_bufr (
+ .CE( 1'b1),
+ .CLR( 1'b0),
+ .I (adc_dco_ibuf_s),
+ .O (adc_dco_clk));
+
 genvar          l_inst;
-
-  // clock buffers  
-  IBUFGDS i_clk_ibuf (
-    .I (adc_dco_in_p),
-    .IB (adc_dco_in_n),
-    .O (adc_dco_ibuf_s));
-
-  BUFR  #(.SIM_DEVICE("VIRTEX6")) adc_dco_bufr (
-    .CE( 1'b1),
-    .CLR( 1'b0),
-    .I (adc_dco_ibuf_s),
-    .O (adc_dco_clk));
-
 generate
   for (l_inst = 0; l_inst <= 7; l_inst = l_inst + 1) begin : adc_input
-
   IBUFDS i_data_ibuf (
     .I (adc_data_in_p[l_inst]),
     .IB (adc_data_in_n[l_inst]),
@@ -93,14 +99,23 @@ generate
 
   end  
   endgenerate
-  
 
-  
-always @(posedge adc_dco_clk) begin
-    leds[7:0] <= adc_data_p_s[7:0];
+// System clock generation
+
+// Send 250MHz clock to ADC
+
+
+
+begin  
+   assign leds[6:0] = adc_data_p_s[6:0];
+   assign leds[7] = ~adc_data_p_s[7];
+end
+
+//always @(posedge adc_dco_clk) begin
+//    leds[7:0] <= adc_data_p_s[7:0];
     //(* KEEP = "TRUE" *)
 	 //leds[7] <= 1'b1;
-end
+//end
 
 //always @(posedge adc_dco_ibuf_s) begin
 //  leds[0] <= adc_data_ibuf_s[0];

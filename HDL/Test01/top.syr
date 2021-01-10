@@ -139,18 +139,14 @@ Synthesizing Unit <top>.
     Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[5].i_data_idelay>.
     Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[6].i_data_idelay>.
     Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[7].i_data_idelay>.
-    Found 8-bit register for signal <leds>.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	no macro.
 Unit <top> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
-Macro Statistics
-# Registers                                            : 1
- 8-bit register                                        : 1
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -161,10 +157,7 @@ Macro Statistics
 =========================================================================
 Advanced HDL Synthesis Report
 
-Macro Statistics
-# Registers                                            : 8
- Flip-Flops                                            : 8
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -190,10 +183,7 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Macro Statistics
-# Registers                                            : 8
- Flip-Flops                                            : 8
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -215,12 +205,11 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3
+# BELS                             : 4
 #      GND                         : 1
-#      INV                         : 1
+#      INV                         : 2
 #      VCC                         : 1
-# FlipFlops/Latches                : 16
-#      FD                          : 8
+# FlipFlops/Latches                : 8
 #      IDDR_2CLK                   : 8
 # IO Buffers                       : 17
 #      IBUFDS                      : 8
@@ -238,20 +227,19 @@ Selected Device : 6vlx240tff1156-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:               8  out of  301440     0%  
- Number of Slice LUTs:                    1  out of  150720     0%  
-    Number used as Logic:                 1  out of  150720     0%  
+ Number of Slice LUTs:                    2  out of  150720     0%  
+    Number used as Logic:                 2  out of  150720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      9
-   Number with an unused Flip Flop:       1  out of      9    11%  
-   Number with an unused LUT:             8  out of      9    88%  
-   Number of fully used LUT-FF pairs:     0  out of      9     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     10
+   Number with an unused Flip Flop:       2  out of     10    20%  
+   Number with an unused LUT:             8  out of     10    80%  
+   Number of fully used LUT-FF pairs:     0  out of     10     0%  
+   Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                          26
  Number of bonded IOBs:                  26  out of    600     4%  
-    IOB Flip Flops/Latches:               8
 
 Specific Feature Utilization:
 
@@ -276,7 +264,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-adc_dco_in_p                       | IBUFGDS+BUFR           | 9     |
+adc_dco_in_p                       | IBUFGDS                | 1     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -293,69 +281,32 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 0.410ns
-   Maximum output required time after clock: 0.777ns
-   Maximum combinational path delay: 0.399ns
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 0.887ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'adc_dco_in_p'
-  Total number of paths / destination ports: 8 / 8
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 32 / 24
 -------------------------------------------------------------------------
-Offset:              0.410ns (Levels of Logic = 0)
-  Source:            adc_input[0].i_data_ddr:Q1 (PAD)
-  Destination:       leds_0 (FF)
-  Destination Clock: adc_dco_in_p rising
-
-  Data Path: adc_input[0].i_data_ddr:Q1 to leds_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    IDDR_2CLK:Q1           1   0.000   0.399  adc_input[0].i_data_ddr (adc_data_p_s<0>)
-     FD:D                      0.011          leds_0
-    ----------------------------------------
-    Total                      0.410ns (0.011ns logic, 0.399ns route)
-                                       (2.7% logic, 97.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'adc_dco_in_p'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              0.777ns (Levels of Logic = 1)
-  Source:            leds_7 (FF)
+Delay:               0.887ns (Levels of Logic = 2)
+  Source:            adc_input[7].i_data_ddr:Q1 (PAD)
   Destination:       leds<7> (PAD)
-  Source Clock:      adc_dco_in_p rising
 
-  Data Path: leds_7 to leds<7>
+  Data Path: adc_input[7].i_data_ddr:Q1 to leds<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.375   0.399  leds_7 (leds_7)
+    IDDR_2CLK:Q1           1   0.000   0.399  adc_input[7].i_data_ddr (adc_data_p_s<7>)
+     INV:I->O              1   0.086   0.399  leds<7>1_INV_0 (leds_7_OBUF)
      OBUF:I->O                 0.003          leds_7_OBUF (leds<7>)
     ----------------------------------------
-    Total                      0.777ns (0.378ns logic, 0.399ns route)
-                                       (48.6% logic, 51.4% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 24 / 16
--------------------------------------------------------------------------
-Delay:               0.399ns (Levels of Logic = 0)
-  Source:            adc_input[0].i_data_idelay:DATAOUT (PAD)
-  Destination:       adc_input[0].i_data_ddr:D (PAD)
-
-  Data Path: adc_input[0].i_data_idelay:DATAOUT to adc_input[0].i_data_ddr:D
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    IODELAYE1:DATAOUT      1   0.000   0.399  adc_input[0].i_data_idelay (adc_data_idelay_s<0>)
-    IDDR_2CLK:D                0.000          adc_input[0].i_data_ddr
-    ----------------------------------------
-    Total                      0.399ns (0.000ns logic, 0.399ns route)
-                                       (0.0% logic, 100.0% route)
+    Total                      0.887ns (0.089ns logic, 0.798ns route)
+                                       (10.0% logic, 90.0% route)
 
 =========================================================================
 
@@ -365,8 +316,8 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.65 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.43 secs
  
 --> 
 

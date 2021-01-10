@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Jan 08 01:02:37 2021
+// Written by: Map P.20131013 on Sun Jan 10 01:25:20 2021
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -61,13 +61,11 @@ PIN adc_input[7].i_data_ddr_pins<1> = BEL "adc_input[7].i_data_ddr" PINNAME
         CK;
 PIN adc_input[7].i_data_ddr_pins<2> = BEL "adc_input[7].i_data_ddr" PINNAME
         CKB;
-TIMEGRP ADCCLK = BEL "leds_0" BEL "leds_1" BEL "leds_2" BEL "leds_3" BEL
-        "leds_4" BEL "leds_5" BEL "leds_6" BEL "leds_7" BEL "adc_dco_bufr" BEL
-        "adc_input[0].i_data_idelay" BEL "adc_input[1].i_data_idelay" BEL
-        "adc_input[2].i_data_idelay" BEL "adc_input[3].i_data_idelay" BEL
-        "adc_input[4].i_data_idelay" BEL "adc_input[5].i_data_idelay" BEL
-        "adc_input[6].i_data_idelay" BEL "adc_input[7].i_data_idelay" PIN
-        "adc_input[0].i_data_ddr_pins<1>" PIN
+TIMEGRP ADCCLK = BEL "adc_dco_bufr" BEL "adc_input[0].i_data_idelay" BEL
+        "adc_input[1].i_data_idelay" BEL "adc_input[2].i_data_idelay" BEL
+        "adc_input[3].i_data_idelay" BEL "adc_input[4].i_data_idelay" BEL
+        "adc_input[5].i_data_idelay" BEL "adc_input[6].i_data_idelay" BEL
+        "adc_input[7].i_data_idelay" PIN "adc_input[0].i_data_ddr_pins<1>" PIN
         "adc_input[0].i_data_ddr_pins<2>" PIN
         "adc_input[0].i_data_ddr_pins<1>" PIN
         "adc_input[0].i_data_ddr_pins<2>" PIN

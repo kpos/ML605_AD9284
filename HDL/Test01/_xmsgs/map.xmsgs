@@ -20,37 +20,31 @@
 <msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
 </msg>
 
-<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[0].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[0].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[1].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[1].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[2].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[2].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[3].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[3].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[4].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[4].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[5].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[5].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[6].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[6].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="1441" delta="new" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[7].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-</msg>
-
-<msg type="error" file="PhysDesignRules" num="2506" delta="new" >Incorrect placement for a BUFR component. BUFR <arg fmt="%s" index="1">adc_dco_bufr</arg> in clock region <arg fmt="%s" index="2">CLOCKREGION_X0Y3</arg> is driven by a CCIO <arg fmt="%s" index="3">adc_dco_in_p</arg> in clock region <arg fmt="%s" index="4">CLOCKREGION_X0Y4</arg>. The BUFR should be placed in the same clock region as the CCIO or the CLOCK_DEDICATED_ROUTE constraint should be used on the net &lt;<arg fmt="%s" index="5">adc_dco_ibuf_s</arg>&gt;. 
-</msg>
-
-<msg type="error" file="Pack" num="1642" delta="new" >Errors in physical DRC.
+<msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[7].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
 </messages>
