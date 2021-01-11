@@ -72,8 +72,8 @@ TIMESPEC TS_ADC = PERIOD "ADCCLK" 4 ns HIGH 50 %;
 NET "adc_dco_in_p" TNM_NET = "ADCCLK";
 NET "adc_data_in_p[*]" TNM = "adc_data_in_pta_pads";
 NET "adc_data_in_n[*]" TNM = "adc_data_in_pta_pads";
-TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 3.62 ns BEFORE "adc_dco_in_p" RISING;
-TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 3.62 ns BEFORE "adc_dco_in_p" FALLING;
+#TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 3.62 ns BEFORE "adc_dco_in_p" RISING;
+#TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 3.62 ns BEFORE "adc_dco_in_p" FALLING;
 
 
 # Powrot SPI z karty przetwornika
@@ -98,6 +98,15 @@ NET "leds[5]" LOC = AG23;
 NET "leds[6]" LOC = AE24;
 NET "leds[7]" LOC = AD24;
 
+NET "led_C" LOC = AP24;
+NET "led_S" LOC = AH28;
+NET "led_N" LOC = AH27;
+
+NET "led*" IOSTANDARD = LVCMOS25;
+//NET "adc_clock_out" LOC = P31 | IOSTANDARD = LVCMOS25; //25P on interposer board
+NET "adc_clock_out" LOC = M22 | IOSTANDARD = LVCMOS25; //J55 on ML605
+
+NET "ML605_FPGA_RESET"  LOC = "H10" | TIG ;
 
 ## Frequency: 200 MHz, 50ppm  
 NET "ML605_SystemClock_200MHz_p" LOC = "J9"; ## {IN} U11.4  
@@ -106,3 +115,9 @@ NET "ML605_SystemClock_200MHz_?" IOSTANDARD = LVDS_25;
 ##  
 NET "ML605_SystemClock_200MHz_p" TNM_NET = "PIN_SystemClock_200MHz";  
 TIMESPEC "TS_SystemClock" = PERIOD "PIN_SystemClock_200MHz" 200 MHz HIGH 50 %;
+
+#NET "ML605_UserClock"   LOC = "U23";						## {IN}			U11.5
+#NET "ML605_UserClock"	IOSTANDARD = LVCMOS25;
+##
+#NET "ML605_UserClock"	TNM_NET = "TGRP_UserClock";
+#TIMESPEC "TS_UserClock"	= PERIOD "TGRP_UserClock"		66 MHz	HIGH 40 %; 

@@ -29,9 +29,621 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 component switching limit errors)
- Minimum period is   3.332ns.
+ 15198 paths analyzed, 166 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.339ns.
+--------------------------------------------------------------------------------
+
+Paths for end point counter_dco_27 (SLICE_X49Y134.CIN), 944 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.661ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_20 (FF)
+  Destination:          counter_dco_27 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.283ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.021ns (0.087 - 0.108)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_20 to counter_dco_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y132.CQ     Tcko                  0.337   counter_dco<21>
+                                                       counter_dco_20
+    SLICE_X49Y126.C2     net (fanout=3)        0.952   counter_dco<20>
+    SLICE_X49Y126.COUT   Topcyc                0.338   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<2>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.A5     net (fanout=28)       0.456   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y128.COUT   Topcya                0.409   counter_dco<5>
+                                                       Mcount_counter_dco_lut<2>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.COUT   Tbyp                  0.078   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CLK    Tcinck                0.153   counter_dco<27>
+                                                       Mcount_counter_dco_xor<27>
+                                                       counter_dco_27
+    -------------------------------------------------  ---------------------------
+    Total                                      3.283ns (1.875ns logic, 1.408ns route)
+                                                       (57.1% logic, 42.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.690ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_7 (FF)
+  Destination:          counter_dco_27 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.250ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.025ns (0.087 - 0.112)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_7 to counter_dco_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y129.BQ     Tcko                  0.337   counter_dco<9>
+                                                       counter_dco_7
+    SLICE_X49Y126.A2     net (fanout=3)        0.848   counter_dco<7>
+    SLICE_X49Y126.COUT   Topcya                0.409   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<0>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.A5     net (fanout=28)       0.456   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y128.COUT   Topcya                0.409   counter_dco<5>
+                                                       Mcount_counter_dco_lut<2>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.COUT   Tbyp                  0.078   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CLK    Tcinck                0.153   counter_dco<27>
+                                                       Mcount_counter_dco_xor<27>
+                                                       counter_dco_27
+    -------------------------------------------------  ---------------------------
+    Total                                      3.250ns (1.946ns logic, 1.304ns route)
+                                                       (59.9% logic, 40.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.698ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_20 (FF)
+  Destination:          counter_dco_27 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.246ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.021ns (0.087 - 0.108)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_20 to counter_dco_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y132.CQ     Tcko                  0.337   counter_dco<21>
+                                                       counter_dco_20
+    SLICE_X49Y126.C2     net (fanout=3)        0.952   counter_dco<20>
+    SLICE_X49Y126.COUT   Topcyc                0.338   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<2>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y127.C4     net (fanout=28)       0.412   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y127.COUT   Topcyc                0.338   counter_dco<1>
+                                                       Mcount_counter_dco_lut<0>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.COUT   Tbyp                  0.078   counter_dco<5>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.COUT   Tbyp                  0.078   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CLK    Tcinck                0.153   counter_dco<27>
+                                                       Mcount_counter_dco_xor<27>
+                                                       counter_dco_27
+    -------------------------------------------------  ---------------------------
+    Total                                      3.246ns (1.882ns logic, 1.364ns route)
+                                                       (58.0% logic, 42.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_dco_25 (SLICE_X49Y133.CIN), 804 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.700ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_20 (FF)
+  Destination:          counter_dco_25 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.245ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.020ns (0.088 - 0.108)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_20 to counter_dco_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y132.CQ     Tcko                  0.337   counter_dco<21>
+                                                       counter_dco_20
+    SLICE_X49Y126.C2     net (fanout=3)        0.952   counter_dco<20>
+    SLICE_X49Y126.COUT   Topcyc                0.338   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<2>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.A5     net (fanout=28)       0.456   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y128.COUT   Topcya                0.409   counter_dco<5>
+                                                       Mcount_counter_dco_lut<2>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CLK    Tcinck                0.193   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+                                                       counter_dco_25
+    -------------------------------------------------  ---------------------------
+    Total                                      3.245ns (1.837ns logic, 1.408ns route)
+                                                       (56.6% logic, 43.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.729ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_7 (FF)
+  Destination:          counter_dco_25 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.212ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.024ns (0.088 - 0.112)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_7 to counter_dco_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y129.BQ     Tcko                  0.337   counter_dco<9>
+                                                       counter_dco_7
+    SLICE_X49Y126.A2     net (fanout=3)        0.848   counter_dco<7>
+    SLICE_X49Y126.COUT   Topcya                0.409   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<0>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.A5     net (fanout=28)       0.456   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y128.COUT   Topcya                0.409   counter_dco<5>
+                                                       Mcount_counter_dco_lut<2>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CLK    Tcinck                0.193   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+                                                       counter_dco_25
+    -------------------------------------------------  ---------------------------
+    Total                                      3.212ns (1.908ns logic, 1.304ns route)
+                                                       (59.4% logic, 40.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.737ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_20 (FF)
+  Destination:          counter_dco_25 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.208ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.020ns (0.088 - 0.108)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_20 to counter_dco_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y132.CQ     Tcko                  0.337   counter_dco<21>
+                                                       counter_dco_20
+    SLICE_X49Y126.C2     net (fanout=3)        0.952   counter_dco<20>
+    SLICE_X49Y126.COUT   Topcyc                0.338   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<2>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y127.C4     net (fanout=28)       0.412   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y127.COUT   Topcyc                0.338   counter_dco<1>
+                                                       Mcount_counter_dco_lut<0>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.COUT   Tbyp                  0.078   counter_dco<5>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CLK    Tcinck                0.193   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+                                                       counter_dco_25
+    -------------------------------------------------  ---------------------------
+    Total                                      3.208ns (1.844ns logic, 1.364ns route)
+                                                       (57.5% logic, 42.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_dco_26 (SLICE_X49Y134.CIN), 944 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.720ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_20 (FF)
+  Destination:          counter_dco_26 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.224ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.021ns (0.087 - 0.108)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_20 to counter_dco_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y132.CQ     Tcko                  0.337   counter_dco<21>
+                                                       counter_dco_20
+    SLICE_X49Y126.C2     net (fanout=3)        0.952   counter_dco<20>
+    SLICE_X49Y126.COUT   Topcyc                0.338   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<2>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.A5     net (fanout=28)       0.456   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y128.COUT   Topcya                0.409   counter_dco<5>
+                                                       Mcount_counter_dco_lut<2>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.COUT   Tbyp                  0.078   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CLK    Tcinck                0.094   counter_dco<27>
+                                                       Mcount_counter_dco_xor<27>
+                                                       counter_dco_26
+    -------------------------------------------------  ---------------------------
+    Total                                      3.224ns (1.816ns logic, 1.408ns route)
+                                                       (56.3% logic, 43.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.749ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_7 (FF)
+  Destination:          counter_dco_26 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.191ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.025ns (0.087 - 0.112)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_7 to counter_dco_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y129.BQ     Tcko                  0.337   counter_dco<9>
+                                                       counter_dco_7
+    SLICE_X49Y126.A2     net (fanout=3)        0.848   counter_dco<7>
+    SLICE_X49Y126.COUT   Topcya                0.409   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<0>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.A5     net (fanout=28)       0.456   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y128.COUT   Topcya                0.409   counter_dco<5>
+                                                       Mcount_counter_dco_lut<2>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.COUT   Tbyp                  0.078   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CLK    Tcinck                0.094   counter_dco<27>
+                                                       Mcount_counter_dco_xor<27>
+                                                       counter_dco_26
+    -------------------------------------------------  ---------------------------
+    Total                                      3.191ns (1.887ns logic, 1.304ns route)
+                                                       (59.1% logic, 40.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.757ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_dco_20 (FF)
+  Destination:          counter_dco_26 (FF)
+  Requirement:          4.000ns
+  Data Path Delay:      3.187ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.021ns (0.087 - 0.108)
+  Source Clock:         adc_dco_clk rising at 0.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: counter_dco_20 to counter_dco_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y132.CQ     Tcko                  0.337   counter_dco<21>
+                                                       counter_dco_20
+    SLICE_X49Y126.C2     net (fanout=3)        0.952   counter_dco<20>
+    SLICE_X49Y126.COUT   Topcyc                0.338   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_lut<2>
+                                                       Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.CIN    net (fanout=1)        0.000   Mcompar_GND_1_o_counter_dco[31]_LessThan_2_o_cy<3>
+    SLICE_X49Y127.AMUX   Tcina                 0.248   counter_dco<1>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y127.C4     net (fanout=28)       0.412   GND_1_o_counter_dco[31]_LessThan_2_o
+    SLICE_X49Y127.COUT   Topcyc                0.338   counter_dco<1>
+                                                       Mcount_counter_dco_lut<0>
+                                                       Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<1>
+    SLICE_X49Y128.COUT   Tbyp                  0.078   counter_dco<5>
+                                                       Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<5>
+    SLICE_X49Y129.COUT   Tbyp                  0.078   counter_dco<9>
+                                                       Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<9>
+    SLICE_X49Y130.COUT   Tbyp                  0.078   counter_dco<13>
+                                                       Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<13>
+    SLICE_X49Y131.COUT   Tbyp                  0.078   counter_dco<17>
+                                                       Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<17>
+    SLICE_X49Y132.COUT   Tbyp                  0.078   counter_dco<21>
+                                                       Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<21>
+    SLICE_X49Y133.COUT   Tbyp                  0.078   counter_dco<25>
+                                                       Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CIN    net (fanout=1)        0.000   Mcount_counter_dco_cy<25>
+    SLICE_X49Y134.CLK    Tcinck                0.094   counter_dco<27>
+                                                       Mcount_counter_dco_xor<27>
+                                                       counter_dco_26
+    -------------------------------------------------  ---------------------------
+    Total                                      3.187ns (1.823ns logic, 1.364ns route)
+                                                       (57.2% logic, 42.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point counter_dco_0 (SLICE_X49Y127.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.147ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_dco_0 (FF)
+  Destination:          counter_dco_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.147ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         adc_dco_clk rising at 4.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: counter_dco_0 to counter_dco_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y127.CQ     Tcko                  0.098   counter_dco<1>
+                                                       counter_dco_0
+    SLICE_X49Y127.C5     net (fanout=1)        0.062   counter_dco<0>
+    SLICE_X49Y127.CLK    Tah         (-Th)     0.013   counter_dco<1>
+                                                       Mcount_counter_dco_lut<0>
+                                                       Mcount_counter_dco_cy<1>
+                                                       counter_dco_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.147ns (0.085ns logic, 0.062ns route)
+                                                       (57.8% logic, 42.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_dco_1 (SLICE_X49Y127.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.163ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_dco_0 (FF)
+  Destination:          counter_dco_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.163ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         adc_dco_clk rising at 4.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: counter_dco_0 to counter_dco_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y127.CQ     Tcko                  0.098   counter_dco<1>
+                                                       counter_dco_0
+    SLICE_X49Y127.C5     net (fanout=1)        0.062   counter_dco<0>
+    SLICE_X49Y127.CLK    Tah         (-Th)    -0.003   counter_dco<1>
+                                                       Mcount_counter_dco_lut<0>
+                                                       Mcount_counter_dco_cy<1>
+                                                       counter_dco_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.163ns (0.101ns logic, 0.062ns route)
+                                                       (62.0% logic, 38.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_dco_1 (SLICE_X49Y127.D4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.170ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_dco_1 (FF)
+  Destination:          counter_dco_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.170ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         adc_dco_clk rising at 4.000ns
+  Destination Clock:    adc_dco_clk rising at 4.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: counter_dco_1 to counter_dco_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y127.DQ     Tcko                  0.098   counter_dco<1>
+                                                       counter_dco_1
+    SLICE_X49Y127.D4     net (fanout=1)        0.091   counter_dco<1>
+    SLICE_X49Y127.CLK    Tah         (-Th)     0.019   counter_dco<1>
+                                                       Mcount_counter_dco_lut<1>
+                                                       Mcount_counter_dco_cy<1>
+                                                       counter_dco_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.170ns (0.079ns logic, 0.091ns route)
+                                                       (46.5% logic, 53.5% route)
+
 --------------------------------------------------------------------------------
 
 Component Switching Limit Checks: TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIGH 50%;
@@ -62,1373 +674,86 @@ Slack: 2.592ns (period - min period limit)
 --------------------------------------------------------------------------------
 
 ================================================================================
-Timing constraint: TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 
-1.62 ns BEFORE COMP         "adc_dco_in_p" "RISING";
-For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+Timing constraint: TS_SystemClock = PERIOD TIMEGRP "PIN_SystemClock_200MHz" 200 
+MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 16 paths analyzed, 8 endpoints analyzed, 8 failing endpoints
- 8 timing errors detected. (8 setup errors, 0 hold errors)
- Minimum allowable offset is   2.845ns.
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.800ns.
 --------------------------------------------------------------------------------
 
-Paths for end point adc_input[6].i_data_ddr (ILOGIC_X0Y177.DDLY), 2 paths
+Component Switching Limit Checks: TS_SystemClock = PERIOD TIMEGRP "PIN_SystemClock_200MHz" 200 MHz HIGH 50%;
 --------------------------------------------------------------------------------
-Slack (setup path):     -2.945ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_p<6> (PAD)
-  Destination:          adc_input[6].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.346ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.526ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_p<6> to adc_input[6].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    F31.I                  Tiopi                 1.169   adc_data_in_p<6>
-                                                         adc_data_in_p<6>
-                                                         adc_input[6].i_data_ibuf/IBUFDS
-    IODELAY_X0Y177.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<6>
-    IODELAY_X0Y177.DATAOUT Tioddo_IDATAIN        4.045   adc_input[6].i_data_idelay
-                                                         adc_input[6].i_data_idelay
-    ILOGIC_X0Y177.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<6>
-    ILOGIC_X0Y177.CLK      Tidockd               0.131   leds_6_OBUF
-                                                         adc_input[6].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.346ns (5.345ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[6].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y177.CLK    net (fanout=24)       0.803   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.526ns (1.438ns logic, 1.088ns route)
-                                                       (56.9% logic, 43.1% route)
-
+Slack: 2.200ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 5.000ns
+  Low pulse: 2.500ns
+  Low pulse limit: 1.400ns (Tdcmpw_CLKIN_200_250)
+  Physical resource: MAIN_200_CLK_MMCM/CLKIN1
+  Logical resource: MAIN_200_CLK_MMCM/CLKIN1
+  Location pin: MMCM_ADV_X0Y4.CLKIN1
+  Clock network: clock200
 --------------------------------------------------------------------------------
-Slack (setup path):     -2.945ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_n<6> (PAD)
-  Destination:          adc_input[6].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.346ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.526ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_n<6> to adc_input[6].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    E31.PADOUT             Tiopp                 0.000   adc_data_in_n<6>
-                                                         adc_data_in_n<6>
-                                                         adc_input[6].i_data_ibuf/SLAVEBUF.DIFFIN
-    F31.DIFFI_IN           net (fanout=1)        0.000   adc_input[6].i_data_ibuf/SLAVEBUF.DIFFIN
-    F31.I                  Tiodi                 1.169   adc_data_in_p<6>
-                                                         adc_input[6].i_data_ibuf/IBUFDS
-    IODELAY_X0Y177.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<6>
-    IODELAY_X0Y177.DATAOUT Tioddo_IDATAIN        4.045   adc_input[6].i_data_idelay
-                                                         adc_input[6].i_data_idelay
-    ILOGIC_X0Y177.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<6>
-    ILOGIC_X0Y177.CLK      Tidockd               0.131   leds_6_OBUF
-                                                         adc_input[6].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.346ns (5.345ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[6].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y177.CLK    net (fanout=24)       0.803   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.526ns (1.438ns logic, 1.088ns route)
-                                                       (56.9% logic, 43.1% route)
-
+Slack: 2.200ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 5.000ns
+  High pulse: 2.500ns
+  High pulse limit: 1.400ns (Tdcmpw_CLKIN_200_250)
+  Physical resource: MAIN_200_CLK_MMCM/CLKIN1
+  Logical resource: MAIN_200_CLK_MMCM/CLKIN1
+  Location pin: MMCM_ADV_X0Y4.CLKIN1
+  Clock network: clock200
 --------------------------------------------------------------------------------
-
-Paths for end point adc_input[3].i_data_ddr (ILOGIC_X0Y165.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (setup path):     -2.939ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_p<3> (PAD)
-  Destination:          adc_input[3].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.349ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_p<3> to adc_input[3].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    G32.I                  Tiopi                 1.172   adc_data_in_p<3>
-                                                         adc_data_in_p<3>
-                                                         adc_input[3].i_data_ibuf/IBUFDS
-    IODELAY_X0Y165.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<3>
-    IODELAY_X0Y165.DATAOUT Tioddo_IDATAIN        4.045   adc_input[3].i_data_idelay
-                                                         adc_input[3].i_data_idelay
-    ILOGIC_X0Y165.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<3>
-    ILOGIC_X0Y165.CLK      Tidockd               0.131   leds_3_OBUF
-                                                         adc_input[3].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.349ns (5.348ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[3].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y165.CLK    net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -2.939ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_n<3> (PAD)
-  Destination:          adc_input[3].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.349ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_n<3> to adc_input[3].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    H32.PADOUT             Tiopp                 0.000   adc_data_in_n<3>
-                                                         adc_data_in_n<3>
-                                                         adc_input[3].i_data_ibuf/SLAVEBUF.DIFFIN
-    G32.DIFFI_IN           net (fanout=1)        0.000   adc_input[3].i_data_ibuf/SLAVEBUF.DIFFIN
-    G32.I                  Tiodi                 1.172   adc_data_in_p<3>
-                                                         adc_input[3].i_data_ibuf/IBUFDS
-    IODELAY_X0Y165.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<3>
-    IODELAY_X0Y165.DATAOUT Tioddo_IDATAIN        4.045   adc_input[3].i_data_idelay
-                                                         adc_input[3].i_data_idelay
-    ILOGIC_X0Y165.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<3>
-    ILOGIC_X0Y165.CLK      Tidockd               0.131   leds_3_OBUF
-                                                         adc_input[3].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.349ns (5.348ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[3].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y165.CLK    net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[2].i_data_ddr (ILOGIC_X0Y171.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (setup path):     -2.936ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_p<2> (PAD)
-  Destination:          adc_input[2].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.346ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_p<2> to adc_input[2].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    H34.I                  Tiopi                 1.169   adc_data_in_p<2>
-                                                         adc_data_in_p<2>
-                                                         adc_input[2].i_data_ibuf/IBUFDS
-    IODELAY_X0Y171.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<2>
-    IODELAY_X0Y171.DATAOUT Tioddo_IDATAIN        4.045   adc_input[2].i_data_idelay
-                                                         adc_input[2].i_data_idelay
-    ILOGIC_X0Y171.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<2>
-    ILOGIC_X0Y171.CLK      Tidockd               0.131   leds_2_OBUF
-                                                         adc_input[2].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.346ns (5.345ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[2].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y171.CLK    net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -2.936ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_n<2> (PAD)
-  Destination:          adc_input[2].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.346ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_n<2> to adc_input[2].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    H33.PADOUT             Tiopp                 0.000   adc_data_in_n<2>
-                                                         adc_data_in_n<2>
-                                                         adc_input[2].i_data_ibuf/SLAVEBUF.DIFFIN
-    H34.DIFFI_IN           net (fanout=1)        0.000   adc_input[2].i_data_ibuf/SLAVEBUF.DIFFIN
-    H34.I                  Tiodi                 1.169   adc_data_in_p<2>
-                                                         adc_input[2].i_data_ibuf/IBUFDS
-    IODELAY_X0Y171.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<2>
-    IODELAY_X0Y171.DATAOUT Tioddo_IDATAIN        4.045   adc_input[2].i_data_idelay
-                                                         adc_input[2].i_data_idelay
-    ILOGIC_X0Y171.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<2>
-    ILOGIC_X0Y171.CLK      Tidockd               0.131   leds_2_OBUF
-                                                         adc_input[2].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.346ns (5.345ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[2].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y171.CLK    net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-
-Hold Paths: TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 1.62 ns BEFORE COMP
-        "adc_dco_in_p" "RISING";
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[1].i_data_ddr (ILOGIC_X0Y163.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (hold path):      2.282ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_p<1> (PAD)
-  Destination:          adc_input[1].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.939ns (Levels of Logic = 2)
-  Clock Path Delay:     1.352ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_p<1> to adc_input[1].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    L25.I                  Tiopi                 0.510   adc_data_in_p<1>
-                                                         adc_data_in_p<1>
-                                                         adc_input[1].i_data_ibuf/IBUFDS
-    IODELAY_X0Y163.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<1>
-    IODELAY_X0Y163.DATAOUT Tioddo_IDATAIN        1.431   adc_input[1].i_data_idelay
-                                                         adc_input[1].i_data_idelay
-    ILOGIC_X0Y163.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<1>
-    ILOGIC_X0Y163.CLK      Tiockdd     (-Th)     0.003   leds_1_OBUF
-                                                         adc_input[1].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.939ns (1.938ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[1].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y163.CLK    net (fanout=24)       0.411   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.352ns (0.795ns logic, 0.557ns route)
-                                                       (58.8% logic, 41.2% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      2.282ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_n<1> (PAD)
-  Destination:          adc_input[1].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.939ns (Levels of Logic = 3)
-  Clock Path Delay:     1.352ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_n<1> to adc_input[1].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    L26.PADOUT             Tiopp                 0.000   adc_data_in_n<1>
-                                                         adc_data_in_n<1>
-                                                         adc_input[1].i_data_ibuf/SLAVEBUF.DIFFIN
-    L25.DIFFI_IN           net (fanout=1)        0.000   adc_input[1].i_data_ibuf/SLAVEBUF.DIFFIN
-    L25.I                  Tiodi                 0.510   adc_data_in_p<1>
-                                                         adc_input[1].i_data_ibuf/IBUFDS
-    IODELAY_X0Y163.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<1>
-    IODELAY_X0Y163.DATAOUT Tioddo_IDATAIN        1.431   adc_input[1].i_data_idelay
-                                                         adc_input[1].i_data_idelay
-    ILOGIC_X0Y163.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<1>
-    ILOGIC_X0Y163.CLK      Tiockdd     (-Th)     0.003   leds_1_OBUF
-                                                         adc_input[1].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.939ns (1.938ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[1].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y163.CLK    net (fanout=24)       0.411   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.352ns (0.795ns logic, 0.557ns route)
-                                                       (58.8% logic, 41.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[5].i_data_ddr (ILOGIC_X0Y185.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (hold path):      2.300ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_p<5> (PAD)
-  Destination:          adc_input[5].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.946ns (Levels of Logic = 2)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_p<5> to adc_input[5].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    K28.I                  Tiopi                 0.517   adc_data_in_p<5>
-                                                         adc_data_in_p<5>
-                                                         adc_input[5].i_data_ibuf/IBUFDS
-    IODELAY_X0Y185.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<5>
-    IODELAY_X0Y185.DATAOUT Tioddo_IDATAIN        1.431   adc_input[5].i_data_idelay
-                                                         adc_input[5].i_data_idelay
-    ILOGIC_X0Y185.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<5>
-    ILOGIC_X0Y185.CLK      Tiockdd     (-Th)     0.003   leds_5_OBUF
-                                                         adc_input[5].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.946ns (1.945ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[5].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y185.CLK    net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      2.300ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_n<5> (PAD)
-  Destination:          adc_input[5].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.946ns (Levels of Logic = 3)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_n<5> to adc_input[5].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    J29.PADOUT             Tiopp                 0.000   adc_data_in_n<5>
-                                                         adc_data_in_n<5>
-                                                         adc_input[5].i_data_ibuf/SLAVEBUF.DIFFIN
-    K28.DIFFI_IN           net (fanout=1)        0.000   adc_input[5].i_data_ibuf/SLAVEBUF.DIFFIN
-    K28.I                  Tiodi                 0.517   adc_data_in_p<5>
-                                                         adc_input[5].i_data_ibuf/IBUFDS
-    IODELAY_X0Y185.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<5>
-    IODELAY_X0Y185.DATAOUT Tioddo_IDATAIN        1.431   adc_input[5].i_data_idelay
-                                                         adc_input[5].i_data_idelay
-    ILOGIC_X0Y185.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<5>
-    ILOGIC_X0Y185.CLK      Tiockdd     (-Th)     0.003   leds_5_OBUF
-                                                         adc_input[5].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.946ns (1.945ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[5].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y185.CLK    net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[0].i_data_ddr (ILOGIC_X0Y173.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (hold path):      2.318ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_p<0> (PAD)
-  Destination:          adc_input[0].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.964ns (Levels of Logic = 2)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_p<0> to adc_input[0].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    J30.I                  Tiopi                 0.535   adc_data_in_p<0>
-                                                         adc_data_in_p<0>
-                                                         adc_input[0].i_data_ibuf/IBUFDS
-    IODELAY_X0Y173.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<0>
-    IODELAY_X0Y173.DATAOUT Tioddo_IDATAIN        1.431   adc_input[0].i_data_idelay
-                                                         adc_input[0].i_data_idelay
-    ILOGIC_X0Y173.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<0>
-    ILOGIC_X0Y173.CLK      Tiockdd     (-Th)     0.003   leds_0_OBUF
-                                                         adc_input[0].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.964ns (1.963ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[0].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y173.CLK    net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      2.318ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_n<0> (PAD)
-  Destination:          adc_input[0].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk rising at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.964ns (Levels of Logic = 3)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_n<0> to adc_input[0].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    K29.PADOUT             Tiopp                 0.000   adc_data_in_n<0>
-                                                         adc_data_in_n<0>
-                                                         adc_input[0].i_data_ibuf/SLAVEBUF.DIFFIN
-    J30.DIFFI_IN           net (fanout=1)        0.000   adc_input[0].i_data_ibuf/SLAVEBUF.DIFFIN
-    J30.I                  Tiodi                 0.535   adc_data_in_p<0>
-                                                         adc_input[0].i_data_ibuf/IBUFDS
-    IODELAY_X0Y173.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<0>
-    IODELAY_X0Y173.DATAOUT Tioddo_IDATAIN        1.431   adc_input[0].i_data_idelay
-                                                         adc_input[0].i_data_idelay
-    ILOGIC_X0Y173.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<0>
-    ILOGIC_X0Y173.CLK      Tiockdd     (-Th)     0.003   leds_0_OBUF
-                                                         adc_input[0].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.964ns (1.963ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[0].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y173.CLK    net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
---------------------------------------------------------------------------------
-
-================================================================================
-Timing constraint: TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 
-1.62 ns BEFORE COMP         "adc_dco_in_p" "FALLING";
-For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
-
- 16 paths analyzed, 8 endpoints analyzed, 8 failing endpoints
- 8 timing errors detected. (8 setup errors, 0 hold errors)
- Minimum allowable offset is   2.848ns.
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[6].i_data_ddr (ILOGIC_X0Y177.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (setup path):     -2.948ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_p<6> (PAD)
-  Destination:          adc_input[6].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.349ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.526ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_p<6> to adc_input[6].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    F31.I                  Tiopi                 1.169   adc_data_in_p<6>
-                                                         adc_data_in_p<6>
-                                                         adc_input[6].i_data_ibuf/IBUFDS
-    IODELAY_X0Y177.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<6>
-    IODELAY_X0Y177.DATAOUT Tioddo_IDATAIN        4.045   adc_input[6].i_data_idelay
-                                                         adc_input[6].i_data_idelay
-    ILOGIC_X0Y177.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<6>
-    ILOGIC_X0Y177.CLKB     Tidockd               0.134   leds_6_OBUF
-                                                         adc_input[6].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.349ns (5.348ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[6].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y177.CLKB   net (fanout=24)       0.803   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.526ns (1.438ns logic, 1.088ns route)
-                                                       (56.9% logic, 43.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -2.948ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_n<6> (PAD)
-  Destination:          adc_input[6].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.349ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.526ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_n<6> to adc_input[6].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    E31.PADOUT             Tiopp                 0.000   adc_data_in_n<6>
-                                                         adc_data_in_n<6>
-                                                         adc_input[6].i_data_ibuf/SLAVEBUF.DIFFIN
-    F31.DIFFI_IN           net (fanout=1)        0.000   adc_input[6].i_data_ibuf/SLAVEBUF.DIFFIN
-    F31.I                  Tiodi                 1.169   adc_data_in_p<6>
-                                                         adc_input[6].i_data_ibuf/IBUFDS
-    IODELAY_X0Y177.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<6>
-    IODELAY_X0Y177.DATAOUT Tioddo_IDATAIN        4.045   adc_input[6].i_data_idelay
-                                                         adc_input[6].i_data_idelay
-    ILOGIC_X0Y177.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<6>
-    ILOGIC_X0Y177.CLKB     Tidockd               0.134   leds_6_OBUF
-                                                         adc_input[6].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.349ns (5.348ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[6].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y177.CLKB   net (fanout=24)       0.803   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.526ns (1.438ns logic, 1.088ns route)
-                                                       (56.9% logic, 43.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[3].i_data_ddr (ILOGIC_X0Y165.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (setup path):     -2.942ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_p<3> (PAD)
-  Destination:          adc_input[3].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.352ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_p<3> to adc_input[3].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    G32.I                  Tiopi                 1.172   adc_data_in_p<3>
-                                                         adc_data_in_p<3>
-                                                         adc_input[3].i_data_ibuf/IBUFDS
-    IODELAY_X0Y165.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<3>
-    IODELAY_X0Y165.DATAOUT Tioddo_IDATAIN        4.045   adc_input[3].i_data_idelay
-                                                         adc_input[3].i_data_idelay
-    ILOGIC_X0Y165.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<3>
-    ILOGIC_X0Y165.CLKB     Tidockd               0.134   leds_3_OBUF
-                                                         adc_input[3].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.352ns (5.351ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[3].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y165.CLKB   net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -2.942ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_n<3> (PAD)
-  Destination:          adc_input[3].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.352ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_n<3> to adc_input[3].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    H32.PADOUT             Tiopp                 0.000   adc_data_in_n<3>
-                                                         adc_data_in_n<3>
-                                                         adc_input[3].i_data_ibuf/SLAVEBUF.DIFFIN
-    G32.DIFFI_IN           net (fanout=1)        0.000   adc_input[3].i_data_ibuf/SLAVEBUF.DIFFIN
-    G32.I                  Tiodi                 1.172   adc_data_in_p<3>
-                                                         adc_input[3].i_data_ibuf/IBUFDS
-    IODELAY_X0Y165.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<3>
-    IODELAY_X0Y165.DATAOUT Tioddo_IDATAIN        4.045   adc_input[3].i_data_idelay
-                                                         adc_input[3].i_data_idelay
-    ILOGIC_X0Y165.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<3>
-    ILOGIC_X0Y165.CLKB     Tidockd               0.134   leds_3_OBUF
-                                                         adc_input[3].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.352ns (5.351ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[3].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y165.CLKB   net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[2].i_data_ddr (ILOGIC_X0Y171.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (setup path):     -2.939ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_p<2> (PAD)
-  Destination:          adc_input[2].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.349ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_p<2> to adc_input[2].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    H34.I                  Tiopi                 1.169   adc_data_in_p<2>
-                                                         adc_data_in_p<2>
-                                                         adc_input[2].i_data_ibuf/IBUFDS
-    IODELAY_X0Y171.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<2>
-    IODELAY_X0Y171.DATAOUT Tioddo_IDATAIN        4.045   adc_input[2].i_data_idelay
-                                                         adc_input[2].i_data_idelay
-    ILOGIC_X0Y171.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<2>
-    ILOGIC_X0Y171.CLKB     Tidockd               0.134   leds_2_OBUF
-                                                         adc_input[2].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.349ns (5.348ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[2].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y171.CLKB   net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -2.939ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               adc_data_in_n<2> (PAD)
-  Destination:          adc_input[2].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          -0.100ns
-  Data Path Delay:      5.349ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
-  Clock Path Delay:     2.535ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: adc_data_in_n<2> to adc_input[2].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    H33.PADOUT             Tiopp                 0.000   adc_data_in_n<2>
-                                                         adc_data_in_n<2>
-                                                         adc_input[2].i_data_ibuf/SLAVEBUF.DIFFIN
-    H34.DIFFI_IN           net (fanout=1)        0.000   adc_input[2].i_data_ibuf/SLAVEBUF.DIFFIN
-    H34.I                  Tiodi                 1.169   adc_data_in_p<2>
-                                                         adc_input[2].i_data_ibuf/IBUFDS
-    IODELAY_X0Y171.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<2>
-    IODELAY_X0Y171.DATAOUT Tioddo_IDATAIN        4.045   adc_input[2].i_data_idelay
-                                                         adc_input[2].i_data_idelay
-    ILOGIC_X0Y171.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<2>
-    ILOGIC_X0Y171.CLKB     Tidockd               0.134   leds_2_OBUF
-                                                         adc_input[2].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        5.349ns (5.348ns logic, 0.001ns route)
-                                                         (100.0% logic, 0.0% route)
-
-  Minimum Clock Path at Slow Process Corner: adc_dco_in_p to adc_input[2].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 1.115   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.285   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.323   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y171.CLKB   net (fanout=24)       0.812   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      2.535ns (1.438ns logic, 1.097ns route)
-                                                       (56.7% logic, 43.3% route)
-
---------------------------------------------------------------------------------
-
-Hold Paths: TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 1.62 ns BEFORE COMP
-        "adc_dco_in_p" "FALLING";
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[1].i_data_ddr (ILOGIC_X0Y163.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (hold path):      2.284ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_p<1> (PAD)
-  Destination:          adc_input[1].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.941ns (Levels of Logic = 2)
-  Clock Path Delay:     1.352ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_p<1> to adc_input[1].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    L25.I                  Tiopi                 0.510   adc_data_in_p<1>
-                                                         adc_data_in_p<1>
-                                                         adc_input[1].i_data_ibuf/IBUFDS
-    IODELAY_X0Y163.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<1>
-    IODELAY_X0Y163.DATAOUT Tioddo_IDATAIN        1.431   adc_input[1].i_data_idelay
-                                                         adc_input[1].i_data_idelay
-    ILOGIC_X0Y163.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<1>
-    ILOGIC_X0Y163.CLKB     Tiockdd     (-Th)     0.001   leds_1_OBUF
-                                                         adc_input[1].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.941ns (1.940ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[1].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y163.CLKB   net (fanout=24)       0.411   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.352ns (0.795ns logic, 0.557ns route)
-                                                       (58.8% logic, 41.2% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      2.284ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_n<1> (PAD)
-  Destination:          adc_input[1].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.941ns (Levels of Logic = 3)
-  Clock Path Delay:     1.352ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_n<1> to adc_input[1].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    L26.PADOUT             Tiopp                 0.000   adc_data_in_n<1>
-                                                         adc_data_in_n<1>
-                                                         adc_input[1].i_data_ibuf/SLAVEBUF.DIFFIN
-    L25.DIFFI_IN           net (fanout=1)        0.000   adc_input[1].i_data_ibuf/SLAVEBUF.DIFFIN
-    L25.I                  Tiodi                 0.510   adc_data_in_p<1>
-                                                         adc_input[1].i_data_ibuf/IBUFDS
-    IODELAY_X0Y163.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<1>
-    IODELAY_X0Y163.DATAOUT Tioddo_IDATAIN        1.431   adc_input[1].i_data_idelay
-                                                         adc_input[1].i_data_idelay
-    ILOGIC_X0Y163.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<1>
-    ILOGIC_X0Y163.CLKB     Tiockdd     (-Th)     0.001   leds_1_OBUF
-                                                         adc_input[1].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.941ns (1.940ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[1].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y163.CLKB   net (fanout=24)       0.411   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.352ns (0.795ns logic, 0.557ns route)
-                                                       (58.8% logic, 41.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[5].i_data_ddr (ILOGIC_X0Y185.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (hold path):      2.302ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_p<5> (PAD)
-  Destination:          adc_input[5].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.948ns (Levels of Logic = 2)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_p<5> to adc_input[5].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    K28.I                  Tiopi                 0.517   adc_data_in_p<5>
-                                                         adc_data_in_p<5>
-                                                         adc_input[5].i_data_ibuf/IBUFDS
-    IODELAY_X0Y185.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<5>
-    IODELAY_X0Y185.DATAOUT Tioddo_IDATAIN        1.431   adc_input[5].i_data_idelay
-                                                         adc_input[5].i_data_idelay
-    ILOGIC_X0Y185.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<5>
-    ILOGIC_X0Y185.CLKB     Tiockdd     (-Th)     0.001   leds_5_OBUF
-                                                         adc_input[5].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.948ns (1.947ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[5].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y185.CLKB   net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      2.302ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_n<5> (PAD)
-  Destination:          adc_input[5].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.948ns (Levels of Logic = 3)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_n<5> to adc_input[5].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    J29.PADOUT             Tiopp                 0.000   adc_data_in_n<5>
-                                                         adc_data_in_n<5>
-                                                         adc_input[5].i_data_ibuf/SLAVEBUF.DIFFIN
-    K28.DIFFI_IN           net (fanout=1)        0.000   adc_input[5].i_data_ibuf/SLAVEBUF.DIFFIN
-    K28.I                  Tiodi                 0.517   adc_data_in_p<5>
-                                                         adc_input[5].i_data_ibuf/IBUFDS
-    IODELAY_X0Y185.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<5>
-    IODELAY_X0Y185.DATAOUT Tioddo_IDATAIN        1.431   adc_input[5].i_data_idelay
-                                                         adc_input[5].i_data_idelay
-    ILOGIC_X0Y185.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<5>
-    ILOGIC_X0Y185.CLKB     Tiockdd     (-Th)     0.001   leds_5_OBUF
-                                                         adc_input[5].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.948ns (1.947ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[5].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y185.CLKB   net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point adc_input[0].i_data_ddr (ILOGIC_X0Y173.DDLY), 2 paths
---------------------------------------------------------------------------------
-Slack (hold path):      2.320ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_p<0> (PAD)
-  Destination:          adc_input[0].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.966ns (Levels of Logic = 2)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_p<0> to adc_input[0].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    J30.I                  Tiopi                 0.535   adc_data_in_p<0>
-                                                         adc_data_in_p<0>
-                                                         adc_input[0].i_data_ibuf/IBUFDS
-    IODELAY_X0Y173.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<0>
-    IODELAY_X0Y173.DATAOUT Tioddo_IDATAIN        1.431   adc_input[0].i_data_idelay
-                                                         adc_input[0].i_data_idelay
-    ILOGIC_X0Y173.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<0>
-    ILOGIC_X0Y173.CLKB     Tiockdd     (-Th)     0.001   leds_0_OBUF
-                                                         adc_input[0].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.966ns (1.965ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[0].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y173.CLKB   net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
---------------------------------------------------------------------------------
-Slack (hold path):      2.320ns (requirement - (clock path + clock arrival + uncertainty - data path))
-  Source:               adc_data_in_n<0> (PAD)
-  Destination:          adc_input[0].i_data_ddr (FF)
-  Destination Clock:    adc_dco_clk falling at 0.000ns
-  Requirement:          1.720ns
-  Data Path Delay:      1.966ns (Levels of Logic = 3)
-  Clock Path Delay:     1.341ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.025ns
-
-  Clock Uncertainty:          0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.050ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Minimum Data Path at Fast Process Corner: adc_data_in_n<0> to adc_input[0].i_data_ddr
-    Location               Delay type         Delay(ns)  Physical Resource
-                                                         Logical Resource(s)
-    ---------------------------------------------------  -------------------
-    K29.PADOUT             Tiopp                 0.000   adc_data_in_n<0>
-                                                         adc_data_in_n<0>
-                                                         adc_input[0].i_data_ibuf/SLAVEBUF.DIFFIN
-    J30.DIFFI_IN           net (fanout=1)        0.000   adc_input[0].i_data_ibuf/SLAVEBUF.DIFFIN
-    J30.I                  Tiodi                 0.535   adc_data_in_p<0>
-                                                         adc_input[0].i_data_ibuf/IBUFDS
-    IODELAY_X0Y173.IDATAIN net (fanout=1)        0.000   adc_data_ibuf_s<0>
-    IODELAY_X0Y173.DATAOUT Tioddo_IDATAIN        1.431   adc_input[0].i_data_idelay
-                                                         adc_input[0].i_data_idelay
-    ILOGIC_X0Y173.DDLY     net (fanout=1)        0.001   adc_data_idelay_s<0>
-    ILOGIC_X0Y173.CLKB     Tiockdd     (-Th)     0.001   leds_0_OBUF
-                                                         adc_input[0].i_data_ddr
-    ---------------------------------------------------  ---------------------------
-    Total                                        1.966ns (1.965ns logic, 0.001ns route)
-                                                         (99.9% logic, 0.1% route)
-
-  Maximum Clock Path at Fast Process Corner: adc_dco_in_p to adc_input[0].i_data_ddr
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    F33.I                Tiopi                 0.654   adc_dco_in_p
-                                                       adc_dco_in_p
-                                                       i_clk_ibuf/IBUFDS
-    BUFR_X0Y9.I          net (fanout=1)        0.146   adc_dco_ibuf_s
-    BUFR_X0Y9.O          Tbrcko_O              0.141   adc_dco_bufr
-                                                       adc_dco_bufr
-    ILOGIC_X0Y173.CLKB   net (fanout=24)       0.400   adc_dco_clk
-    -------------------------------------------------  ---------------------------
-    Total                                      1.341ns (0.795ns logic, 0.546ns route)
-                                                       (59.3% logic, 40.7% route)
-
+Slack: 2.572ns (period - min period limit)
+  Period: 4.000ns
+  Min period limit: 1.428ns (700.280MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: MAIN_200_CLK_MMCM/CLKOUT0
+  Logical resource: MAIN_200_CLK_MMCM/CLKOUT0
+  Location pin: MMCM_ADV_X0Y4.CLKOUT0
+  Clock network: adc_clock_out_OBUF
 --------------------------------------------------------------------------------
 
 
-2 constraints not met.
+All constraints were met.
 
 
 Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock adc_dco_in_p
-----------------+------------+------------+------------+------------+------------------+--------+
-                |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
-Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
-----------------+------------+------------+------------+------------+------------------+--------+
-adc_data_in_n<0>|    2.810(R)|      SLOW  |   -0.598(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.813(F)|      SLOW  |   -0.600(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_n<1>|    2.782(R)|      SLOW  |   -0.562(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.785(F)|      SLOW  |   -0.564(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_n<2>|    2.836(R)|      SLOW  |   -0.620(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.839(F)|      SLOW  |   -0.622(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_n<3>|    2.839(R)|      SLOW  |   -0.623(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.842(F)|      SLOW  |   -0.625(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_n<4>|    2.815(R)|      SLOW  |   -0.599(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.818(F)|      SLOW  |   -0.601(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_n<5>|    2.799(R)|      SLOW  |   -0.580(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.802(F)|      SLOW  |   -0.582(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_n<6>|    2.845(R)|      SLOW  |   -0.620(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.848(F)|      SLOW  |   -0.622(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_n<7>|    2.825(R)|      SLOW  |   -0.611(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.828(F)|      SLOW  |   -0.613(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<0>|    2.810(R)|      SLOW  |   -0.598(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.813(F)|      SLOW  |   -0.600(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<1>|    2.782(R)|      SLOW  |   -0.562(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.785(F)|      SLOW  |   -0.564(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<2>|    2.836(R)|      SLOW  |   -0.620(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.839(F)|      SLOW  |   -0.622(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<3>|    2.839(R)|      SLOW  |   -0.623(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.842(F)|      SLOW  |   -0.625(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<4>|    2.815(R)|      SLOW  |   -0.599(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.818(F)|      SLOW  |   -0.601(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<5>|    2.799(R)|      SLOW  |   -0.580(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.802(F)|      SLOW  |   -0.582(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<6>|    2.845(R)|      SLOW  |   -0.620(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.848(F)|      SLOW  |   -0.622(F)|      FAST  |adc_dco_clk       |   0.000|
-adc_data_in_p<7>|    2.825(R)|      SLOW  |   -0.611(R)|      FAST  |adc_dco_clk       |   0.000|
-                |    2.828(F)|      SLOW  |   -0.613(F)|      FAST  |adc_dco_clk       |   0.000|
-----------------+------------+------------+------------+------------+------------------+--------+
+Clock to Setup on destination clock adc_dco_in_n
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+adc_dco_in_n   |    3.339|         |         |         |
+adc_dco_in_p   |    3.339|         |         |         |
+---------------+---------+---------+---------+---------+
 
-TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 1.62 ns BEFORE COMP         "adc_dco_in_p" "RISING";
-Worst Case Data Window 2.283; Ideal Clock Offset To Actual Clock 2.614; 
-------------------+------------+------------+------------+------------+---------+---------+-------------+
-                  |            |  Process   |            |  Process   |  Setup  |  Hold   |Source Offset|
-Source            |   Setup    |   Corner   |    Hold    |   Corner   |  Slack  |  Slack  |  To Center  |
-------------------+------------+------------+------------+------------+---------+---------+-------------+
-adc_data_in_n<0>  |    2.810(R)|      SLOW  |   -0.598(R)|      FAST  |   -2.910|    2.318|       -2.614|
-adc_data_in_n<1>  |    2.782(R)|      SLOW  |   -0.562(R)|      FAST  |   -2.882|    2.282|       -2.582|
-adc_data_in_n<2>  |    2.836(R)|      SLOW  |   -0.620(R)|      FAST  |   -2.936|    2.340|       -2.638|
-adc_data_in_n<3>  |    2.839(R)|      SLOW  |   -0.623(R)|      FAST  |   -2.939|    2.343|       -2.641|
-adc_data_in_n<4>  |    2.815(R)|      SLOW  |   -0.599(R)|      FAST  |   -2.915|    2.319|       -2.617|
-adc_data_in_n<5>  |    2.799(R)|      SLOW  |   -0.580(R)|      FAST  |   -2.899|    2.300|       -2.600|
-adc_data_in_n<6>  |    2.845(R)|      SLOW  |   -0.620(R)|      FAST  |   -2.945|    2.340|       -2.643|
-adc_data_in_n<7>  |    2.825(R)|      SLOW  |   -0.611(R)|      FAST  |   -2.925|    2.331|       -2.628|
-adc_data_in_p<0>  |    2.810(R)|      SLOW  |   -0.598(R)|      FAST  |   -2.910|    2.318|       -2.614|
-adc_data_in_p<1>  |    2.782(R)|      SLOW  |   -0.562(R)|      FAST  |   -2.882|    2.282|       -2.582|
-adc_data_in_p<2>  |    2.836(R)|      SLOW  |   -0.620(R)|      FAST  |   -2.936|    2.340|       -2.638|
-adc_data_in_p<3>  |    2.839(R)|      SLOW  |   -0.623(R)|      FAST  |   -2.939|    2.343|       -2.641|
-adc_data_in_p<4>  |    2.815(R)|      SLOW  |   -0.599(R)|      FAST  |   -2.915|    2.319|       -2.617|
-adc_data_in_p<5>  |    2.799(R)|      SLOW  |   -0.580(R)|      FAST  |   -2.899|    2.300|       -2.600|
-adc_data_in_p<6>  |    2.845(R)|      SLOW  |   -0.620(R)|      FAST  |   -2.945|    2.340|       -2.643|
-adc_data_in_p<7>  |    2.825(R)|      SLOW  |   -0.611(R)|      FAST  |   -2.925|    2.331|       -2.628|
-------------------+------------+------------+------------+------------+---------+---------+-------------+
-Worst Case Summary|       2.845|         -  |      -0.562|         -  |   -2.945|    2.282|             |
-------------------+------------+------------+------------+------------+---------+---------+-------------+
-
-TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 1.62 ns BEFORE COMP         "adc_dco_in_p" "FALLING";
-Worst Case Data Window 2.284; Ideal Clock Offset To Actual Clock 2.616; 
-------------------+------------+------------+------------+------------+---------+---------+-------------+
-                  |            |  Process   |            |  Process   |  Setup  |  Hold   |Source Offset|
-Source            |   Setup    |   Corner   |    Hold    |   Corner   |  Slack  |  Slack  |  To Center  |
-------------------+------------+------------+------------+------------+---------+---------+-------------+
-adc_data_in_n<0>  |    0.813(F)|      SLOW  |    1.400(F)|      FAST  |   -2.913|    2.320|       -2.617|
-adc_data_in_n<1>  |    0.785(F)|      SLOW  |    1.436(F)|      FAST  |   -2.885|    2.284|       -2.584|
-adc_data_in_n<2>  |    0.839(F)|      SLOW  |    1.378(F)|      FAST  |   -2.939|    2.342|       -2.641|
-adc_data_in_n<3>  |    0.842(F)|      SLOW  |    1.375(F)|      FAST  |   -2.942|    2.345|       -2.644|
-adc_data_in_n<4>  |    0.818(F)|      SLOW  |    1.399(F)|      FAST  |   -2.918|    2.321|       -2.620|
-adc_data_in_n<5>  |    0.802(F)|      SLOW  |    1.418(F)|      FAST  |   -2.902|    2.302|       -2.602|
-adc_data_in_n<6>  |    0.848(F)|      SLOW  |    1.378(F)|      FAST  |   -2.948|    2.342|       -2.645|
-adc_data_in_n<7>  |    0.828(F)|      SLOW  |    1.387(F)|      FAST  |   -2.928|    2.333|       -2.631|
-adc_data_in_p<0>  |    0.813(F)|      SLOW  |    1.400(F)|      FAST  |   -2.913|    2.320|       -2.617|
-adc_data_in_p<1>  |    0.785(F)|      SLOW  |    1.436(F)|      FAST  |   -2.885|    2.284|       -2.584|
-adc_data_in_p<2>  |    0.839(F)|      SLOW  |    1.378(F)|      FAST  |   -2.939|    2.342|       -2.641|
-adc_data_in_p<3>  |    0.842(F)|      SLOW  |    1.375(F)|      FAST  |   -2.942|    2.345|       -2.644|
-adc_data_in_p<4>  |    0.818(F)|      SLOW  |    1.399(F)|      FAST  |   -2.918|    2.321|       -2.620|
-adc_data_in_p<5>  |    0.802(F)|      SLOW  |    1.418(F)|      FAST  |   -2.902|    2.302|       -2.602|
-adc_data_in_p<6>  |    0.848(F)|      SLOW  |    1.378(F)|      FAST  |   -2.948|    2.342|       -2.645|
-adc_data_in_p<7>  |    0.828(F)|      SLOW  |    1.387(F)|      FAST  |   -2.928|    2.333|       -2.631|
-------------------+------------+------------+------------+------------+---------+---------+-------------+
-Worst Case Summary|       0.848|         -  |       1.436|         -  |   -2.948|    2.284|             |
-------------------+------------+------------+------------+------------+---------+---------+-------------+
+Clock to Setup on destination clock adc_dco_in_p
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+adc_dco_in_n   |    3.339|         |         |         |
+adc_dco_in_p   |    3.339|         |         |         |
+---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 16  Score: 46726  (Setup/Max: 46726, Hold: 0)
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 32 paths, 0 nets, and 42 connections
+Constraints cover 15198 paths, 0 nets, and 120 connections
 
 Design statistics:
-   Minimum period:   3.332ns{1}   (Maximum frequency: 300.120MHz)
-   Minimum input required time before clock:   2.848ns
+   Minimum period:   3.339ns{1}   (Maximum frequency: 299.491MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Jan 10 01:26:25 2021 
+Analysis completed Mon Jan 11 11:34:24 2021 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -22,3 +22,49 @@ map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -
 par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf ML605_FMCint_AD9284.ucf 
 bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf ML605_FMCint_AD9284.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf ML605_FMCint_AD9284.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf ML605_FMCint_AD9284.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf ML605_FMCint_AD9284.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf ML605_FMCint_AD9284.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf ML605_FMCint_AD9284.ucf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+xst -intstyle ise -ifn "D:/GIT/ML605_AD9284/HDL/Test01/top.xst" -ofn "D:/GIT/ML605_AD9284/HDL/Test01/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ML605_FMCint_AD9284.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 

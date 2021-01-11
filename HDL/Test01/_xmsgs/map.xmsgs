@@ -20,31 +20,82 @@
 <msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
 </msg>
 
+<msg type="info" file="Place" num="834" delta="new" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">33</arg> IOs, <arg fmt="%d" index="2">32</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
+</msg>
+
 <msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[4].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[2].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[0].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[0].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
+</msg>
+
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[1].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[1].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[2].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[2].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
+</msg>
+
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[3].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[3].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[4].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[4].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
+</msg>
+
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[5].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[5].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[6].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 </msg>
 
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[6].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
+</msg>
+
 <msg type="warning" file="PhysDesignRules" num="1441" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[7].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="1275" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[7].i_data_ddr</arg>&gt;:&lt;<arg fmt="%s" index="2">ILOGICE1_IFF</arg>&gt;.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not configured.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[0].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[7].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[5].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[3].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[1].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2280" delta="old" >Issue with pin connections and/or configuration on block:&lt;<arg fmt="%s" index="1">adc_input[6].i_data_idelay</arg>&gt;:&lt;<arg fmt="%s" index="2">IODELAYE1_IODELAYE1</arg>&gt;.  With IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE are not used and will be ignored.
 </msg>
 
 </messages>
