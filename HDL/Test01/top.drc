@@ -1,10 +1,18 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Jan 11 11:34:32 2021
+Mon Jan 11 13:11:04 2021
 
 drc -z top.ncd top.pcf
 
+WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
+   on block:<adc_input[4].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
+   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
+   are not used and will be ignored.
+WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
+   on block:<adc_input[2].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
+   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
+   are not used and will be ignored.
 WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration
    on block:<adc_input[0].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and
    the Q2 output pin of IFF is not used.
@@ -75,14 +83,6 @@ WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
    are not used and will be ignored.
 WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
    on block:<adc_input[6].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
-   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
-   are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
-   on block:<adc_input[4].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
-   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
-   are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
-   on block:<adc_input[2].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
    IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
    are not used and will be ignored.
 DRC detected 0 errors and 24 warnings.  Please see the previously displayed

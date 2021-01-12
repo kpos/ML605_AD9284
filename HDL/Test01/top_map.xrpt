@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Mon Jan 11 12:05:57 2021">
+  <application stringID="Map" timeStamp="Mon Jan 11 13:09:36 2021">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -117,7 +117,7 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="24"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="816312"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="813088"/>
         <item stringID="MAP_TOTAL_REAL_TIME" value="39 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="39 secs "/>
       </section>
@@ -252,7 +252,7 @@
             <item label="Diff&#xA;Term" stringID="DIFF_TERM" value="FALSE"/>
           </row>
           <row stringID="row" value="4">
-            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="adc_clock_out1"/>
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="adc_clock_out21"/>
             <item stringID="Type" value="IOB"/>
             <item stringID="Direction" value="OUTPUT"/>
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>

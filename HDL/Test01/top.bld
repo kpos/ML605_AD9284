@@ -12,26 +12,26 @@ Done.
 Annotating constraints to design from ucf file "ML605_FMCint_AD9284.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
-WARNING:ConstraintSystem:119 - Constraint <NET "adc_clock_out" LOC = M22 |>
-   [ML605_FMCint_AD9284.ucf(107)]: This constraint cannot be distributed from
-   the design objects matching 'NET "adc_clock_out"' because those design
+WARNING:ConstraintSystem:119 - Constraint <NET "adc_clock_out2" LOC = P31 |>
+   [ML605_FMCint_AD9284.ucf(106)]: This constraint cannot be distributed from
+   the design objects matching 'NET "adc_clock_out2"' because those design
    objects do not contain or drive any instances of the correct type.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "adc_clock_out" LOC = M22 |> [ML605_FMCint_AD9284.ucf(107)]' could not
+   '<NET "adc_clock_out2" LOC = P31 |> [ML605_FMCint_AD9284.ucf(106)]' could not
    be found and so the Locate constraint will be removed.
 
 WARNING:ConstraintSystem:119 - Constraint <IOSTANDARD = LVCMOS25;>
-   [ML605_FMCint_AD9284.ucf(107)]: This constraint cannot be distributed from
-   the design objects matching 'NET "adc_clock_out"' because those design
+   [ML605_FMCint_AD9284.ucf(106)]: This constraint cannot be distributed from
+   the design objects matching 'NET "adc_clock_out2"' because those design
    objects do not contain or drive any instances of the correct type.
 
 INFO:ConstraintSystem:178 - TNM 'PIN_SystemClock_200MHz', used in period
    specification 'TS_SystemClock', was traced into MMCM_ADV instance
    MAIN_200_CLK_MMCM. The following new TNM groups and period specifications
    were generated at the MMCM_ADV output(s): 
-   CLKOUT0: <TIMESPEC TS_adc_clock_out = PERIOD "adc_clock_out" TS_SystemClock *
-   1.25 HIGH 50%>
+   CLKOUT0: <TIMESPEC TS_adc_clock_out2 = PERIOD "adc_clock_out2" TS_SystemClock
+   * 1.25 HIGH 50%>
 
 Done...
 
@@ -52,7 +52,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   3
 
-Total memory usage is 211892 kilobytes
+Total memory usage is 211940 kilobytes
 
 Writing NGD file "top.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec

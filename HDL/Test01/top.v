@@ -17,7 +17,7 @@ module top (
    output led_C, // used for MMCM lock indication
    output led_S,
    output led_N,
-   output adc_clock_out //25P on the interposer card
+   output adc_clock_out2 //25P on the interposer card
 	);
 parameter C_IODELAY_GROUP = "adc_if_delay_group";
 
@@ -45,15 +45,16 @@ wire  [4:0] delay_rdata_s[7:0];
 wire        adc_dco_ibuf_s;
 wire  [7:0] adc_data_p_s;
 wire  [7:0] adc_data_n_s;
+wire adc_clock_out;
+wire adc_clock_out2;
 
-reg   [31:0]   counter;
+//reg   [31:0]   counter;
 
 
-
+// divide by 50M and blink a diode (adc clock in and adc clock out)
 Clock_divider adc_clock_div (
    .clock_in(adc_clock_out),
    .clock_out(led_N));
-   
 Clock_divider adc_dco_div (
    .clock_in(adc_dco_clk),
    .clock_out(led_S));
@@ -128,13 +129,9 @@ MAIN_200_CLK_MMCM (
 );
 
  
-begin
-   assign adc_clock_out = CLKOUT0;
-end
 
 
 // ADC inputs
-//
 // clock buffers  
 IBUFGDS i_clk_ibuf (
  .I (adc_dco_in_p),
@@ -196,52 +193,14 @@ generate
     .D (adc_data_idelay_s[l_inst]),
     .Q1 (adc_data_p_s[l_inst]),
     .Q2 (adc_data_n_s[l_inst]));
-
   end  
   endgenerate
-
-// System clock generation
-
-// Send 250MHz clock to ADC
-
-
-
-begin  
+  
+begin
+   assign adc_clock_out = CLKOUT0;
    assign leds[7:0] = adc_data_p_s[7:0];
-   //assign leds[7] = ~adc_data_p_s[7];
+   assign adc_clock_out2 = adc_clock_out;
+   
 end
 
-/*
-
-// checking if dco clock returns back to fpga
-reg [31:0] counter_dco;
-always @(posedge adc_dco_clk, posedge ML605_FPGA_RESET)
-   if (ML605_FPGA_RESET)
-      counter_dco <= 0;
-   else if (adc_dco_clk)
-        if (counter_dco >= 250_000_000)
-            counter_dco <=0;
-        else
-            counter_dco <= counter_dco + 1;
-
-always @(posedge adc_dco_clk)
-   if (counter_dco >= 125_000_000)
-      led_S <= 1'b1;
-   else
-      led_S <= 1'b0;
-
-*/
-
-//always @(posedge adc_dco_clk, posedge ML605_FPGA_RESET) begin
- //  if ML605_FPGA_RESET
-//    leds[7:0] <= adc_data_p_s[7:0];
-    //(* KEEP = "TRUE" *)
-	 //leds[7] <= 1'b1;
-//end
-
-//always @(posedge adc_dco_ibuf_s) begin
-//  leds[0] <= adc_data_ibuf_s[0];
- //  leds[1] <= adc_dco_ibuf_s;
-//end
-  
 endmodule

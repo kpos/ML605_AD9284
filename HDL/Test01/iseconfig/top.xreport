@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-01-10T23:04:19</DateModified>
+  <DateModified>2021-01-11T12:51:29</DateModified>
   <ModuleName>top</ModuleName>
-  <SummaryTimeStamp>2021-01-10T01:27:23</SummaryTimeStamp>
+  <SummaryTimeStamp>2021-01-11T12:32:26</SummaryTimeStamp>
   <SavedFilePath>D:/GIT/ML605_AD9284/HDL/Test01/iseconfig/top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/GIT/ML605_AD9284/HDL/Test01\</ImplementationReportsDirectory>
   <DateInitialized>2021-01-07T11:59:03</DateInitialized>

@@ -10,7 +10,7 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Mon Jan 11 12:05:18 2021
+Mapped Date    : Mon Jan 11 13:08:57 2021
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,19 +23,19 @@ Total REAL time at the beginning of Placer: 26 secs
 Total CPU  time at the beginning of Placer: 26 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:71253d68) REAL time: 32 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:a0bc90e8) REAL time: 32 secs 
 
 Phase 2.7  Design Feasibility Check
 INFO:Place:834 - Only a subset of IOs are locked. Out of 33 IOs, 32 are locked
    and 1 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:71253d68) REAL time: 33 secs 
+Phase 2.7  Design Feasibility Check (Checksum:a0bc90e8) REAL time: 33 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:70519774) REAL time: 33 secs 
+Phase 3.31  Local Placement Optimization (Checksum:9fe8eaf4) REAL time: 33 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:70519774) REAL time: 33 secs 
+Phase 4.37  Local Placement Optimization (Checksum:9fe8eaf4) REAL time: 33 secs 
 
 Phase 5.2  Initial Placement for Architecture Specific Features
 
@@ -125,39 +125,39 @@ TIMEGRP "TN_adc_dco_clk" AREA_GROUP = "CLKAG_adc_dco_clk" ;
 AREA_GROUP "CLKAG_adc_dco_clk" RANGE = CLOCKREGION_X0Y4, CLOCKREGION_X0Y3;
 
 
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:f43e2029) REAL time: 35 secs 
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:43f3f6e4) REAL time: 35 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:f43e2029) REAL time: 35 secs 
+Phase 6.36  Local Placement Optimization (Checksum:43f3f6e4) REAL time: 35 secs 
 
 Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:f43e2029) REAL time: 35 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:43f3f6e4) REAL time: 35 secs 
 
 Phase 8.3  Local Placement Optimization
 
-Phase 8.3  Local Placement Optimization (Checksum:f445c789) REAL time: 36 secs 
+Phase 8.3  Local Placement Optimization (Checksum:43faec24) REAL time: 36 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:f445c789) REAL time: 36 secs 
+Phase 9.5  Local Placement Optimization (Checksum:43faec24) REAL time: 36 secs 
 
 Phase 10.8  Global Placement
 ......
 ................
 ................
 ......
-Phase 10.8  Global Placement (Checksum:73915dd) REAL time: 37 secs 
+Phase 10.8  Global Placement (Checksum:56ee3a78) REAL time: 37 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:73915dd) REAL time: 37 secs 
+Phase 11.5  Local Placement Optimization (Checksum:56ee3a78) REAL time: 37 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:b2d6bdbd) REAL time: 37 secs 
+Phase 12.18  Placement Optimization (Checksum:28be258) REAL time: 37 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:b2d6bdbd) REAL time: 37 secs 
+Phase 13.5  Local Placement Optimization (Checksum:28be258) REAL time: 38 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:5b074aaf) REAL time: 38 secs 
+Phase 14.34  Placement Validation (Checksum:163218da) REAL time: 38 secs 
 
 Total REAL time to Placer completion: 38 secs 
 Total CPU  time to Placer completion: 38 secs 
@@ -306,7 +306,7 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.92
 
-Peak Memory Usage:  797 MB
+Peak Memory Usage:  794 MB
 Total REAL time to MAP completion:  39 secs 
 Total CPU time to MAP completion:   39 secs 
 

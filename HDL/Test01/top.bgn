@@ -5,7 +5,7 @@ C:\FPGA\Xilinx\14.7\ISE_DS\ISE\.
    "top" is an NCD, version 3.2, device xc6vlx240t, package ff1156, speed -1
 Opened constraints file top.pcf.
 
-Mon Jan 11 11:34:32 2021
+Mon Jan 11 13:11:04 2021
 
 C:\FPGA\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:2 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g InitPin:Pullup -g CsPin:Pullup -g DinPin:Pullup -g BusyPin:Pullup -g RdWrPin:Pullup -g HswapenPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ConfigFallback:Enable -g BPI_page_size:1 -g OverTempPowerDown:Disable -g USR_ACCESS:None -g next_config_addr:None -g JTAG_SysMon:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g DonePipe:Yes -g DriveDone:No -g Encrypt:No top.ncd 
 
@@ -151,6 +151,14 @@ There were 0 CONFIG constraint(s) processed from top.pcf.
 
 
 Running DRC.
+WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
+   on block:<adc_input[4].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
+   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
+   are not used and will be ignored.
+WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
+   on block:<adc_input[2].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
+   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
+   are not used and will be ignored.
 WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration
    on block:<adc_input[0].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and
    the Q2 output pin of IFF is not used.
@@ -221,14 +229,6 @@ WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
    are not used and will be ignored.
 WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
    on block:<adc_input[6].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
-   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
-   are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
-   on block:<adc_input[4].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
-   IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
-   are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration
-   on block:<adc_input[2].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With
    IDELAY_TYPE programming FIXED or DEFAULT active input pins INC, RST and CE
    are not used and will be ignored.
 DRC detected 0 errors and 24 warnings.  Please see the previously displayed

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Jan 11 12:05:56 2021
+// Written by: Map P.20131013 on Mon Jan 11 13:09:35 2021
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -118,7 +118,7 @@ TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_input[0].i_data_idelay"
         "adc_dco_div/counter_23" BEL "adc_dco_div/counter_24" BEL
         "adc_dco_div/counter_25" BEL "adc_dco_div/counter_26" BEL
         "adc_dco_div/counter_27";
-TIMEGRP adc_clock_out = BEL "adc_clock_div/clock_out" BEL
+TIMEGRP adc_clock_out2 = BEL "adc_clock_div/clock_out" BEL
         "adc_clock_div/counter_0" BEL "adc_clock_div/counter_1" BEL
         "adc_clock_div/counter_2" BEL "adc_clock_div/counter_3" BEL
         "adc_clock_div/counter_4" BEL "adc_clock_div/counter_5" BEL
@@ -133,7 +133,7 @@ TIMEGRP adc_clock_out = BEL "adc_clock_div/clock_out" BEL
         "adc_clock_div/counter_22" BEL "adc_clock_div/counter_23" BEL
         "adc_clock_div/counter_24" BEL "adc_clock_div/counter_25" BEL
         "adc_clock_div/counter_26" BEL "adc_clock_div/counter_27" BEL
-        "adc_clock_out1" BEL "adc_clock_out_BUFG";
+        "adc_clock_out21" BEL "adc_clock_out2_BUFG";
 TIMEGRP adc_data_in_pta_pads = BEL "adc_data_in_p<0>" BEL "adc_data_in_p<1>"
         BEL "adc_data_in_p<2>" BEL "adc_data_in_p<3>" BEL "adc_data_in_p<4>"
         BEL "adc_data_in_p<5>" BEL "adc_data_in_p<6>" BEL "adc_data_in_p<7>"
@@ -144,7 +144,7 @@ PIN MAIN_200_CLK_MMCM_pins<2> = BEL "MAIN_200_CLK_MMCM" PINNAME CLKIN1;
 TIMEGRP PIN_SystemClock_200MHz = PIN "MAIN_200_CLK_MMCM_pins<2>";
 TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIGH 50%;
 TS_SystemClock = PERIOD TIMEGRP "PIN_SystemClock_200MHz" 200 MHz HIGH 50%;
-TS_adc_clock_out = PERIOD TIMEGRP "adc_clock_out" TS_SystemClock * 1.25 HIGH
+TS_adc_clock_out2 = PERIOD TIMEGRP "adc_clock_out2" TS_SystemClock * 1.25 HIGH
         50%;
 PIN ML605_FPGA_RESET_pins<0> = BEL "ML605_FPGA_RESET" PINNAME PAD;
 PIN MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2> = BEL

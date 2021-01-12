@@ -9,7 +9,7 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Mon Jan 11 12:05:18 2021
+Mapped Date    : Mon Jan 11 13:08:57 2021
 
 Design Summary
 --------------
@@ -87,7 +87,7 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.92
 
-Peak Memory Usage:  797 MB
+Peak Memory Usage:  794 MB
 Total REAL time to MAP completion:  39 secs 
 Total CPU time to MAP completion:   39 secs 
 
@@ -219,7 +219,7 @@ Section 6 - IOB Properties
 | ML605_FPGA_RESET                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ML605_SystemClock_200MHz_n         | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | ML605_SystemClock_200MHz_p         | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| adc_clock_out1                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| adc_clock_out21                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | adc_data_in_n<0>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_data_in_n<1>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_data_in_n<2>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |

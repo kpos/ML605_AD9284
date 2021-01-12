@@ -103,8 +103,8 @@ NET "led_S" LOC = AH28;
 NET "led_N" LOC = AH27;
 
 NET "led*" IOSTANDARD = LVCMOS25;
-//NET "adc_clock_out" LOC = P31 | IOSTANDARD = LVCMOS25; //25P on interposer board
-NET "adc_clock_out" LOC = M22 | IOSTANDARD = LVCMOS25; //J55 on ML605
+NET "adc_clock_out2" LOC = P31 | IOSTANDARD = LVCMOS25; //25P on interposer board
+//NET "adc_clock_out" LOC = M22 | IOSTANDARD = LVCMOS25; //J55 on ML605
 
 NET "ML605_FPGA_RESET"  LOC = "H10" | TIG ;
 
