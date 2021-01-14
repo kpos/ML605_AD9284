@@ -9,7 +9,8 @@ module test02_top(
     input [7:0] adc_data_in_n,
     input adc_dco_in_p,
     input adc_dco_in_n,
-
+    output adc_clock_out,
+    
     output [7:0] leds,
     output led_C,
     output led_S,
@@ -19,3 +20,5 @@ module test02_top(
 // capture module 
 
 endmodule
+
+
