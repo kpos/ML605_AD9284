@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-01-11T22:44:16</DateModified>
+  <DateModified>2021-01-16T16:37:13</DateModified>
   <ModuleName>test02_top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>D:/GIT/ML605_AD9284/HDL/Test02/iseconfig/test02_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/GIT/ML605_AD9284/HDL/Test02</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>D:/GIT/ML605_AD9284/HDL/Test02\</ImplementationReportsDirectory>
   <DateInitialized>2021-01-11T22:44:16</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

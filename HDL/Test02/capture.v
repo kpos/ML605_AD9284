@@ -1,20 +1,10 @@
 `timescale 1ns / 1ps
 
-module capture(rst, clk, 
-    input rst,
-    input clk,
-    
-    input [7:0] adc_data_in_p,
-    input [7:0] adc_data_in_n,
-    input adc_dco_in_p,
-    input adc_dco_in_n,
-    output adc_clock_out)
-    
-endmodule
 
 
-module capture (dco, din_p, din_n, wr_data, dclk);
+module capture (rst, dco, din_p, din_n, wr_data, dclk);
 
+input rst;
 input dco;
 input dclk;             
 input [7:0] din_p, din_n;
