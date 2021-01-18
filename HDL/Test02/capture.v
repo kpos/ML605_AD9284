@@ -1,13 +1,11 @@
 `timescale 1ns / 1ps
+// from Analog Device sample files
 
+module capture (dco, din_p, din_n, wr_data, dclk);
 
-
-module capture (rst, dco, din_p, din_n, wr_data, dclk);
-
-input rst;
-input dco;
-input dclk;             
-input [7:0] din_p, din_n;
+input dco; // data clock from adc
+input dclk;    // data clock when reading         
+input [7:0] din_p, din_n; //diff data input
 
 output reg [63:0] wr_data; 
 
