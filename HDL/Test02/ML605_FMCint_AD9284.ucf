@@ -59,11 +59,9 @@ NET "adc_data_in_n[7]" DIFF_TERM = "TRUE";
 
 # Wyjscie zegara ADC -> FPGA - para roznicowa
 NET "adc_dco_in_p" LOC = F33;
-NET "adc_dco_in_p" IOSTANDARD = LVDS_25;
-NET "adc_dco_in_p" DIFF_TERM = "TRUE";
 NET "adc_dco_in_n" LOC = G33;
-NET "adc_dco_in_n" IOSTANDARD = LVDS_25;
-NET "adc_dco_in_n" DIFF_TERM = "TRUE";
+NET "adc_dco_in_*" IOSTANDARD = LVDS_25;
+NET "adc_dco_in_*" DIFF_TERM = "TRUE";
 
 #INST adc_dco_bufr LOC= BUFR_X0Y3;
 
@@ -74,6 +72,8 @@ NET "adc_data_in_p[*]" TNM = "adc_data_in_pta_pads";
 NET "adc_data_in_n[*]" TNM = "adc_data_in_pta_pads";
 #TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 3.62 ns BEFORE "adc_dco_in_p" RISING;
 #TIMEGRP "adc_data_in_pta_pads" OFFSET = IN -0.1 ns VALID 3.62 ns BEFORE "adc_dco_in_p" FALLING;
+
+NET "adc_clk_out_p" LOC =  
 
 
 # Powrot SPI z karty przetwornika
@@ -112,6 +112,8 @@ NET "pb_C" LOC = G26;
 
 
 NET "led*" IOSTANDARD = LVCMOS25;
+NET "pb_*" IOSTANDARD = LVCMOS25;
+
 NET "adc_clock_out2" LOC = P31 | IOSTANDARD = LVCMOS25; //25P on interposer board
 //NET "adc_clock_out" LOC = M22 | IOSTANDARD = LVCMOS25; //J55 on ML605
 

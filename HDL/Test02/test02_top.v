@@ -1,9 +1,16 @@
 `timescale 1ns / 1ps
 
 module test02_top(
-    input clk_in_p,
+    input clk_in_p, // 200MHz in
     input clk_in_n,
     input rst,
+    
+    input pb_N,
+    input pb_E, // pattern enable
+    input pb_W, // data read speed
+    input pb_S, // dco speed
+    input pb_C, // select channel
+    
 
     input [7:0] adc_data_in_p,
     input [7:0] adc_data_in_n,
@@ -12,9 +19,11 @@ module test02_top(
     output adc_clock_out,
     
     output [7:0] leds,
-    output led_C,
-    output led_S,
-    output led_N
+    output led_N,   // PLL lock
+    output led_E,   // Pattern generator enabled
+    output led_W,   // modulo 50M data read
+    output led_S,   // modulo 50M dco clock
+    output led_C    // channel selector A/B
     );
 
 
