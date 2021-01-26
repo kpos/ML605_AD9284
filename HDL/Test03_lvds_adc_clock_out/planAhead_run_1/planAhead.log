@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Jan 08 01:04:09 2021
+# Process ID: 2664
+# Log file: D:/GIT/ML605_AD9284/HDL/Test01/planAhead_run_1/planAhead.log
+# Journal file: D:/GIT/ML605_AD9284/HDL/Test01/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/GIT/ML605_AD9284/HDL/Test01/pa.fromNetlist.tcl
+# create_project -name Test01 -dir "D:/GIT/ML605_AD9284/HDL/Test01/planAhead_run_1" -part xc6vlx240tff1156-1
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/GIT/ML605_AD9284/HDL/Test01/top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/GIT/ML605_AD9284/HDL/Test01} }
+# set_property target_constrs_file "ML605_FMCint_AD9284.ucf" [current_fileset -constrset]
+Adding file 'D:/GIT/ML605_AD9284/HDL/Test01/ML605_FMCint_AD9284.ucf' to fileset 'constrs_1'
+# add_files [list {ML605_FMCint_AD9284.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6vlx240tff1156-1
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design top.ngc ...
+WARNING:NetListWriters:298 - No output is written to top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file top.edif ...
+ngc2edif: Total memory usage is 77984 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/Test01.data/cache/top_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/Test01.data/cache/top_ngc_zx.edif]
+Loading clock regions from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ClockRegion.xml
+Loading clock buffers from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ClockBuffers.xml
+Loading clock placement rules from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockPlacerRules.xml
+Loading clock capable ios from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/virtex6/ClockCapableIOBs.xml
+Loading package pin functions from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/PinFunctions.xml...
+Loading package from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/virtex6lxt/xc6vlx240t/ff1156/Package.xml
+Loading io standards from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/IOStandards.xml
+Loading device configuration modes from C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/virtex6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/FPGA/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/virtex6/drc.xml
+Parsing UCF File [D:/GIT/ML605_AD9284/HDL/Test01/ML605_FMCint_AD9284.ucf]
+Finished Parsing UCF File [D:/GIT/ML605_AD9284/HDL/Test01/ML605_FMCint_AD9284.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 1b158ea6
+link_design: Time (s): elapsed = 00:00:15 . Memory (MB): peak = 722.387 ; gain = 279.965
+INFO: [Power 33-160] Power Analysis is not supported for 6-series devices.
+INFO: [Power 33-160] Power Analysis is not supported for 6-series devices.
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See D:/GIT/ML605_AD9284/HDL/Test01\planAhead_pid2664.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Jan 08 01:07:38 2021...
+INFO: [Common 17-83] Releasing license: PlanAhead
