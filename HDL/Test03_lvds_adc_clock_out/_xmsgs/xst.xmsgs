@@ -5,40 +5,40 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 49: Redeclaration of ansi port <arg fmt="%s" index="1">adc_clock_out2</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="new" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 54: Redeclaration of ansi port <arg fmt="%s" index="1">leds</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 107: Assignment to <arg fmt="%s" index="1">CLKOUT0B</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 112: Assignment to <arg fmt="%s" index="1">CLKOUT0B</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 108: Assignment to <arg fmt="%s" index="1">CLKOUT1</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 113: Assignment to <arg fmt="%s" index="1">CLKOUT1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 109: Assignment to <arg fmt="%s" index="1">CLKOUT1B</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 114: Assignment to <arg fmt="%s" index="1">CLKOUT1B</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 110: Assignment to <arg fmt="%s" index="1">CLKOUT2</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 115: Assignment to <arg fmt="%s" index="1">CLKOUT2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 111: Assignment to <arg fmt="%s" index="1">CLKOUT2B</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 116: Assignment to <arg fmt="%s" index="1">CLKOUT2B</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 112: Assignment to <arg fmt="%s" index="1">CLKOUT3</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 117: Assignment to <arg fmt="%s" index="1">CLKOUT3</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 113: Assignment to <arg fmt="%s" index="1">CLKOUT3B</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 118: Assignment to <arg fmt="%s" index="1">CLKOUT3B</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 114: Assignment to <arg fmt="%s" index="1">CLKOUT4</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 119: Assignment to <arg fmt="%s" index="1">CLKOUT4</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 115: Assignment to <arg fmt="%s" index="1">CLKOUT5</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 120: Assignment to <arg fmt="%s" index="1">CLKOUT5</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 116: Assignment to <arg fmt="%s" index="1">CLKOUT6</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 121: Assignment to <arg fmt="%s" index="1">CLKOUT6</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test01\top.v" Line 119: Assignment to <arg fmt="%s" index="1">CLKFBOUTB</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 124: Assignment to <arg fmt="%s" index="1">CLKFBOUTB</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">MAIN_200_CLK_MMCM</arg> in unit <arg fmt="%s" index="2">top</arg> of type <arg fmt="%s" index="3">MMCM_BASE</arg> has been replaced by <arg fmt="%s" index="4">MMCM_ADV</arg>
@@ -66,6 +66,9 @@
 </msg>
 
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">adc_input[7].i_data_ddr</arg> in unit <arg fmt="%s" index="2">top</arg> of type <arg fmt="%s" index="3">IDDR</arg> has been replaced by <arg fmt="%s" index="4">IDDR_2CLK</arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

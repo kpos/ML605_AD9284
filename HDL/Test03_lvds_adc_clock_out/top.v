@@ -17,7 +17,9 @@ module top (
    output led_C, // used for MMCM lock indication
    output led_S,
    output led_N,
-   output adc_clock_out2 //25P on the interposer card
+   //output adc_clock_out2 //25P on the interposer card
+   output adc_clock_out_p,
+   output adc_clock_out_n
 	);
 parameter C_IODELAY_GROUP = "adc_if_delay_group";
 
@@ -47,6 +49,9 @@ wire  [7:0] adc_data_p_s;
 wire  [7:0] adc_data_n_s;
 wire adc_clock_out;
 wire adc_clock_out2;
+wire led_clock;
+
+reg [7:0] leds;
 
 //reg   [31:0]   counter;
 
@@ -128,8 +133,14 @@ MAIN_200_CLK_MMCM (
    .CLKFBIN(CLKFBOUT)      // 1-bit input: Feedback clock input
 );
 
- 
+OBUFDS adc_clock_out_ds (
+  .I(adc_clock_out),
+  .O(adc_clock_out_p),
+  .OB(adc_clock_out_n));
 
+always @(posedge led_S) begin
+      leds[7:0] = adc_data_p_s[7:0];;
+   end
 
 // ADC inputs
 // clock buffers  
@@ -198,8 +209,8 @@ generate
   
 begin
    assign adc_clock_out = CLKOUT0;
-   assign leds[7:0] = adc_data_p_s[7:0];
-   assign adc_clock_out2 = adc_clock_out;
+   //assign leds[7:0] = adc_data_p_s[7:0];
+   //assign adc_clock_out2 = adc_clock_out;
    
 end
 

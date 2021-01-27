@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-KIKU::  Mon Jan 11 13:09:38 2021
+KIKU::  Wed Jan 27 00:46:39 2021
 
 par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
 
@@ -56,9 +56,11 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        33 out of     600    5%
-    Number of LOCed IOBs:                       32 out of      33   96%
-    IOB Flip Flops:                              8
+  Number of bonded IOBs:                        34 out of     600    5%
+    Number of LOCed IOBs:                       34 out of      34  100%
+    IOB Flip Flops:                             16
+    IOB Master Pads:                             1
+    IOB Slave Pads:                              1
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
@@ -69,7 +71,9 @@ Specific Feature Utilization:
   Number of ILOGICE1/ISERDESE1s:                 8 out of     720    1%
     Number used as ILOGICE1s:                    8
     Number used as ISERDESE1s:                   0
-  Number of OLOGICE1/OSERDESE1s:                 0 out of     720    0%
+  Number of OLOGICE1/OSERDESE1s:                 8 out of     720    1%
+    Number used as OLOGICE1s:                    8
+    Number used as OSERDESE1s:                   0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHCEs:                             0 out of     144    0%
   Number of BUFIODQSs:                           0 out of      72    0%
@@ -93,35 +97,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 12 secs 
-Finished initial Timing Analysis.  REAL time: 12 secs 
+Starting initial Timing Analysis.  REAL time: 14 secs 
+Finished initial Timing Analysis.  REAL time: 14 secs 
 
 Starting Router
 
 
-Phase  1  : 5927 unrouted;      REAL time: 15 secs 
+Phase  1  : 5943 unrouted;      REAL time: 17 secs 
 
-Phase  2  : 5371 unrouted;      REAL time: 15 secs 
+Phase  2  : 5387 unrouted;      REAL time: 17 secs 
 
-Phase  3  : 146 unrouted;      REAL time: 34 secs 
+Phase  3  : 103 unrouted;      REAL time: 40 secs 
 
-Phase  4  : 146 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
+Phase  4  : 103 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 49 secs 
 
 Updating file: top.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 50 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 50 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 50 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 50 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 50 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
-Total REAL time to Router completion: 42 secs 
-Total CPU time to Router completion: 42 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 50 secs 
+Total REAL time to Router completion: 50 secs 
+Total CPU time to Router completion: 50 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -139,13 +143,16 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         adc_dco_clk |  Regional Clk| No   |   32 |  0.203     |  1.052      |
+|        CLKOUT0_BUFG | BUFGCTRL_X0Y0| No   |    9 |  0.015     |  1.718      |
 +---------------------+--------------+------+------+------------+-------------+
-| adc_clock_out2_BUFG | BUFGCTRL_X0Y0| No   |    9 |  0.024     |  1.769      |
+|         adc_dco_clk |  Regional Clk| No   |   32 |  0.120     |  0.969      |
++---------------------+--------------+------+------+------------+-------------+
+|adc_dco_div/clock_ou |              |      |      |            |             |
+|                   t |         Local|      |    9 |  1.181     |  4.270      |
 +---------------------+--------------+------+------+------------+-------------+
 |MMCM_PHASE_CALIBRATI |              |      |      |            |             |
 |ON_ML_LUT2_4_ML_NEW_ |              |      |      |            |             |
-|                 CLK |         Local|      |    3 |  0.115     |  0.353      |
+|                 CLK |         Local|      |    3 |  0.115     |  0.592      |
 +---------------------+--------------+------+------+------------+-------------+
 |MAIN_200_CLK_MMCM_ML |              |      |      |            |             |
 |            _NEW_OUT |         Local|      |    2 |  0.000     |  0.497      |
@@ -173,13 +180,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIG | SETUP       |     1.186ns|     2.814ns|       0|           0
-  H 50%                                     | HOLD        |     0.140ns|            |       0|           0
+  TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIG | SETUP       |     1.307ns|     2.693ns|       0|           0
+  H 50%                                     | HOLD        |     0.141ns|            |       0|           0
                                             | MINPERIOD   |     0.668ns|     3.332ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_adc_clock_out2 = PERIOD TIMEGRP "adc_c | SETUP       |     1.020ns|     2.980ns|       0|           0
-  lock_out2" TS_SystemClock * 1.25 HIGH     | HOLD        |     0.147ns|            |       0|           0
-       50%                                  |             |            |            |        |            
+  TS_CLKOUT0 = PERIOD TIMEGRP "CLKOUT0" TS_ | SETUP       |     1.038ns|     2.962ns|       0|           0
+  SystemClock * 1.25 HIGH 50%               | HOLD        |     0.147ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_SystemClock = PERIOD TIMEGRP "PIN_Syst | MINLOWPULSE |     2.200ns|     2.800ns|       0|           0
   emClock_200MHz" 200 MHz HIGH 50%          |             |            |            |        |            
@@ -196,8 +202,8 @@ Derived Constraints for TS_SystemClock
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_SystemClock                 |      5.000ns|      2.800ns|      3.725ns|            0|            0|            0|         1646|
-| TS_adc_clock_out2             |      4.000ns|      2.980ns|          N/A|            0|            0|         1646|            0|
+|TS_SystemClock                 |      5.000ns|      2.800ns|      3.703ns|            0|            0|            0|         1646|
+| TS_CLKOUT0                    |      4.000ns|      2.962ns|          N/A|            0|            0|         1646|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -207,8 +213,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 46 secs 
-Total CPU time to PAR completion: 46 secs 
+Total REAL time to PAR completion: 54 secs 
+Total CPU time to PAR completion: 54 secs 
 
 Peak Memory Usage:  732 MB
 

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Jan 11 13:09:35 2021
+// Written by: Map P.20131013 on Wed Jan 27 00:46:35 2021
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -28,6 +28,8 @@ COMP "leds<4>" LOCATE = SITE "AB23" LEVEL 1;
 COMP "leds<5>" LOCATE = SITE "AG23" LEVEL 1;
 COMP "leds<6>" LOCATE = SITE "AE24" LEVEL 1;
 COMP "leds<7>" LOCATE = SITE "AD24" LEVEL 1;
+COMP "adc_clock_out_n" LOCATE = SITE "B10" LEVEL 1;
+COMP "adc_clock_out_p" LOCATE = SITE "A10" LEVEL 1;
 COMP "led_C" LOCATE = SITE "AP24" LEVEL 1;
 COMP "led_N" LOCATE = SITE "AH27" LEVEL 1;
 COMP "ML605_SystemClock_200MHz_n" LOCATE = SITE "H9" LEVEL 1;
@@ -118,22 +120,22 @@ TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_input[0].i_data_idelay"
         "adc_dco_div/counter_23" BEL "adc_dco_div/counter_24" BEL
         "adc_dco_div/counter_25" BEL "adc_dco_div/counter_26" BEL
         "adc_dco_div/counter_27";
-TIMEGRP adc_clock_out2 = BEL "adc_clock_div/clock_out" BEL
-        "adc_clock_div/counter_0" BEL "adc_clock_div/counter_1" BEL
-        "adc_clock_div/counter_2" BEL "adc_clock_div/counter_3" BEL
-        "adc_clock_div/counter_4" BEL "adc_clock_div/counter_5" BEL
-        "adc_clock_div/counter_6" BEL "adc_clock_div/counter_7" BEL
-        "adc_clock_div/counter_8" BEL "adc_clock_div/counter_9" BEL
-        "adc_clock_div/counter_10" BEL "adc_clock_div/counter_11" BEL
-        "adc_clock_div/counter_12" BEL "adc_clock_div/counter_13" BEL
-        "adc_clock_div/counter_14" BEL "adc_clock_div/counter_15" BEL
-        "adc_clock_div/counter_16" BEL "adc_clock_div/counter_17" BEL
-        "adc_clock_div/counter_18" BEL "adc_clock_div/counter_19" BEL
-        "adc_clock_div/counter_20" BEL "adc_clock_div/counter_21" BEL
-        "adc_clock_div/counter_22" BEL "adc_clock_div/counter_23" BEL
-        "adc_clock_div/counter_24" BEL "adc_clock_div/counter_25" BEL
-        "adc_clock_div/counter_26" BEL "adc_clock_div/counter_27" BEL
-        "adc_clock_out21" BEL "adc_clock_out2_BUFG";
+TIMEGRP CLKOUT0 = BEL "adc_clock_div/clock_out" BEL "adc_clock_div/counter_0"
+        BEL "adc_clock_div/counter_1" BEL "adc_clock_div/counter_2" BEL
+        "adc_clock_div/counter_3" BEL "adc_clock_div/counter_4" BEL
+        "adc_clock_div/counter_5" BEL "adc_clock_div/counter_6" BEL
+        "adc_clock_div/counter_7" BEL "adc_clock_div/counter_8" BEL
+        "adc_clock_div/counter_9" BEL "adc_clock_div/counter_10" BEL
+        "adc_clock_div/counter_11" BEL "adc_clock_div/counter_12" BEL
+        "adc_clock_div/counter_13" BEL "adc_clock_div/counter_14" BEL
+        "adc_clock_div/counter_15" BEL "adc_clock_div/counter_16" BEL
+        "adc_clock_div/counter_17" BEL "adc_clock_div/counter_18" BEL
+        "adc_clock_div/counter_19" BEL "adc_clock_div/counter_20" BEL
+        "adc_clock_div/counter_21" BEL "adc_clock_div/counter_22" BEL
+        "adc_clock_div/counter_23" BEL "adc_clock_div/counter_24" BEL
+        "adc_clock_div/counter_25" BEL "adc_clock_div/counter_26" BEL
+        "adc_clock_div/counter_27" BEL "adc_clock_out_p" BEL "adc_clock_out_n"
+        BEL "CLKOUT0_BUFG";
 TIMEGRP adc_data_in_pta_pads = BEL "adc_data_in_p<0>" BEL "adc_data_in_p<1>"
         BEL "adc_data_in_p<2>" BEL "adc_data_in_p<3>" BEL "adc_data_in_p<4>"
         BEL "adc_data_in_p<5>" BEL "adc_data_in_p<6>" BEL "adc_data_in_p<7>"
@@ -144,8 +146,7 @@ PIN MAIN_200_CLK_MMCM_pins<2> = BEL "MAIN_200_CLK_MMCM" PINNAME CLKIN1;
 TIMEGRP PIN_SystemClock_200MHz = PIN "MAIN_200_CLK_MMCM_pins<2>";
 TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIGH 50%;
 TS_SystemClock = PERIOD TIMEGRP "PIN_SystemClock_200MHz" 200 MHz HIGH 50%;
-TS_adc_clock_out2 = PERIOD TIMEGRP "adc_clock_out2" TS_SystemClock * 1.25 HIGH
-        50%;
+TS_CLKOUT0 = PERIOD TIMEGRP "CLKOUT0" TS_SystemClock * 1.25 HIGH 50%;
 PIN ML605_FPGA_RESET_pins<0> = BEL "ML605_FPGA_RESET" PINNAME PAD;
 PIN MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LUT2_4" PINNAME O6;

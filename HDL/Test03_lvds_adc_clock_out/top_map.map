@@ -10,7 +10,7 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Mon Jan 11 13:08:57 2021
+Mapped Date    : Wed Jan 27 00:45:46 2021
 
 Mapping design into LUTs...
 Running directed packing...
@@ -19,23 +19,20 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 26 secs 
-Total CPU  time at the beginning of Placer: 26 secs 
+Total REAL time at the beginning of Placer: 34 secs 
+Total CPU  time at the beginning of Placer: 34 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:a0bc90e8) REAL time: 32 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:7d657255) REAL time: 42 secs 
 
 Phase 2.7  Design Feasibility Check
-INFO:Place:834 - Only a subset of IOs are locked. Out of 33 IOs, 32 are locked
-   and 1 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:a0bc90e8) REAL time: 33 secs 
+Phase 2.7  Design Feasibility Check (Checksum:7d657255) REAL time: 43 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:9fe8eaf4) REAL time: 33 secs 
+Phase 3.31  Local Placement Optimization (Checksum:b9e1f108) REAL time: 43 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:9fe8eaf4) REAL time: 33 secs 
+Phase 4.37  Local Placement Optimization (Checksum:b9e1f108) REAL time: 43 secs 
 
 Phase 5.2  Initial Placement for Architecture Specific Features
 
@@ -118,51 +115,56 @@ Clock-Region: <CLOCKREGION_X0Y4>
 # 
 ######################################################################################
 
-# Regional-Clock "adc_dco_clk" driven by "BUFR_X0Y9"
-INST "adc_dco_bufr" LOC = "BUFR_X0Y9" ;
+# Regional-Clock "adc_dco_clk" driven by "BUFR_X0Y8"
+INST "adc_dco_bufr" LOC = "BUFR_X0Y8" ;
 NET "adc_dco_clk" TNM_NET = "TN_adc_dco_clk" ;
 TIMEGRP "TN_adc_dco_clk" AREA_GROUP = "CLKAG_adc_dco_clk" ;
 AREA_GROUP "CLKAG_adc_dco_clk" RANGE = CLOCKREGION_X0Y4, CLOCKREGION_X0Y3;
 
 
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:43f3f6e4) REAL time: 35 secs 
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:5165d4ee) REAL time: 46 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:43f3f6e4) REAL time: 35 secs 
+Phase 6.36  Local Placement Optimization (Checksum:5165d4ee) REAL time: 46 secs 
 
 Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:43f3f6e4) REAL time: 35 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:5165d4ee) REAL time: 46 secs 
 
 Phase 8.3  Local Placement Optimization
-
-Phase 8.3  Local Placement Optimization (Checksum:43faec24) REAL time: 36 secs 
+Phase 8.3  Local Placement Optimization (Checksum:5165d4ee) REAL time: 46 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:43faec24) REAL time: 36 secs 
+Phase 9.5  Local Placement Optimization (Checksum:5165d4ee) REAL time: 46 secs 
 
 Phase 10.8  Global Placement
-......
-................
-................
-......
-Phase 10.8  Global Placement (Checksum:56ee3a78) REAL time: 37 secs 
+.....
+.......................
+.......................
+.....
+Phase 10.8  Global Placement (Checksum:855dedae) REAL time: 48 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:56ee3a78) REAL time: 37 secs 
+Phase 11.5  Local Placement Optimization (Checksum:855dedae) REAL time: 48 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:28be258) REAL time: 37 secs 
+Phase 12.18  Placement Optimization (Checksum:348a31e) REAL time: 48 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:28be258) REAL time: 38 secs 
+Phase 13.5  Local Placement Optimization (Checksum:348a31e) REAL time: 48 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:163218da) REAL time: 38 secs 
+Phase 14.34  Placement Validation (Checksum:f62bba29) REAL time: 48 secs 
 
-Total REAL time to Placer completion: 38 secs 
-Total CPU  time to Placer completion: 38 secs 
+Total REAL time to Placer completion: 49 secs 
+Total CPU  time to Placer completion: 48 secs 
 Running post-placement packing...
 Writing output files...
+WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
+   block:<adc_input[1].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
+   pins INC, RST and CE are not used and will be ignored.
+WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
+   block:<adc_input[6].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
+   pins INC, RST and CE are not used and will be ignored.
 WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
    block:<adc_input[4].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
    pins INC, RST and CE are not used and will be ignored.
@@ -221,12 +223,6 @@ WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration o
 WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
    block:<adc_input[3].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
    pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[1].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[6].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
 
 Design Summary
 --------------
@@ -271,9 +267,11 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        33 out of     600    5%
-    Number of LOCed IOBs:                       32 out of      33   96%
-    IOB Flip Flops:                              8
+  Number of bonded IOBs:                        34 out of     600    5%
+    Number of LOCed IOBs:                       34 out of      34  100%
+    IOB Flip Flops:                             16
+    IOB Master Pads:                             1
+    IOB Slave Pads:                              1
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
@@ -284,7 +282,9 @@ Specific Feature Utilization:
   Number of ILOGICE1/ISERDESE1s:                 8 out of     720    1%
     Number used as ILOGICE1s:                    8
     Number used as ISERDESE1s:                   0
-  Number of OLOGICE1/OSERDESE1s:                 0 out of     720    0%
+  Number of OLOGICE1/OSERDESE1s:                 8 out of     720    1%
+    Number used as OLOGICE1s:                    8
+    Number used as OSERDESE1s:                   0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHCEs:                             0 out of     144    0%
   Number of BUFIODQSs:                           0 out of      72    0%
@@ -304,11 +304,11 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-Average Fanout of Non-Clock Nets:                2.92
+Average Fanout of Non-Clock Nets:                2.83
 
-Peak Memory Usage:  794 MB
-Total REAL time to MAP completion:  39 secs 
-Total CPU time to MAP completion:   39 secs 
+Peak Memory Usage:  795 MB
+Total REAL time to MAP completion:  50 secs 
+Total CPU time to MAP completion:   50 secs 
 
 Mapping completed.
 See MAP report file "top_map.mrp" for details.

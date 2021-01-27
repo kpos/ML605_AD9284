@@ -5,20 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;adc_clock_out2&quot; LOC = P31 |&gt; [ML605_FMCint_AD9284.ucf(106)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;adc_clock_out2&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">PIN_SystemClock_200MHz</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_SystemClock</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MAIN_200_CLK_MMCM</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_CLKOUT0 = PERIOD &quot;CLKOUT0&quot; TS_SystemClock * 1.25 HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;adc_clock_out2&quot; LOC = P31 |&gt; [ML605_FMCint_AD9284.ucf(106)]&apos; could not be found and so the Locate constraint will be removed.
-</msg>
-
-<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;IOSTANDARD = LVCMOS25;&gt; [ML605_FMCint_AD9284.ucf(106)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;adc_clock_out2&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
-</msg>
-
-<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">PIN_SystemClock_200MHz</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_SystemClock</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCM_ADV</arg> instance <arg fmt="%s" index="5">MAIN_200_CLK_MMCM</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCM_ADV</arg> output(s): 
-<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_adc_clock_out2 = PERIOD &quot;adc_clock_out2&quot; TS_SystemClock * 1.25 HIGH 50%&gt;</arg>
-</msg>
-
-<msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN1_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">MMCM</arg> instance <arg fmt="%s" index="3">MAIN_200_CLK_MMCM</arg> to <arg fmt="%s" index="4">5.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_SystemClock&quot; = PERIOD &quot;PIN_SystemClock_200MHz&quot; 200 MHz HIGH 50 %;&gt; [ML605_FMCint_AD9284.ucf(117)]</arg>).
+<msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN1_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">MMCM</arg> instance <arg fmt="%s" index="3">MAIN_200_CLK_MMCM</arg> to <arg fmt="%s" index="4">5.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_SystemClock&quot; = PERIOD &quot;PIN_SystemClock_200MHz&quot; 200 MHz HIGH 50 %;&gt; [ML605_FMCint_AD9284.ucf(121)]</arg>).
 </msg>
 
 </messages>
