@@ -163,7 +163,7 @@ generate
     .IB (adc_data_in_n[l_inst]),
     .O (adc_data_ibuf_s[l_inst]));
 
-  (* IODELAY_GROUP = C_IODELAY_GROUP *)
+/*  (* IODELAY_GROUP = C_IODELAY_GROUP *)
   IODELAYE1 #(
     .CINVCTRL_SEL ("FALSE"),
     .DELAY_SRC ("I"),
@@ -189,7 +189,7 @@ generate
     .RST(ML605_FPGA_RESET),//
     //.RST (delay_ld[l_inst]),
     //.CNTVALUEIN (delay_wdata),
-    .CNTVALUEOUT (delay_rdata_s[l_inst]));//
+    .CNTVALUEOUT (delay_rdata_s[l_inst]));//*/
  
   IDDR #(
     .INIT_Q1 (1'b0),
@@ -201,7 +201,8 @@ generate
     .R (ML605_FPGA_RESET),
     .S (1'b0),
     .C (adc_dco_clk),
-    .D (adc_data_idelay_s[l_inst]),
+    //.D (adc_data_idelay_s[l_inst]),
+    .D (adc_data_ibuf_s[l_inst]),
     .Q1 (adc_data_p_s[l_inst]),
     .Q2 (adc_data_n_s[l_inst]));
   end  
