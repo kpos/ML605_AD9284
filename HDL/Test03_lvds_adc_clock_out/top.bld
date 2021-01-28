@@ -24,7 +24,7 @@ Done...
 INFO:NgdBuild:1222 - Setting CLKIN1_PERIOD attribute associated with MMCM
    instance MAIN_200_CLK_MMCM to 5.000000 ns based on the period specification
    (<TIMESPEC "TS_SystemClock" = PERIOD "PIN_SystemClock_200MHz" 200 MHz HIGH 50
-   %;> [ML605_FMCint_AD9284.ucf(121)]).
+   %;> [ML605_FMCint_AD9284.ucf(122)]).
 Checking expanded design ...
 
 Partition Implementation Status
@@ -38,7 +38,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 211924 kilobytes
+Total memory usage is 211964 kilobytes
 
 Writing NGD file "top.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec

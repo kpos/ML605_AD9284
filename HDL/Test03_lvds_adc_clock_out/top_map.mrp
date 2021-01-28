@@ -9,36 +9,36 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Wed Jan 27 00:45:46 2021
+Mapped Date    : Thu Jan 28 22:47:03 2021
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   24
+Number of warnings:   16
 Slice Logic Utilization:
   Number of Slice Registers:                    62 out of 301,440    1%
     Number used as Flip Flops:                  61
     Number used as Latches:                      1
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        111 out of 150,720    1%
+  Number of Slice LUTs:                        112 out of 150,720    1%
     Number used as logic:                      109 out of 150,720    1%
-      Number using O6 output only:              38
+      Number using O6 output only:              37
       Number using O5 output only:              52
-      Number using O5 and O6:                   19
+      Number using O5 and O6:                   20
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  58,400    0%
-    Number used exclusively as route-thrus:      2
-      Number with same-slice register load:      0
+    Number used exclusively as route-thrus:      3
+      Number with same-slice register load:      1
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    36 out of  37,680    1%
-  Number of LUT Flip Flop pairs used:          113
-    Number with an unused Flip Flop:            51 out of     113   45%
-    Number with an unused LUT:                   2 out of     113    1%
-    Number of fully used LUT-FF pairs:          60 out of     113   53%
+  Number of occupied Slices:                    37 out of  37,680    1%
+  Number of LUT Flip Flop pairs used:          114
+    Number with an unused Flip Flop:            53 out of     114   46%
+    Number with an unused LUT:                   2 out of     114    1%
+    Number of fully used LUT-FF pairs:          59 out of     114   51%
     Number of unique control sets:               6
     Number of slice register sites lost
       to control set restrictions:              34 out of 301,440    1%
@@ -52,9 +52,9 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        34 out of     600    5%
-    Number of LOCed IOBs:                       34 out of      34  100%
-    IOB Flip Flops:                             16
+  Number of bonded IOBs:                        32 out of     600    5%
+    Number of LOCed IOBs:                       32 out of      32  100%
+    IOB Flip Flops:                             15
     IOB Master Pads:                             1
     IOB Slave Pads:                              1
 
@@ -64,8 +64,8 @@ Specific Feature Utilization:
   Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
     Number used as BUFGs:                        1
     Number used as BUFGCTRLs:                    0
-  Number of ILOGICE1/ISERDESE1s:                 8 out of     720    1%
-    Number used as ILOGICE1s:                    8
+  Number of ILOGICE1/ISERDESE1s:                 7 out of     720    1%
+    Number used as ILOGICE1s:                    7
     Number used as ISERDESE1s:                   0
   Number of OLOGICE1/OSERDESE1s:                 8 out of     720    1%
     Number used as OLOGICE1s:                    8
@@ -82,18 +82,18 @@ Specific Feature Utilization:
   Number of IBUFDS_GTXE1s:                       0 out of      12    0%
   Number of ICAPs:                               0 out of       2    0%
   Number of IDELAYCTRLs:                         0 out of      18    0%
-  Number of IODELAYE1s:                          8 out of     720    1%
+  Number of IODELAYE1s:                          0 out of     720    0%
   Number of MMCM_ADVs:                           1 out of      12    8%
   Number of PCIE_2_0s:                           0 out of       2    0%
   Number of STARTUPs:                            1 out of       1  100%
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-Average Fanout of Non-Clock Nets:                2.83
+Average Fanout of Non-Clock Nets:                2.91
 
 Peak Memory Usage:  795 MB
-Total REAL time to MAP completion:  50 secs 
-Total CPU time to MAP completion:   50 secs 
+Total REAL time to MAP completion:  41 secs 
+Total CPU time to MAP completion:   39 secs 
 
 Table of Contents
 -----------------
@@ -116,23 +116,10 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[1].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[6].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[4].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[2].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[0].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[0].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
+WARNING:MapLib:701 - Signal adc_data_in_p<0> connected to top level port
+   adc_data_in_p<0> has been removed.
+WARNING:MapLib:701 - Signal adc_data_in_n<0> connected to top level port
+   adc_data_in_n<0> has been removed.
 WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
    block:<adc_input[1].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
 WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
@@ -168,18 +155,6 @@ WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration o
 WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
    block:<adc_input[7].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
    value is not configured.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[0].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[7].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[5].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
-WARNING:PhysDesignRules:2280 - Issue with pin connections and/or configuration on
-   block:<adc_input[3].i_data_idelay>:<IODELAYE1_IODELAYE1>.  With IDELAY_TYPE programming FIXED or DEFAULT active input
-   pins INC, RST and CE are not used and will be ignored.
 
 Section 3 - Informational
 -------------------------
@@ -197,10 +172,36 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+   4 block(s) removed
    2 block(s) optimized away
+   3 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "adc_input[0].i_data_ddr" (IDDR_2CLK) removed.
+ The signal "adc_data_ibuf_s<0>" is loadless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "adc_data_in_p<0>" is unused and has been removed.
+ Unused block "adc_data_in_p<0>" (PAD) removed.
+The signal "adc_data_in_n<0>" is unused and has been removed.
+ Unused block "adc_data_in_n<0>" (PAD) removed.
+Unused block "adc_input[0].i_data_ibuf" (IBUFDS) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -222,7 +223,6 @@ Section 6 - IOB Properties
 | ML605_SystemClock_200MHz_p         | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
 | adc_clock_out_n                    | IOBS             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
 | adc_clock_out_p                    | IOBM             | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
-| adc_data_in_n<0>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_data_in_n<1>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_data_in_n<2>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_data_in_n<3>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
@@ -230,14 +230,13 @@ Section 6 - IOB Properties
 | adc_data_in_n<5>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_data_in_n<6>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_data_in_n<7>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
-| adc_data_in_p<0>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
-| adc_data_in_p<1>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
-| adc_data_in_p<2>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
-| adc_data_in_p<3>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
-| adc_data_in_p<4>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
-| adc_data_in_p<5>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
-| adc_data_in_p<6>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
-| adc_data_in_p<7>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          | DEFAULT  |
+| adc_data_in_p<1>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
+| adc_data_in_p<2>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
+| adc_data_in_p<3>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
+| adc_data_in_p<4>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
+| adc_data_in_p<5>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
+| adc_data_in_p<6>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
+| adc_data_in_p<7>                   | IOB              | INPUT     | LVDS_25              | TRUE  |          |      | IDDR         |          |          |
 | adc_dco_in_n                       | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | adc_dco_in_p                       | IOB              | INPUT     | LVDS_25              | TRUE  |          |      |              |          |          |
 | led_C                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |

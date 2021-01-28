@@ -1,10 +1,12 @@
 `timescale 1ns / 1ps
 
-module Clock_divider(clock_in,clock_out    );
+module Clock_divider
+    #( parameter DIVISOR = 50_000_000)
+(clock_in,clock_out    );
    input clock_in; // input clock on FPGA
    output reg clock_out; // output clock after dividing the input clock by divisor
    reg[27:0] counter=28'd0;
-   parameter DIVISOR = 28'd50_000_000;
+
 
    always @(posedge clock_in)
    begin

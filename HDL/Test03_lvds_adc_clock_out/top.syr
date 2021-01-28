@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.08 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: top.prj
 
@@ -109,7 +109,7 @@ Analyzing Verilog file "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\Clock_
 Parsing module <Clock_divider>.
 Analyzing Verilog file "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" into library work
 Parsing module <top>.
-WARNING:HDLCompiler:751 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 54: Redeclaration of ansi port leds is not allowed
+WARNING:HDLCompiler:751 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 55: Redeclaration of ansi port leds is not allowed
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -117,30 +117,30 @@ WARNING:HDLCompiler:751 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top
 
 Elaborating module <top>.
 
-Elaborating module <Clock_divider>.
+Elaborating module <Clock_divider(DIVISOR=50000000)>.
+
+Elaborating module <Clock_divider(DIVISOR=25000000)>.
 
 Elaborating module <IBUFGDS>.
 
 Elaborating module <MMCM_BASE(BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT_F=5.0,CLKFBOUT_PHASE=0.0,CLKIN1_PERIOD=0.0,CLKOUT0_DIVIDE_F=4.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT5_DUTY_CYCLE=0.5,CLKOUT6_DUTY_CYCLE=0.5,CLKOUT0_PHASE=0.0,CLKOUT1_PHASE=0.0,CLKOUT2_PHASE=0.0,CLKOUT3_PHASE=0.0,CLKOUT4_PHASE=0.0,CLKOUT5_PHASE=0.0,CLKOUT6_PHASE=0.0,CLKOUT1_DIVIDE=1,CLKOUT2_DIVIDE=1,CLKOUT3_DIVIDE=1,CLKOUT4_DIVIDE=1,CLKOUT5_DIVIDE=1,CLKOUT6_DIVIDE=1,CLKOUT4_CASCADE="FALSE",CLOCK_HOLD="FALSE",DIVCLK_DIVIDE=1,REF_JITTER1=0.0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 112: Assignment to CLKOUT0B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 113: Assignment to CLKOUT1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 114: Assignment to CLKOUT1B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 115: Assignment to CLKOUT2 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 116: Assignment to CLKOUT2B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 117: Assignment to CLKOUT3 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 118: Assignment to CLKOUT3B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 119: Assignment to CLKOUT4 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 120: Assignment to CLKOUT5 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 121: Assignment to CLKOUT6 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 124: Assignment to CLKFBOUTB ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 113: Assignment to CLKOUT0B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 114: Assignment to CLKOUT1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 115: Assignment to CLKOUT1B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 116: Assignment to CLKOUT2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 117: Assignment to CLKOUT2B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 118: Assignment to CLKOUT3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 119: Assignment to CLKOUT3B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 120: Assignment to CLKOUT4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 121: Assignment to CLKOUT5 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 122: Assignment to CLKOUT6 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 125: Assignment to CLKFBOUTB ignored, since the identifier is never used
 
 Elaborating module <OBUFDS>.
 
 Elaborating module <BUFR(SIM_DEVICE="VIRTEX6")>.
 
 Elaborating module <IBUFDS>.
-
-Elaborating module <IODELAYE1(CINVCTRL_SEL="FALSE",DELAY_SRC="I",HIGH_PERFORMANCE_MODE="TRUE",IDELAY_TYPE="DEFAULT",IDELAY_VALUE=0,ODELAY_TYPE="FIXED",ODELAY_VALUE=0,REFCLK_FREQUENCY=200.0,SIGNAL_PATTERN="DATA")>.
 
 Elaborating module <IDDR(INIT_Q1=1'b0,INIT_Q2=1'b0,DDR_CLK_EDGE="SAME_EDGE_PIPELINED",SRTYPE="ASYNC")>.
 
@@ -151,32 +151,38 @@ Elaborating module <IDDR(INIT_Q1=1'b0,INIT_Q2=1'b0,DDR_CLK_EDGE="SAME_EDGE_PIPEL
 Synthesizing Unit <top>.
     Related source file is "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v".
         C_IODELAY_GROUP = "adc_if_delay_group"
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[0].i_data_idelay>.
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[1].i_data_idelay>.
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[2].i_data_idelay>.
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[3].i_data_idelay>.
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[4].i_data_idelay>.
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[5].i_data_idelay>.
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[6].i_data_idelay>.
-    Set property "IODELAY_GROUP = ADC_IF_DELAY_GROUP" for instance <adc_input[7].i_data_idelay>.
     Found 8-bit register for signal <leds>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 Unit <top> synthesized.
 
-Synthesizing Unit <Clock_divider>.
+Synthesizing Unit <Clock_divider_1>.
     Related source file is "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\Clock_divider.v".
-        DIVISOR = 28'b0010111110101111000010000000
+        DIVISOR = 50000000
     Found 1-bit register for signal <clock_out>.
     Found 28-bit register for signal <counter>.
-    Found 28-bit adder for signal <counter[27]_GND_2_o_add_1_OUT> created at line 11.
-    Found 28-bit comparator greater for signal <n0001> created at line 12
-    Found 28-bit comparator greater for signal <counter[27]_GND_2_o_LessThan_5_o> created at line 14
+    Found 28-bit adder for signal <counter[27]_GND_2_o_add_1_OUT> created at line 13.
+    Found 28-bit comparator greater for signal <n0001> created at line 14
+    Found 28-bit comparator greater for signal <counter[27]_GND_2_o_LessThan_5_o> created at line 16
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-Unit <Clock_divider> synthesized.
+Unit <Clock_divider_1> synthesized.
+
+Synthesizing Unit <Clock_divider_2>.
+    Related source file is "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\Clock_divider.v".
+        DIVISOR = 25000000
+    Found 1-bit register for signal <clock_out>.
+    Found 28-bit register for signal <counter>.
+    Found 28-bit adder for signal <counter[27]_GND_3_o_add_1_OUT> created at line 13.
+    Found 28-bit comparator greater for signal <n0001> created at line 14
+    Found 28-bit comparator greater for signal <counter[27]_GND_3_o_LessThan_5_o> created at line 16
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <Clock_divider_2> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -198,9 +204,13 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <Clock_divider>.
+Synthesizing (advanced) Unit <Clock_divider_1>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-Unit <Clock_divider> synthesized (advanced).
+Unit <Clock_divider_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Clock_divider_2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <Clock_divider_2> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -264,14 +274,14 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 256
+# BELS                             : 257
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 54
-#      LUT2                        : 5
-#      LUT3                        : 5
+#      LUT2                        : 4
+#      LUT3                        : 6
 #      LUT4                        : 6
-#      LUT5                        : 48
+#      LUT5                        : 49
 #      MUXCY                       : 75
 #      VCC                         : 1
 #      XORCY                       : 56
@@ -287,9 +297,8 @@ Primitive and Black Box Usage:
 #      IBUFGDS                     : 2
 #      OBUF                        : 11
 #      OBUFDS                      : 1
-# Others                           : 10
+# Others                           : 2
 #      BUFR                        : 1
-#      IODELAYE1                   : 8
 #      MMCM_ADV                    : 1
 
 Device utilization summary:
@@ -300,14 +309,14 @@ Selected Device : 6vlx240tff1156-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:              66  out of  301440     0%  
- Number of Slice LUTs:                  123  out of  150720     0%  
-    Number used as Logic:               123  out of  150720     0%  
+ Number of Slice LUTs:                  124  out of  150720     0%  
+    Number used as Logic:               124  out of  150720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    131
-   Number with an unused Flip Flop:      65  out of    131    49%  
-   Number with an unused LUT:             8  out of    131     6%  
-   Number of fully used LUT-FF pairs:    58  out of    131    44%  
+ Number of LUT Flip Flop pairs used:    132
+   Number with an unused Flip Flop:      66  out of    132    50%  
+   Number with an unused LUT:             8  out of    132     6%  
+   Number of fully used LUT-FF pairs:    58  out of    132    43%  
    Number of unique control sets:         4
 
 IO Utilization: 
@@ -340,8 +349,8 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 adc_dco_div/clock_out              | NONE(leds_0)           | 8     |
-adc_dco_in_p                       | IBUFGDS+BUFR           | 30    |
 ML605_SystemClock_200MHz_p         | MMCM_ADV:CLKOUT0       | 29    |
+adc_dco_in_p                       | IBUFGDS+BUFR           | 30    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -360,40 +369,12 @@ Speed Grade: -1
 
    Minimum period: 3.385ns (Maximum Frequency: 295.421MHz)
    Minimum input arrival time before clock: 0.410ns
-   Maximum output required time after clock: 0.830ns
-   Maximum combinational path delay: 0.500ns
+   Maximum output required time after clock: 0.836ns
+   Maximum combinational path delay: 0.448ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'adc_dco_in_p'
-  Clock period: 2.708ns (frequency: 369.276MHz)
-  Total number of paths / destination ports: 1590 / 29
--------------------------------------------------------------------------
-Delay:               2.708ns (Levels of Logic = 7)
-  Source:            adc_dco_div/counter_7 (FF)
-  Destination:       adc_dco_div/clock_out (FF)
-  Source Clock:      adc_dco_in_p rising
-  Destination Clock: adc_dco_in_p rising
-
-  Data Path: adc_dco_div/counter_7 to adc_dco_div/clock_out
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               5   0.375   0.802  adc_dco_div/counter_7 (adc_dco_div/counter_7)
-     LUT5:I0->O            1   0.068   0.000  adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_lut<0> (adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_lut<0>)
-     MUXCY:S->O            1   0.290   0.000  adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<0> (adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<0>)
-     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<1> (adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<1>)
-     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<2> (adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<2>)
-     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<3> (adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<3>)
-     MUXCY:CI->O           1   0.220   0.399  adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<4> (adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<4>)
-     INV:I->O              1   0.086   0.399  adc_dco_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<4>_inv1_INV_0 (adc_dco_div/counter[27]_GND_2_o_LessThan_5_o)
-     FD:D                      0.011          adc_dco_div/clock_out
-    ----------------------------------------
-    Total                      2.708ns (1.108ns logic, 1.600ns route)
-                                       (40.9% logic, 59.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ML605_SystemClock_200MHz_p'
@@ -424,20 +405,48 @@ Delay:               2.708ns (Levels of Logic = 7)
                                        (40.9% logic, 59.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'adc_dco_div/clock_out'
-  Total number of paths / destination ports: 8 / 8
+Timing constraint: Default period analysis for Clock 'adc_dco_in_p'
+  Clock period: 2.708ns (frequency: 369.276MHz)
+  Total number of paths / destination ports: 1676 / 29
 -------------------------------------------------------------------------
-Offset:              0.410ns (Levels of Logic = 0)
-  Source:            adc_input[0].i_data_ddr:Q1 (PAD)
-  Destination:       leds_0 (FF)
-  Destination Clock: adc_dco_div/clock_out rising
+Delay:               2.708ns (Levels of Logic = 7)
+  Source:            adc_dco_div/counter_6 (FF)
+  Destination:       adc_dco_div/clock_out (FF)
+  Source Clock:      adc_dco_in_p rising
+  Destination Clock: adc_dco_in_p rising
 
-  Data Path: adc_input[0].i_data_ddr:Q1 to leds_0
+  Data Path: adc_dco_div/counter_6 to adc_dco_div/clock_out
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-    IDDR_2CLK:Q1           1   0.000   0.399  adc_input[0].i_data_ddr (adc_data_p_s<0>)
-     FD:D                      0.011          leds_0
+     FD:C->Q               5   0.375   0.802  adc_dco_div/counter_6 (adc_dco_div/counter_6)
+     LUT5:I0->O            1   0.068   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_lut<0> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<0> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<1> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<2> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<3> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<3>)
+     MUXCY:CI->O           1   0.220   0.399  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<4> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<4>)
+     INV:I->O              1   0.086   0.399  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<4>_inv1_INV_0 (adc_dco_div/counter[27]_GND_3_o_LessThan_5_o)
+     FD:D                      0.011          adc_dco_div/clock_out
+    ----------------------------------------
+    Total                      2.708ns (1.108ns logic, 1.600ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'adc_dco_div/clock_out'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              0.410ns (Levels of Logic = 0)
+  Source:            adc_input[1].i_data_ddr:Q1 (PAD)
+  Destination:       leds_1 (FF)
+  Destination Clock: adc_dco_div/clock_out rising
+
+  Data Path: adc_input[1].i_data_ddr:Q1 to leds_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    IDDR_2CLK:Q1           1   0.000   0.399  adc_input[1].i_data_ddr (adc_data_p_s<1>)
+     FD:D                      0.011          leds_1
     ----------------------------------------
     Total                      0.410ns (0.011ns logic, 0.399ns route)
                                        (2.7% logic, 97.3% route)
@@ -465,7 +474,7 @@ Offset:              0.777ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'adc_dco_in_p'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              0.830ns (Levels of Logic = 1)
+Offset:              0.836ns (Levels of Logic = 1)
   Source:            adc_dco_div/clock_out (FF)
   Destination:       led_S (PAD)
   Source Clock:      adc_dco_in_p rising
@@ -474,11 +483,11 @@ Offset:              0.830ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               9   0.375   0.452  adc_dco_div/clock_out (adc_dco_div/clock_out)
+     FD:C->Q              10   0.375   0.458  adc_dco_div/clock_out (adc_dco_div/clock_out)
      OBUF:I->O                 0.003          led_S_OBUF (led_S)
     ----------------------------------------
-    Total                      0.830ns (0.378ns logic, 0.452ns route)
-                                       (45.5% logic, 54.5% route)
+    Total                      0.836ns (0.378ns logic, 0.458ns route)
+                                       (45.2% logic, 54.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ML605_SystemClock_200MHz_p'
@@ -501,21 +510,21 @@ Offset:              0.777ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 40 / 32
+  Total number of paths / destination ports: 24 / 16
 -------------------------------------------------------------------------
-Delay:               0.500ns (Levels of Logic = 1)
+Delay:               0.448ns (Levels of Logic = 1)
   Source:            ML605_FPGA_RESET (PAD)
-  Destination:       adc_input[0].i_data_idelay:RST (PAD)
+  Destination:       adc_input[0].i_data_ddr:R (PAD)
 
-  Data Path: ML605_FPGA_RESET to adc_input[0].i_data_idelay:RST
+  Data Path: ML605_FPGA_RESET to adc_input[0].i_data_ddr:R
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            16   0.003   0.497  ML605_FPGA_RESET_IBUF (ML605_FPGA_RESET_IBUF)
-    IODELAYE1:RST              0.000          adc_input[0].i_data_idelay
+     IBUF:I->O             8   0.003   0.445  ML605_FPGA_RESET_IBUF (ML605_FPGA_RESET_IBUF)
+    IDDR_2CLK:R                0.000          adc_input[0].i_data_ddr
     ----------------------------------------
-    Total                      0.500ns (0.003ns logic, 0.497ns route)
-                                       (0.6% logic, 99.4% route)
+    Total                      0.448ns (0.003ns logic, 0.445ns route)
+                                       (0.7% logic, 99.3% route)
 
 =========================================================================
 
@@ -530,6 +539,14 @@ Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ML605_SystemClock_200MHz_p|    2.708|         |         |         |
 --------------------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock adc_dco_div/clock_out
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+adc_dco_in_p   |    0.844|         |         |         |
+---------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock adc_dco_in_p
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
@@ -542,7 +559,7 @@ adc_dco_in_p   |    2.708|         |         |         |
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.98 secs
+Total CPU time to Xst completion: 5.95 secs
  
 --> 
 

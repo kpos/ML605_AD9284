@@ -18,6 +18,7 @@ module top (
    output led_S,
    output led_N,
    //output adc_clock_out2 //25P on the interposer card
+   //output adc_clock_out_5hz_trigger;
    output adc_clock_out_p,
    output adc_clock_out_n
 	);
@@ -57,10 +58,10 @@ reg [7:0] leds;
 
 
 // divide by 50M and blink a diode (adc clock in and adc clock out)
-Clock_divider adc_clock_div (
+Clock_divider #(.DIVISOR( 50_000_000))adc_clock_div (
    .clock_in(adc_clock_out),
    .clock_out(led_N));
-Clock_divider adc_dco_div (
+Clock_divider #(.DIVISOR( 25_000_000)) adc_dco_div (
    .clock_in(adc_dco_clk),
    .clock_out(led_S));
 
@@ -138,9 +139,22 @@ OBUFDS adc_clock_out_ds (
   .O(adc_clock_out_p),
   .OB(adc_clock_out_n));
 
-always @(posedge led_S) begin
-      leds[7:0] = adc_data_p_s[7:0];;
+//wire nled_S = ~led_S;
+
+always @(posedge led_S ) begin
+      leds[7:1] = adc_data_p_s[7:1];
+      leds[0] = led_S;
    end
+   
+
+begin
+   assign adc_clock_out = CLKOUT0;
+   //assign leds[0] = led_S;
+   //assign leds[7:0] = adc_data_p_s[7:0];
+   //assign adc_clock_out2 = adc_clock_out;
+   
+end
+    
 
 // ADC inputs
 // clock buffers  
@@ -154,6 +168,7 @@ BUFR  #(.SIM_DEVICE("VIRTEX6")) adc_dco_bufr (
  .CLR( 1'b0),
  .I (adc_dco_ibuf_s),
  .O (adc_dco_clk));
+
 
 genvar          l_inst;
 generate
@@ -208,11 +223,6 @@ generate
   end  
   endgenerate
   
-begin
-   assign adc_clock_out = CLKOUT0;
-   //assign leds[7:0] = adc_data_p_s[7:0];
-   //assign adc_clock_out2 = adc_clock_out;
-   
-end
+
 
 endmodule

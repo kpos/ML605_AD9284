@@ -1,17 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Jan 27 00:46:35 2021
+// Written by: Map P.20131013 on Thu Jan 28 22:47:44 2021
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "adc_data_in_n<0>" LOCATE = SITE "K29" LEVEL 1;
-COMP "adc_data_in_n<1>" LOCATE = SITE "L26" LEVEL 1;
-COMP "adc_data_in_n<2>" LOCATE = SITE "H33" LEVEL 1;
 COMP "adc_data_in_n<3>" LOCATE = SITE "H32" LEVEL 1;
 COMP "adc_data_in_n<4>" LOCATE = SITE "J32" LEVEL 1;
 COMP "adc_data_in_n<5>" LOCATE = SITE "J29" LEVEL 1;
 COMP "adc_data_in_n<6>" LOCATE = SITE "E31" LEVEL 1;
 COMP "adc_data_in_n<7>" LOCATE = SITE "H30" LEVEL 1;
-COMP "adc_data_in_p<0>" LOCATE = SITE "J30" LEVEL 1;
 COMP "adc_data_in_p<1>" LOCATE = SITE "L25" LEVEL 1;
 COMP "adc_data_in_p<2>" LOCATE = SITE "H34" LEVEL 1;
 COMP "adc_data_in_p<3>" LOCATE = SITE "G32" LEVEL 1;
@@ -37,10 +33,24 @@ COMP "adc_dco_in_n" LOCATE = SITE "G33" LEVEL 1;
 COMP "ML605_SystemClock_200MHz_p" LOCATE = SITE "J9" LEVEL 1;
 COMP "adc_dco_in_p" LOCATE = SITE "F33" LEVEL 1;
 COMP "led_S" LOCATE = SITE "AH28" LEVEL 1;
-PIN adc_input[0].i_data_ddr_pins<1> = BEL "adc_input[0].i_data_ddr" PINNAME
-        CK;
-PIN adc_input[0].i_data_ddr_pins<2> = BEL "adc_input[0].i_data_ddr" PINNAME
-        CKB;
+COMP "adc_data_in_n<1>" LOCATE = SITE "L26" LEVEL 1;
+COMP "adc_data_in_n<2>" LOCATE = SITE "H33" LEVEL 1;
+TIMEGRP CLKOUT0 = BEL "adc_clock_div/clock_out" BEL "adc_clock_div/counter_0"
+        BEL "adc_clock_div/counter_1" BEL "adc_clock_div/counter_2" BEL
+        "adc_clock_div/counter_3" BEL "adc_clock_div/counter_4" BEL
+        "adc_clock_div/counter_5" BEL "adc_clock_div/counter_6" BEL
+        "adc_clock_div/counter_7" BEL "adc_clock_div/counter_8" BEL
+        "adc_clock_div/counter_9" BEL "adc_clock_div/counter_10" BEL
+        "adc_clock_div/counter_11" BEL "adc_clock_div/counter_12" BEL
+        "adc_clock_div/counter_13" BEL "adc_clock_div/counter_14" BEL
+        "adc_clock_div/counter_15" BEL "adc_clock_div/counter_16" BEL
+        "adc_clock_div/counter_17" BEL "adc_clock_div/counter_18" BEL
+        "adc_clock_div/counter_19" BEL "adc_clock_div/counter_20" BEL
+        "adc_clock_div/counter_21" BEL "adc_clock_div/counter_22" BEL
+        "adc_clock_div/counter_23" BEL "adc_clock_div/counter_24" BEL
+        "adc_clock_div/counter_25" BEL "adc_clock_div/counter_26" BEL
+        "adc_clock_div/counter_27" BEL "adc_clock_out_p" BEL "adc_clock_out_n"
+        BEL "CLKOUT0_BUFG";
 PIN adc_input[1].i_data_ddr_pins<1> = BEL "adc_input[1].i_data_ddr" PINNAME
         CK;
 PIN adc_input[1].i_data_ddr_pins<2> = BEL "adc_input[1].i_data_ddr" PINNAME
@@ -69,15 +79,7 @@ PIN adc_input[7].i_data_ddr_pins<1> = BEL "adc_input[7].i_data_ddr" PINNAME
         CK;
 PIN adc_input[7].i_data_ddr_pins<2> = BEL "adc_input[7].i_data_ddr" PINNAME
         CKB;
-TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_input[0].i_data_idelay"
-        BEL "adc_input[1].i_data_idelay" BEL "adc_input[2].i_data_idelay" BEL
-        "adc_input[3].i_data_idelay" BEL "adc_input[4].i_data_idelay" BEL
-        "adc_input[5].i_data_idelay" BEL "adc_input[6].i_data_idelay" BEL
-        "adc_input[7].i_data_idelay" BEL "adc_dco_bufr" PIN
-        "adc_input[0].i_data_ddr_pins<1>" PIN
-        "adc_input[0].i_data_ddr_pins<2>" PIN
-        "adc_input[0].i_data_ddr_pins<1>" PIN
-        "adc_input[0].i_data_ddr_pins<2>" PIN
+TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_dco_bufr" PIN
         "adc_input[1].i_data_ddr_pins<1>" PIN
         "adc_input[1].i_data_ddr_pins<2>" PIN
         "adc_input[1].i_data_ddr_pins<1>" PIN
@@ -120,28 +122,11 @@ TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_input[0].i_data_idelay"
         "adc_dco_div/counter_23" BEL "adc_dco_div/counter_24" BEL
         "adc_dco_div/counter_25" BEL "adc_dco_div/counter_26" BEL
         "adc_dco_div/counter_27";
-TIMEGRP CLKOUT0 = BEL "adc_clock_div/clock_out" BEL "adc_clock_div/counter_0"
-        BEL "adc_clock_div/counter_1" BEL "adc_clock_div/counter_2" BEL
-        "adc_clock_div/counter_3" BEL "adc_clock_div/counter_4" BEL
-        "adc_clock_div/counter_5" BEL "adc_clock_div/counter_6" BEL
-        "adc_clock_div/counter_7" BEL "adc_clock_div/counter_8" BEL
-        "adc_clock_div/counter_9" BEL "adc_clock_div/counter_10" BEL
-        "adc_clock_div/counter_11" BEL "adc_clock_div/counter_12" BEL
-        "adc_clock_div/counter_13" BEL "adc_clock_div/counter_14" BEL
-        "adc_clock_div/counter_15" BEL "adc_clock_div/counter_16" BEL
-        "adc_clock_div/counter_17" BEL "adc_clock_div/counter_18" BEL
-        "adc_clock_div/counter_19" BEL "adc_clock_div/counter_20" BEL
-        "adc_clock_div/counter_21" BEL "adc_clock_div/counter_22" BEL
-        "adc_clock_div/counter_23" BEL "adc_clock_div/counter_24" BEL
-        "adc_clock_div/counter_25" BEL "adc_clock_div/counter_26" BEL
-        "adc_clock_div/counter_27" BEL "adc_clock_out_p" BEL "adc_clock_out_n"
-        BEL "CLKOUT0_BUFG";
-TIMEGRP adc_data_in_pta_pads = BEL "adc_data_in_p<0>" BEL "adc_data_in_p<1>"
-        BEL "adc_data_in_p<2>" BEL "adc_data_in_p<3>" BEL "adc_data_in_p<4>"
-        BEL "adc_data_in_p<5>" BEL "adc_data_in_p<6>" BEL "adc_data_in_p<7>"
-        BEL "adc_data_in_n<0>" BEL "adc_data_in_n<1>" BEL "adc_data_in_n<2>"
-        BEL "adc_data_in_n<3>" BEL "adc_data_in_n<4>" BEL "adc_data_in_n<5>"
-        BEL "adc_data_in_n<6>" BEL "adc_data_in_n<7>";
+TIMEGRP adc_data_in_pta_pads = BEL "adc_data_in_p<1>" BEL "adc_data_in_p<2>"
+        BEL "adc_data_in_p<3>" BEL "adc_data_in_p<4>" BEL "adc_data_in_p<5>"
+        BEL "adc_data_in_p<6>" BEL "adc_data_in_p<7>" BEL "adc_data_in_n<1>"
+        BEL "adc_data_in_n<2>" BEL "adc_data_in_n<3>" BEL "adc_data_in_n<4>"
+        BEL "adc_data_in_n<5>" BEL "adc_data_in_n<6>" BEL "adc_data_in_n<7>";
 PIN MAIN_200_CLK_MMCM_pins<2> = BEL "MAIN_200_CLK_MMCM" PINNAME CLKIN1;
 TIMEGRP PIN_SystemClock_200MHz = PIN "MAIN_200_CLK_MMCM_pins<2>";
 TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIGH 50%;
