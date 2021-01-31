@@ -5,22 +5,39 @@ module top (
    input ML605_SystemClock_200MHz_p,
    input ML605_SystemClock_200MHz_n,
    input ML605_FPGA_RESET,
+   
+   input ML605_USB_UART_RX,
+   output ML605_USB_UART_TX,
+   
+   input [7:0] ML605_GPIO_Switches,
   
+   // ADC interface
+   // LVDS data
    input [7:0] adc_data_in_p,
    input [7:0] adc_data_in_n,
-   input adc_dco_in_p,
-   input adc_dco_in_n,
-  
-   //input [7:0] switches,
-	
-   output  [7:0] leds,
-   output led_C, // used for MMCM lock indication
-   output led_S,
-   output led_N,
+   // LVDS data clock
+   input  adc_dco_in_p,
+   input  adc_dco_in_n,
+   // 250MHz clock source for ADC
+   output adc_clock_out_p,
+   output adc_clock_out_n,
    //output adc_clock_out2 //25P on the interposer card
    //output adc_clock_out_5hz_trigger;
-   output adc_clock_out_p,
-   output adc_clock_out_n
+
+  
+   // ADC SPI interface
+   input  ADC_SPI_SDI,
+   output ADC_SPI_SDO,
+   output ADC_SPI_CLK,
+   output ADC_SPI_CSB,
+   
+   // pattern select
+   input [7:0] switches,
+	
+   output  reg [7:0] leds,
+   output led_C, // used for MMCM lock indication
+   output led_S,
+   output led_N
 	);
 parameter C_IODELAY_GROUP = "adc_if_delay_group";
 
@@ -52,10 +69,37 @@ wire adc_clock_out;
 wire adc_clock_out2;
 wire led_clock;
 
-reg [7:0] leds;
+wire dco_div;
 
-//reg   [31:0]   counter;
 
+
+
+
+
+microblaze_mcs_v1_4 adc_controller (
+  .Clk(clock200), // input Clk
+  .Reset(Reset), // input Reset
+  .UART_Rx(ML605_USB_UART_RX), // input UART_Rx
+  .UART_Tx(ML605_USB_UART_TX), // output UART_Tx
+  .UART_Interrupt(UART_Interrupt), // output UART_Interrupt
+  .GPO1(GPO1), // output [31 : 0] GPO1
+  .GPO2(GPO2), // output [31 : 0] GPO2
+  .GPI1(GPI1), // input [31 : 0] GPI1
+  .GPI1_Interrupt(GPI1_Interrupt), // output GPI1_Interrupt
+  .GPI2(GPI2), // input [31 : 0] GPI2
+  .GPI2_Interrupt(GPI2_Interrupt), // output GPI2_Interrupt
+  .INTC_IRQ(INTC_IRQ) // output INTC_IRQ
+);
+
+
+
+
+
+
+
+
+
+//reg [7:0] leds;
 
 // divide by 50M and blink a diode (adc clock in and adc clock out)
 Clock_divider #(.DIVISOR( 50_000_000))adc_clock_div (
@@ -63,7 +107,7 @@ Clock_divider #(.DIVISOR( 50_000_000))adc_clock_div (
    .clock_out(led_N));
 Clock_divider #(.DIVISOR( 25_000_000)) adc_dco_div (
    .clock_in(adc_dco_clk),
-   .clock_out(led_S));
+   .clock_out(dco_div));
 
 
    
@@ -142,13 +186,15 @@ OBUFDS adc_clock_out_ds (
 //wire nled_S = ~led_S;
 
 always @(posedge led_S ) begin
-      leds[7:1] = adc_data_p_s[7:1];
-      leds[0] = led_S;
+      leds[7:0] = adc_data_p_s[7:0];
+      //leds[0] = led_S;
    end
    
 
 begin
    assign adc_clock_out = CLKOUT0;
+   assign led_S = dco_div;
+   //assign leds[0] = dco_div;
    //assign leds[0] = led_S;
    //assign leds[7:0] = adc_data_p_s[7:0];
    //assign adc_clock_out2 = adc_clock_out;

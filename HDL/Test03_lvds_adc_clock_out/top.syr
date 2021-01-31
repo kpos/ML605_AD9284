@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.08 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: top.prj
 
@@ -99,23 +99,40 @@ DSP48 Utilization Ratio            : 100
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
 =========================================================================
 
 
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\ipcore_dir\microblaze_mcs_v1_4.v" into library work
+Parsing module <microblaze_mcs_v1_4>.
 Analyzing Verilog file "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\Clock_divider.v" into library work
 Parsing module <Clock_divider>.
 Analyzing Verilog file "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" into library work
 Parsing module <top>.
-WARNING:HDLCompiler:751 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 55: Redeclaration of ansi port leds is not allowed
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating module <top>.
+
+Elaborating module <microblaze_mcs_v1_4>.
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 78: Assignment to UART_Tx ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 79: Assignment to UART_Interrupt ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 80: Size mismatch in connection of port <GPO1>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 80: Assignment to GPO1 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 81: Size mismatch in connection of port <GPO2>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 81: Assignment to GPO2 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 82: Size mismatch in connection of port <GPI1>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 83: Assignment to GPI1_Interrupt ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 84: Size mismatch in connection of port <GPI2>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 85: Assignment to GPI2_Interrupt ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 86: Assignment to INTC_IRQ ignored, since the identifier is never used
 
 Elaborating module <Clock_divider(DIVISOR=50000000)>.
 
@@ -124,17 +141,17 @@ Elaborating module <Clock_divider(DIVISOR=25000000)>.
 Elaborating module <IBUFGDS>.
 
 Elaborating module <MMCM_BASE(BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT_F=5.0,CLKFBOUT_PHASE=0.0,CLKIN1_PERIOD=0.0,CLKOUT0_DIVIDE_F=4.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT5_DUTY_CYCLE=0.5,CLKOUT6_DUTY_CYCLE=0.5,CLKOUT0_PHASE=0.0,CLKOUT1_PHASE=0.0,CLKOUT2_PHASE=0.0,CLKOUT3_PHASE=0.0,CLKOUT4_PHASE=0.0,CLKOUT5_PHASE=0.0,CLKOUT6_PHASE=0.0,CLKOUT1_DIVIDE=1,CLKOUT2_DIVIDE=1,CLKOUT3_DIVIDE=1,CLKOUT4_DIVIDE=1,CLKOUT5_DIVIDE=1,CLKOUT6_DIVIDE=1,CLKOUT4_CASCADE="FALSE",CLOCK_HOLD="FALSE",DIVCLK_DIVIDE=1,REF_JITTER1=0.0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 113: Assignment to CLKOUT0B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 114: Assignment to CLKOUT1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 115: Assignment to CLKOUT1B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 116: Assignment to CLKOUT2 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 117: Assignment to CLKOUT2B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 118: Assignment to CLKOUT3 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 119: Assignment to CLKOUT3B ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 120: Assignment to CLKOUT4 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 121: Assignment to CLKOUT5 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 122: Assignment to CLKOUT6 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 125: Assignment to CLKFBOUTB ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 152: Assignment to CLKOUT0B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 153: Assignment to CLKOUT1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 154: Assignment to CLKOUT1B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 155: Assignment to CLKOUT2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 156: Assignment to CLKOUT2B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 157: Assignment to CLKOUT3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 158: Assignment to CLKOUT3B ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 159: Assignment to CLKOUT4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 160: Assignment to CLKOUT5 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 161: Assignment to CLKOUT6 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 164: Assignment to CLKFBOUTB ignored, since the identifier is never used
 
 Elaborating module <OBUFDS>.
 
@@ -143,6 +160,10 @@ Elaborating module <BUFR(SIM_DEVICE="VIRTEX6")>.
 Elaborating module <IBUFDS>.
 
 Elaborating module <IDDR(INIT_Q1=1'b0,INIT_Q2=1'b0,DDR_CLK_EDGE="SAME_EDGE_PIPELINED",SRTYPE="ASYNC")>.
+WARNING:HDLCompiler:634 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 76: Net <Reset> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 77: Net <UART_Rx> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 82: Net <GPI1> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" Line 84: Net <GPI2> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -151,6 +172,19 @@ Elaborating module <IDDR(INIT_Q1=1'b0,INIT_Q2=1'b0,DDR_CLK_EDGE="SAME_EDGE_PIPEL
 Synthesizing Unit <top>.
     Related source file is "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v".
         C_IODELAY_GROUP = "adc_if_delay_group"
+WARNING:Xst:647 - Input <switches> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ADC_SPI_SDI> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" line 74: Output port <GPO1> of the instance <adc_controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" line 74: Output port <GPO2> of the instance <adc_controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" line 74: Output port <UART_Tx> of the instance <adc_controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" line 74: Output port <UART_Interrupt> of the instance <adc_controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" line 74: Output port <GPI1_Interrupt> of the instance <adc_controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" line 74: Output port <GPI2_Interrupt> of the instance <adc_controller> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\top.v" line 74: Output port <INTC_IRQ> of the instance <adc_controller> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <Reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <UART_Rx> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <GPI1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <GPI2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 8-bit register for signal <leds>.
     Summary:
 	inferred   8 D-type flip-flop(s).
@@ -161,9 +195,9 @@ Synthesizing Unit <Clock_divider_1>.
         DIVISOR = 50000000
     Found 1-bit register for signal <clock_out>.
     Found 28-bit register for signal <counter>.
-    Found 28-bit adder for signal <counter[27]_GND_2_o_add_1_OUT> created at line 13.
+    Found 28-bit adder for signal <counter[27]_GND_3_o_add_1_OUT> created at line 13.
     Found 28-bit comparator greater for signal <n0001> created at line 14
-    Found 28-bit comparator greater for signal <counter[27]_GND_2_o_LessThan_5_o> created at line 16
+    Found 28-bit comparator greater for signal <counter[27]_GND_3_o_LessThan_5_o> created at line 16
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
@@ -175,9 +209,9 @@ Synthesizing Unit <Clock_divider_2>.
         DIVISOR = 25000000
     Found 1-bit register for signal <clock_out>.
     Found 28-bit register for signal <counter>.
-    Found 28-bit adder for signal <counter[27]_GND_3_o_add_1_OUT> created at line 13.
+    Found 28-bit adder for signal <counter[27]_GND_4_o_add_1_OUT> created at line 13.
     Found 28-bit comparator greater for signal <n0001> created at line 14
-    Found 28-bit comparator greater for signal <counter[27]_GND_3_o_LessThan_5_o> created at line 16
+    Found 28-bit comparator greater for signal <counter[27]_GND_4_o_LessThan_5_o> created at line 16
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
@@ -203,6 +237,24 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Reading core <ipcore_dir/microblaze_mcs_v1_4.ngc>.
+Loading core <microblaze_mcs_v1_4> for timing and area information for instance <adc_controller>.
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 in unit U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1 of type RAMB36 has been replaced by RAMB36E1
 
 Synthesizing (advanced) Unit <Clock_divider_1>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
@@ -243,6 +295,14 @@ Optimizing unit <top> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 0.
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <adc_controller> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <adc_controller> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <adc_controller> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <adc_controller> is equivalent to the following 29 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
 
 Final Macro Processing ...
 
@@ -274,23 +334,39 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 257
-#      GND                         : 1
-#      INV                         : 5
-#      LUT1                        : 54
-#      LUT2                        : 4
-#      LUT3                        : 6
-#      LUT4                        : 6
-#      LUT5                        : 49
-#      MUXCY                       : 75
-#      VCC                         : 1
-#      XORCY                       : 56
-# FlipFlops/Latches                : 74
-#      FD                          : 38
-#      FDR                         : 28
+# BELS                             : 1085
+#      GND                         : 18
+#      INV                         : 17
+#      LUT1                        : 57
+#      LUT2                        : 47
+#      LUT3                        : 60
+#      LUT4                        : 252
+#      LUT5                        : 72
+#      LUT6                        : 126
+#      LUT6_2                      : 90
+#      MULT_AND                    : 3
+#      MUXCY                       : 74
+#      MUXCY_L                     : 76
+#      MUXF5                       : 66
+#      MUXF6                       : 1
+#      VCC                         : 18
+#      XORCY                       : 108
+# FlipFlops/Latches                : 677
+#      FD                          : 118
+#      FDE                         : 137
+#      FDR                         : 196
+#      FDRE                        : 190
+#      FDS                         : 9
+#      FDSE                        : 19
 #      IDDR_2CLK                   : 8
-# Clock Buffers                    : 1
-#      BUFG                        : 1
+# RAMS                             : 80
+#      RAM32X1D                    : 64
+#      RAMB36E1                    : 16
+# Shift Registers                  : 56
+#      SRL16E                      : 50
+#      SRLC16E                     : 6
+# Clock Buffers                    : 2
+#      BUFG                        : 2
 # IO Buffers                       : 23
 #      IBUF                        : 1
 #      IBUFDS                      : 8
@@ -308,24 +384,29 @@ Selected Device : 6vlx240tff1156-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              66  out of  301440     0%  
- Number of Slice LUTs:                  124  out of  150720     0%  
-    Number used as Logic:               124  out of  150720     0%  
+ Number of Slice Registers:             669  out of  301440     0%  
+ Number of Slice LUTs:                  905  out of  150720     0%  
+    Number used as Logic:               721  out of  150720     0%  
+    Number used as Memory:              184  out of  58400     0%  
+       Number used as RAM:              128
+       Number used as SRL:               56
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    132
-   Number with an unused Flip Flop:      66  out of    132    50%  
-   Number with an unused LUT:             8  out of    132     6%  
-   Number of fully used LUT-FF pairs:    58  out of    132    43%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:   1266
+   Number with an unused Flip Flop:     597  out of   1266    47%  
+   Number with an unused LUT:           361  out of   1266    28%  
+   Number of fully used LUT-FF pairs:   308  out of   1266    24%  
+   Number of unique control sets:        48
 
 IO Utilization: 
- Number of IOs:                          34
+ Number of IOs:                          46
  Number of bonded IOBs:                  34  out of    600     5%  
     IOB Flip Flops/Latches:               8
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of Block RAM/FIFO:               16  out of    416     3%  
+    Number using Block RAM only:         16
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -351,25 +432,59 @@ Clock Signal                       | Clock buffer(FF name)  | Load  |
 adc_dco_div/clock_out              | NONE(leds_0)           | 8     |
 ML605_SystemClock_200MHz_p         | MMCM_ADV:CLKOUT0       | 29    |
 adc_dco_in_p                       | IBUFGDS+BUFR           | 30    |
+ML605_SystemClock_200MHz_p         | IBUFGDS+BUFG           | 739   |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+------------------------+-------+
-Control Signal                     | Buffer(FF name)        | Load  |
------------------------------------+------------------------+-------+
-N0(XST_VCC:P)                      | NONE(adc_dco_bufr)     | 1     |
-N1(XST_GND:G)                      | NONE(adc_dco_bufr)     | 1     |
------------------------------------+------------------------+-------+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                      | Buffer(FF name)                                                                                                                             | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-------+
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_VCC:P)| NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_VCC:P)| NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_VCC:P)| NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_VCC:P)| NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_VCC:P)| NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_VCC:P)| NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N11(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_VCC:P)  | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 62    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[0].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/XST_GND:G) | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[10].RAMB36_I1)| 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/XST_GND:G) | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[11].RAMB36_I1)| 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/XST_GND:G) | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[12].RAMB36_I1)| 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/XST_GND:G) | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[13].RAMB36_I1)| 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/XST_GND:G) | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[14].RAMB36_I1)| 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/XST_GND:G) | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[15].RAMB36_I1)| 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[2].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[3].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[4].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[5].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[6].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[7].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[8].RAMB36_I1)  | 36    |
+adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/N0(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/XST_GND:G)   | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[9].RAMB36_I1)  | 36    |
+adc_controller/N1(adc_controller/XST_GND:G)                                                                                                                         | NONE(adc_controller/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1/U0/lmb_bram_I/RAM_Inst/Using_B36_S2.The_BRAMs[1].RAMB36_I1)  | 32    |
+GPI2(XST_GND:G)                                                                                                                                                     | NONE(adc_dco_bufr)                                                                                                                          | 1     |
+N0(XST_VCC:P)                                                                                                                                                       | NONE(adc_dco_bufr)                                                                                                                          | 1     |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.385ns (Maximum Frequency: 295.421MHz)
+   Minimum period: 4.553ns (Maximum Frequency: 219.621MHz)
    Minimum input arrival time before clock: 0.410ns
-   Maximum output required time after clock: 0.836ns
+   Maximum output required time after clock: 0.830ns
    Maximum combinational path delay: 0.448ns
 
 Timing Details:
@@ -378,75 +493,71 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ML605_SystemClock_200MHz_p'
-  Clock period: 3.385ns (frequency: 295.421MHz)
-  Total number of paths / destination ports: 1646 / 57
+  Clock period: 4.553ns (frequency: 219.621MHz)
+  Total number of paths / destination ports: 134487 / 2850
 -------------------------------------------------------------------------
-Delay:               2.708ns (Levels of Logic = 7)
-  Source:            adc_clock_div/counter_7 (FF)
-  Destination:       adc_clock_div/clock_out (FF)
-  Source Clock:      ML605_SystemClock_200MHz_p rising 1.3X
-  Destination Clock: ML605_SystemClock_200MHz_p rising 1.3X
+Delay:               4.553ns (Levels of Logic = 4)
+  Source:            adc_controller/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[16].SRL16E_I/Use_unisim.MB_SRL16E_I1 (FF)
+  Destination:       adc_controller/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/Op2_DFF (FF)
+  Source Clock:      ML605_SystemClock_200MHz_p rising
+  Destination Clock: ML605_SystemClock_200MHz_p rising
 
-  Data Path: adc_clock_div/counter_7 to adc_clock_div/clock_out
+  Data Path: adc_controller/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[16].SRL16E_I/Use_unisim.MB_SRL16E_I1 to adc_controller/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/Op2_DFF
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              5   0.375   0.802  adc_clock_div/counter_7 (adc_clock_div/counter_7)
-     LUT5:I0->O            1   0.068   0.000  adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_lut<0> (adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_lut<0>)
-     MUXCY:S->O            1   0.290   0.000  adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<0> (adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<0>)
-     MUXCY:CI->O           1   0.020   0.000  adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<1> (adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<1>)
-     MUXCY:CI->O           1   0.020   0.000  adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<2> (adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<2>)
-     MUXCY:CI->O           1   0.020   0.000  adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<3> (adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<3>)
-     MUXCY:CI->O           1   0.220   0.399  adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<4> (adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<4>)
-     INV:I->O              1   0.086   0.399  adc_clock_div/Mcompar_counter[27]_GND_2_o_LessThan_5_o_cy<4>_inv1_INV_0 (adc_clock_div/counter[27]_GND_2_o_LessThan_5_o)
-     FD:D                      0.011          adc_clock_div/clock_out
+     SRL16E:CLK->Q        51   1.684   0.795  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[16].SRL16E_I/Use_unisim.MB_SRL16E_I1 (U0/microblaze_I/MicroBlaze_Core_I/Area.imm_Value<0>)
+     LUT4:I0->O            1   0.068   0.638  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward2_LUT1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.res_forward2_1)
+     LUT4:I0->O           46   0.068   0.573  U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Res_Forward2_LUT4 (U0/microblaze_I/MicroBlaze_Core_I/Area.res_Forward2)
+     LUT4:I3->O            1   0.068   0.581  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/Mmux_op2_I11_SW1 (N35)
+     LUT5:I2->O            1   0.068   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/Mmux_op2_I12 (U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/op2_I)
+     FDE:D                     0.011          U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/Op2_DFF
     ----------------------------------------
-    Total                      2.708ns (1.108ns logic, 1.600ns route)
-                                       (40.9% logic, 59.1% route)
+    Total                      4.553ns (1.967ns logic, 2.586ns route)
+                                       (43.2% logic, 56.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'adc_dco_in_p'
-  Clock period: 2.708ns (frequency: 369.276MHz)
-  Total number of paths / destination ports: 1676 / 29
+  Clock period: 3.263ns (frequency: 306.452MHz)
+  Total number of paths / destination ports: 1676 / 57
 -------------------------------------------------------------------------
-Delay:               2.708ns (Levels of Logic = 7)
+Delay:               3.263ns (Levels of Logic = 6)
   Source:            adc_dco_div/counter_6 (FF)
-  Destination:       adc_dco_div/clock_out (FF)
+  Destination:       adc_dco_div/counter_0 (FF)
   Source Clock:      adc_dco_in_p rising
   Destination Clock: adc_dco_in_p rising
 
-  Data Path: adc_dco_div/counter_6 to adc_dco_div/clock_out
+  Data Path: adc_dco_div/counter_6 to adc_dco_div/counter_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.375   0.802  adc_dco_div/counter_6 (adc_dco_div/counter_6)
-     LUT5:I0->O            1   0.068   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_lut<0> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_lut<0>)
-     MUXCY:S->O            1   0.290   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<0> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<0>)
-     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<1> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<1>)
-     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<2> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<2>)
-     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<3> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<3>)
-     MUXCY:CI->O           1   0.220   0.399  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<4> (adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<4>)
-     INV:I->O              1   0.086   0.399  adc_dco_div/Mcompar_counter[27]_GND_3_o_LessThan_5_o_cy<4>_inv1_INV_0 (adc_dco_div/counter[27]_GND_3_o_LessThan_5_o)
-     FD:D                      0.011          adc_dco_div/clock_out
+     FDR:C->Q              5   0.375   0.802  adc_dco_div/counter_6 (adc_dco_div/counter_6)
+     LUT5:I0->O            1   0.068   0.000  adc_dco_div/Mcompar_n0001_lut<1> (adc_dco_div/Mcompar_n0001_lut<1>)
+     MUXCY:S->O            1   0.290   0.000  adc_dco_div/Mcompar_n0001_cy<1> (adc_dco_div/Mcompar_n0001_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_n0001_cy<2> (adc_dco_div/Mcompar_n0001_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  adc_dco_div/Mcompar_n0001_cy<3> (adc_dco_div/Mcompar_n0001_cy<3>)
+     MUXCY:CI->O           1   0.220   0.417  adc_dco_div/Mcompar_n0001_cy<4> (adc_dco_div/Mcompar_n0001_cy<4>)
+     LUT4:I3->O           28   0.068   0.551  adc_dco_div/Mcompar_n0001_cy<5> (adc_dco_div/Mcompar_n0001_cy<5>)
+     FDR:R                     0.434          adc_dco_div/counter_0
     ----------------------------------------
-    Total                      2.708ns (1.108ns logic, 1.600ns route)
-                                       (40.9% logic, 59.1% route)
+    Total                      3.263ns (1.494ns logic, 1.770ns route)
+                                       (45.8% logic, 54.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'adc_dco_div/clock_out'
-  Total number of paths / destination ports: 7 / 7
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
 Offset:              0.410ns (Levels of Logic = 0)
-  Source:            adc_input[1].i_data_ddr:Q1 (PAD)
-  Destination:       leds_1 (FF)
+  Source:            adc_input[0].i_data_ddr:Q1 (PAD)
+  Destination:       leds_0 (FF)
   Destination Clock: adc_dco_div/clock_out rising
 
-  Data Path: adc_input[1].i_data_ddr:Q1 to leds_1
+  Data Path: adc_input[0].i_data_ddr:Q1 to leds_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-    IDDR_2CLK:Q1           1   0.000   0.399  adc_input[1].i_data_ddr (adc_data_p_s<1>)
-     FD:D                      0.011          leds_1
+    IDDR_2CLK:Q1           1   0.000   0.399  adc_input[0].i_data_ddr (adc_data_p_s<0>)
+     FD:D                      0.011          leds_0
     ----------------------------------------
     Total                      0.410ns (0.011ns logic, 0.399ns route)
                                        (2.7% logic, 97.3% route)
@@ -474,7 +585,7 @@ Offset:              0.777ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'adc_dco_in_p'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              0.836ns (Levels of Logic = 1)
+Offset:              0.830ns (Levels of Logic = 1)
   Source:            adc_dco_div/clock_out (FF)
   Destination:       led_S (PAD)
   Source Clock:      adc_dco_in_p rising
@@ -483,11 +594,11 @@ Offset:              0.836ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              10   0.375   0.458  adc_dco_div/clock_out (adc_dco_div/clock_out)
+     FD:C->Q               9   0.375   0.452  adc_dco_div/clock_out (adc_dco_div/clock_out)
      OBUF:I->O                 0.003          led_S_OBUF (led_S)
     ----------------------------------------
-    Total                      0.836ns (0.378ns logic, 0.458ns route)
-                                       (45.2% logic, 54.8% route)
+    Total                      0.830ns (0.378ns logic, 0.452ns route)
+                                       (45.5% logic, 54.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ML605_SystemClock_200MHz_p'
@@ -536,36 +647,28 @@ Clock to Setup on destination clock ML605_SystemClock_200MHz_p
                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------+---------+---------+---------+---------+
-ML605_SystemClock_200MHz_p|    2.708|         |         |         |
+ML605_SystemClock_200MHz_p|    4.553|         |         |         |
 --------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock adc_dco_div/clock_out
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-adc_dco_in_p   |    0.844|         |         |         |
----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock adc_dco_in_p
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-adc_dco_in_p   |    2.708|         |         |         |
+adc_dco_in_p   |    3.263|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.95 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.10 secs
  
 --> 
 
-Total memory usage is 256168 kilobytes
+Total memory usage is 272360 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
-Number of infos    :   10 (   0 filtered)
+Number of warnings :   32 (   0 filtered)
+Number of infos    :   37 (   0 filtered)
 

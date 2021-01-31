@@ -1,24 +1,35 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Jan 28 22:47:44 2021
+// Written by: Map P.20131013 on Sun Jan 31 01:47:05 2021
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "ML605_SystemClock_200MHz_p" LOCATE = SITE "J9" LEVEL 1;
+COMP "adc_dco_in_p" LOCATE = SITE "F33" LEVEL 1;
+COMP "led_S" LOCATE = SITE "AH28" LEVEL 1;
+COMP "ADC_SPI_CLK" LOCATE = SITE "M31" LEVEL 1;
+COMP "ADC_SPI_CSB" LOCATE = SITE "M27" LEVEL 1;
+COMP "adc_data_in_n<0>" LOCATE = SITE "K29" LEVEL 1;
+COMP "adc_data_in_n<1>" LOCATE = SITE "L26" LEVEL 1;
+COMP "adc_data_in_n<2>" LOCATE = SITE "H33" LEVEL 1;
 COMP "adc_data_in_n<3>" LOCATE = SITE "H32" LEVEL 1;
 COMP "adc_data_in_n<4>" LOCATE = SITE "J32" LEVEL 1;
 COMP "adc_data_in_n<5>" LOCATE = SITE "J29" LEVEL 1;
 COMP "adc_data_in_n<6>" LOCATE = SITE "E31" LEVEL 1;
 COMP "adc_data_in_n<7>" LOCATE = SITE "H30" LEVEL 1;
+COMP "adc_data_in_p<0>" LOCATE = SITE "J30" LEVEL 1;
 COMP "adc_data_in_p<1>" LOCATE = SITE "L25" LEVEL 1;
 COMP "adc_data_in_p<2>" LOCATE = SITE "H34" LEVEL 1;
 COMP "adc_data_in_p<3>" LOCATE = SITE "G32" LEVEL 1;
 COMP "ML605_FPGA_RESET" LOCATE = SITE "H10" LEVEL 1;
 COMP "adc_data_in_p<4>" LOCATE = SITE "J31" LEVEL 1;
 COMP "adc_data_in_p<5>" LOCATE = SITE "K28" LEVEL 1;
+COMP "ADC_SPI_SDI" LOCATE = SITE "L31" LEVEL 1;
 COMP "leds<0>" LOCATE = SITE "AC22" LEVEL 1;
 COMP "adc_data_in_p<6>" LOCATE = SITE "F31" LEVEL 1;
 COMP "leds<1>" LOCATE = SITE "AC24" LEVEL 1;
 COMP "adc_data_in_p<7>" LOCATE = SITE "G31" LEVEL 1;
 COMP "leds<2>" LOCATE = SITE "AE22" LEVEL 1;
+COMP "ADC_SPI_SDO" LOCATE = SITE "K32" LEVEL 1;
 COMP "leds<3>" LOCATE = SITE "AE23" LEVEL 1;
 COMP "leds<4>" LOCATE = SITE "AB23" LEVEL 1;
 COMP "leds<5>" LOCATE = SITE "AG23" LEVEL 1;
@@ -30,11 +41,6 @@ COMP "led_C" LOCATE = SITE "AP24" LEVEL 1;
 COMP "led_N" LOCATE = SITE "AH27" LEVEL 1;
 COMP "ML605_SystemClock_200MHz_n" LOCATE = SITE "H9" LEVEL 1;
 COMP "adc_dco_in_n" LOCATE = SITE "G33" LEVEL 1;
-COMP "ML605_SystemClock_200MHz_p" LOCATE = SITE "J9" LEVEL 1;
-COMP "adc_dco_in_p" LOCATE = SITE "F33" LEVEL 1;
-COMP "led_S" LOCATE = SITE "AH28" LEVEL 1;
-COMP "adc_data_in_n<1>" LOCATE = SITE "L26" LEVEL 1;
-COMP "adc_data_in_n<2>" LOCATE = SITE "H33" LEVEL 1;
 TIMEGRP CLKOUT0 = BEL "adc_clock_div/clock_out" BEL "adc_clock_div/counter_0"
         BEL "adc_clock_div/counter_1" BEL "adc_clock_div/counter_2" BEL
         "adc_clock_div/counter_3" BEL "adc_clock_div/counter_4" BEL
@@ -51,6 +57,10 @@ TIMEGRP CLKOUT0 = BEL "adc_clock_div/clock_out" BEL "adc_clock_div/counter_0"
         "adc_clock_div/counter_25" BEL "adc_clock_div/counter_26" BEL
         "adc_clock_div/counter_27" BEL "adc_clock_out_p" BEL "adc_clock_out_n"
         BEL "CLKOUT0_BUFG";
+PIN adc_input[0].i_data_ddr_pins<1> = BEL "adc_input[0].i_data_ddr" PINNAME
+        CK;
+PIN adc_input[0].i_data_ddr_pins<2> = BEL "adc_input[0].i_data_ddr" PINNAME
+        CKB;
 PIN adc_input[1].i_data_ddr_pins<1> = BEL "adc_input[1].i_data_ddr" PINNAME
         CK;
 PIN adc_input[1].i_data_ddr_pins<2> = BEL "adc_input[1].i_data_ddr" PINNAME
@@ -79,7 +89,25 @@ PIN adc_input[7].i_data_ddr_pins<1> = BEL "adc_input[7].i_data_ddr" PINNAME
         CK;
 PIN adc_input[7].i_data_ddr_pins<2> = BEL "adc_input[7].i_data_ddr" PINNAME
         CKB;
-TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_dco_bufr" PIN
+TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_dco_div/counter_0" BEL
+        "adc_dco_div/counter_1" BEL "adc_dco_div/counter_2" BEL
+        "adc_dco_div/counter_3" BEL "adc_dco_div/counter_4" BEL
+        "adc_dco_div/counter_5" BEL "adc_dco_div/counter_6" BEL
+        "adc_dco_div/counter_7" BEL "adc_dco_div/counter_8" BEL
+        "adc_dco_div/counter_9" BEL "adc_dco_div/counter_10" BEL
+        "adc_dco_div/counter_11" BEL "adc_dco_div/counter_12" BEL
+        "adc_dco_div/counter_13" BEL "adc_dco_div/counter_14" BEL
+        "adc_dco_div/counter_15" BEL "adc_dco_div/counter_16" BEL
+        "adc_dco_div/counter_17" BEL "adc_dco_div/counter_18" BEL
+        "adc_dco_div/counter_19" BEL "adc_dco_div/counter_20" BEL
+        "adc_dco_div/counter_21" BEL "adc_dco_div/counter_22" BEL
+        "adc_dco_div/counter_23" BEL "adc_dco_div/counter_24" BEL
+        "adc_dco_div/counter_25" BEL "adc_dco_div/counter_26" BEL
+        "adc_dco_div/counter_27" BEL "adc_dco_bufr" PIN
+        "adc_input[0].i_data_ddr_pins<1>" PIN
+        "adc_input[0].i_data_ddr_pins<2>" PIN
+        "adc_input[0].i_data_ddr_pins<1>" PIN
+        "adc_input[0].i_data_ddr_pins<2>" PIN
         "adc_input[1].i_data_ddr_pins<1>" PIN
         "adc_input[1].i_data_ddr_pins<2>" PIN
         "adc_input[1].i_data_ddr_pins<1>" PIN
@@ -107,32 +135,20 @@ TIMEGRP ADCCLK = BEL "adc_dco_div/clock_out" BEL "adc_dco_bufr" PIN
         "adc_input[7].i_data_ddr_pins<1>" PIN
         "adc_input[7].i_data_ddr_pins<2>" PIN
         "adc_input[7].i_data_ddr_pins<1>" PIN
-        "adc_input[7].i_data_ddr_pins<2>" BEL "adc_dco_div/counter_0" BEL
-        "adc_dco_div/counter_1" BEL "adc_dco_div/counter_2" BEL
-        "adc_dco_div/counter_3" BEL "adc_dco_div/counter_4" BEL
-        "adc_dco_div/counter_5" BEL "adc_dco_div/counter_6" BEL
-        "adc_dco_div/counter_7" BEL "adc_dco_div/counter_8" BEL
-        "adc_dco_div/counter_9" BEL "adc_dco_div/counter_10" BEL
-        "adc_dco_div/counter_11" BEL "adc_dco_div/counter_12" BEL
-        "adc_dco_div/counter_13" BEL "adc_dco_div/counter_14" BEL
-        "adc_dco_div/counter_15" BEL "adc_dco_div/counter_16" BEL
-        "adc_dco_div/counter_17" BEL "adc_dco_div/counter_18" BEL
-        "adc_dco_div/counter_19" BEL "adc_dco_div/counter_20" BEL
-        "adc_dco_div/counter_21" BEL "adc_dco_div/counter_22" BEL
-        "adc_dco_div/counter_23" BEL "adc_dco_div/counter_24" BEL
-        "adc_dco_div/counter_25" BEL "adc_dco_div/counter_26" BEL
-        "adc_dco_div/counter_27";
-TIMEGRP adc_data_in_pta_pads = BEL "adc_data_in_p<1>" BEL "adc_data_in_p<2>"
-        BEL "adc_data_in_p<3>" BEL "adc_data_in_p<4>" BEL "adc_data_in_p<5>"
-        BEL "adc_data_in_p<6>" BEL "adc_data_in_p<7>" BEL "adc_data_in_n<1>"
-        BEL "adc_data_in_n<2>" BEL "adc_data_in_n<3>" BEL "adc_data_in_n<4>"
-        BEL "adc_data_in_n<5>" BEL "adc_data_in_n<6>" BEL "adc_data_in_n<7>";
+        "adc_input[7].i_data_ddr_pins<2>";
+TIMEGRP adc_data_in_pta_pads = BEL "adc_data_in_p<0>" BEL "adc_data_in_p<1>"
+        BEL "adc_data_in_p<2>" BEL "adc_data_in_p<3>" BEL "adc_data_in_p<4>"
+        BEL "adc_data_in_p<5>" BEL "adc_data_in_p<6>" BEL "adc_data_in_p<7>"
+        BEL "adc_data_in_n<0>" BEL "adc_data_in_n<1>" BEL "adc_data_in_n<2>"
+        BEL "adc_data_in_n<3>" BEL "adc_data_in_n<4>" BEL "adc_data_in_n<5>"
+        BEL "adc_data_in_n<6>" BEL "adc_data_in_n<7>";
 PIN MAIN_200_CLK_MMCM_pins<2> = BEL "MAIN_200_CLK_MMCM" PINNAME CLKIN1;
 TIMEGRP PIN_SystemClock_200MHz = PIN "MAIN_200_CLK_MMCM_pins<2>";
 TS_ADC = PERIOD TIMEGRP "ADCCLK" 4 ns HIGH 50%;
 TS_SystemClock = PERIOD TIMEGRP "PIN_SystemClock_200MHz" 200 MHz HIGH 50%;
 TS_CLKOUT0 = PERIOD TIMEGRP "CLKOUT0" TS_SystemClock * 1.25 HIGH 50%;
 PIN ML605_FPGA_RESET_pins<0> = BEL "ML605_FPGA_RESET" PINNAME PAD;
+PIN ADC_SPI_CLK_OBUF_pins<1> = BEL "ADC_SPI_CLK_OBUF" PINNAME OUT;
 PIN MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LUT2_4" PINNAME O6;
 PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<3> = BEL
@@ -150,6 +166,7 @@ PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<2> = BEL
 PIN MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0_pins<0> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0" PINNAME CK;
 PIN "ML605_FPGA_RESET_pins<0>" TIG;
+PIN "ADC_SPI_CLK_OBUF_pins<1>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<3>" TIG;
 PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<2>" TIG;
