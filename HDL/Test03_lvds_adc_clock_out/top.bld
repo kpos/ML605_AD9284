@@ -25,7 +25,7 @@ Done...
 INFO:NgdBuild:1222 - Setting CLKIN1_PERIOD attribute associated with MMCM
    instance MAIN_200_CLK_MMCM to 5.000000 ns based on the period specification
    (<TIMESPEC "TS_SystemClock" = PERIOD "PIN_SystemClock_200MHz" 200 MHz HIGH 50
-   %;> [ML605_FMCint_AD9284.ucf(122)]).
+   %;> [ML605_FMCint_AD9284.ucf(128)]).
 Checking expanded design ...
 WARNING:NgdBuild:440 - FF primitive
    'adc_controller/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux
@@ -226,10 +226,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  47
 
-Total memory usage is 228080 kilobytes
+Total memory usage is 228088 kilobytes
 
 Writing NGD file "top.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
-Total CPU time to NGDBUILD completion:   5 sec
+Total REAL time to NGDBUILD completion:  6 sec
+Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "top.bld"...

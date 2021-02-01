@@ -9,7 +9,7 @@ module top (
    input ML605_USB_UART_RX,
    output ML605_USB_UART_TX,
    
-   input [7:0] ML605_GPIO_Switches,
+   input [7:0] GPIO_DIP_SW,
   
    // ADC interface
    // LVDS data
@@ -84,7 +84,7 @@ microblaze_mcs_v1_4 adc_controller (
   .UART_Interrupt(UART_Interrupt), // output UART_Interrupt
   .GPO1(GPO1), // output [31 : 0] GPO1
   .GPO2(GPO2), // output [31 : 0] GPO2
-  .GPI1(GPI1), // input [31 : 0] GPI1
+  .GPI1( { 24'b0,  GPIO_DIP_SW } ), // input [31 : 0] GPI1
   .GPI1_Interrupt(GPI1_Interrupt), // output GPI1_Interrupt
   .GPI2(GPI2), // input [31 : 0] GPI2
   .GPI2_Interrupt(GPI2_Interrupt), // output GPI2_Interrupt

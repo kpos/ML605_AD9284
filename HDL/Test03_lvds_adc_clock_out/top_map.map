@@ -10,287 +10,39 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sun Jan 31 01:46:24 2021
+Mapped Date    : Sun Jan 31 02:20:45 2021
 
 Mapping design into LUTs...
-Running directed packing...
-Running delay-based LUT packing...
-Updating timing models...
-INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
-   (.mrp).
-Running timing-driven placement...
-Total REAL time at the beginning of Placer: 28 secs 
-Total CPU  time at the beginning of Placer: 26 secs 
+ERROR:MapLib:30 - LOC constraint BB31 on ML605_GPIO_Switches<7> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint BA30 on ML605_GPIO_Switches<6> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint AY30 on ML605_GPIO_Switches<5> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint AW30 on ML605_GPIO_Switches<4> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint BA32 on ML605_GPIO_Switches<3> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint BA31 on ML605_GPIO_Switches<2> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint AY33 on ML605_GPIO_Switches<1> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
+ERROR:MapLib:30 - LOC constraint AV30 on ML605_GPIO_Switches<0> is invalid: No
+   such site on the device. To bypass this error set the environment variable
+   'XIL_MAP_LOCWARN'.
 
-Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:bf49f7ab) REAL time: 35 secs 
-
-Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:bf49f7ab) REAL time: 35 secs 
-
-Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:f7a4389a) REAL time: 35 secs 
-
-Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:f7a4389a) REAL time: 35 secs 
-
-Phase 5.2  Initial Placement for Architecture Specific Features
-
-......
-
-
-There are 12 clock regions on the target FPGA device:
-|------------------------------------------|------------------------------------------|
-| CLOCKREGION_X0Y5:                        | CLOCKREGION_X1Y5:                        |
-|   4 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
-|   6 Regional Clock Spines, 0 in use      |   6 Regional Clock Spines, 0 in use      |
-|   4 edge BUFIOs available, 0 in use      |   0 edge BUFIOs available, 0 in use      |
-|   4 center BUFIOs available, 0 in use    |   4 center BUFIOs available, 0 in use    |
-|                                          |                                          |
-|------------------------------------------|------------------------------------------|
-| CLOCKREGION_X0Y4:                        | CLOCKREGION_X1Y4:                        |
-|   4 BUFRs available, 1 in use            |   2 BUFRs available, 0 in use            |
-|   6 Regional Clock Spines, 1 in use      |   6 Regional Clock Spines, 0 in use      |
-|   4 edge BUFIOs available, 0 in use      |   0 edge BUFIOs available, 0 in use      |
-|   4 center BUFIOs available, 0 in use    |   4 center BUFIOs available, 0 in use    |
-|                                          |                                          |
-|------------------------------------------|------------------------------------------|
-| CLOCKREGION_X0Y3:                        | CLOCKREGION_X1Y3:                        |
-|   4 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
-|   6 Regional Clock Spines, 1 in use      |   6 Regional Clock Spines, 0 in use      |
-|   4 edge BUFIOs available, 0 in use      |   0 edge BUFIOs available, 0 in use      |
-|   4 center BUFIOs available, 0 in use    |   4 center BUFIOs available, 0 in use    |
-|                                          |                                          |
-|------------------------------------------|------------------------------------------|
-| CLOCKREGION_X0Y2:                        | CLOCKREGION_X1Y2:                        |
-|   4 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
-|   6 Regional Clock Spines, 0 in use      |   6 Regional Clock Spines, 0 in use      |
-|   4 edge BUFIOs available, 0 in use      |   0 edge BUFIOs available, 0 in use      |
-|   4 center BUFIOs available, 0 in use    |   4 center BUFIOs available, 0 in use    |
-|                                          |                                          |
-|------------------------------------------|------------------------------------------|
-| CLOCKREGION_X0Y1:                        | CLOCKREGION_X1Y1:                        |
-|   4 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
-|   6 Regional Clock Spines, 0 in use      |   6 Regional Clock Spines, 0 in use      |
-|   4 edge BUFIOs available, 0 in use      |   0 edge BUFIOs available, 0 in use      |
-|   4 center BUFIOs available, 0 in use    |   4 center BUFIOs available, 0 in use    |
-|                                          |                                          |
-|------------------------------------------|------------------------------------------|
-| CLOCKREGION_X0Y0:                        | CLOCKREGION_X1Y0:                        |
-|   4 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
-|   6 Regional Clock Spines, 0 in use      |   6 Regional Clock Spines, 0 in use      |
-|   4 edge BUFIOs available, 0 in use      |   0 edge BUFIOs available, 0 in use      |
-|   4 center BUFIOs available, 0 in use    |   4 center BUFIOs available, 0 in use    |
-|                                          |                                          |
-|------------------------------------------|------------------------------------------|
-
-
-Clock-Region: <CLOCKREGION_X0Y4>
-  key resource utilizations (used/available): edge-bufios - 0/4; center-bufios - 0/4; bufrs - 1/4; regional-clock-spines - 1/6
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------
-|       |    clock    | BRAM |     |    |        |        |       |       |       |      |      |     |      |
-|       |    region   | FIFO | DCM | GT | ILOGIC | OLOGIC |   FF  |  LUTM |  LUTL | MULT | EMAC | PPC | PCIe | <- (Types of Resources in Clock Region)
-|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|       | Upper Region|  96  |  0  |  0 |   80   |   80   | 26880 |  9600 | 17280 |  64  |   0  |  0  |   0  | <- Available resources in the upper region
-|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|       |CurrentRegion|  96  |  0  |  0 |   80   |   80   | 26880 |  9600 | 17280 |  64  |   0  |  0  |   0  | <- Available resources in the current region
-|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|       | Lower Region|  96  |  0  |  0 |   80   |   80   | 23040 |  9600 | 13440 |  64  |   0  |  0  |   0  | <- Available resources in the lower region
-|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-| clock |    region   |                                                                                      -----------------------------------------------
-|  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
-|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-|  BUFR |       Lower |   0  |  0  |  0 |    8   |    0   |     8 |     0 |     0 |   0  |   0  |  0  |   0  | "adc_dco_clk"
-|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
-
-
-
-
-######################################################################################
-# REGIONAL CLOCKING RESOURCE DISTRIBUTION UCF REPORT:
-#
-# Number of Regional Clocking Regions in the device: 12  (6 clock spines in each)
-# Number of Regional Clock Networks used in this design: 1 (each network can be
-# composed of up to 3 clock spines and cover up to 3 regional clock regions)
-# 
-######################################################################################
-
-# Regional-Clock "adc_dco_clk" driven by "BUFR_X0Y8"
-INST "adc_dco_bufr" LOC = "BUFR_X0Y8" ;
-NET "adc_dco_clk" TNM_NET = "TN_adc_dco_clk" ;
-TIMEGRP "TN_adc_dco_clk" AREA_GROUP = "CLKAG_adc_dco_clk" ;
-AREA_GROUP "CLKAG_adc_dco_clk" RANGE = CLOCKREGION_X0Y4, CLOCKREGION_X0Y3;
-
-
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:703f4cf5) REAL time: 38 secs 
-
-Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:703f4cf5) REAL time: 38 secs 
-
-Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:703f4cf5) REAL time: 38 secs 
-
-Phase 8.3  Local Placement Optimization
-Phase 8.3  Local Placement Optimization (Checksum:703f4cf5) REAL time: 38 secs 
-
-Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:703f4cf5) REAL time: 38 secs 
-
-Phase 10.8  Global Placement
-....
-........................
-............................................
-.....
-Phase 10.8  Global Placement (Checksum:be0308a9) REAL time: 39 secs 
-
-Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:be0308a9) REAL time: 39 secs 
-
-Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:df872fc1) REAL time: 40 secs 
-
-Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:df872fc1) REAL time: 40 secs 
-
-Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:f6a90c2c) REAL time: 40 secs 
-
-Total REAL time to Placer completion: 40 secs 
-Total CPU  time to Placer completion: 38 secs 
-Running post-placement packing...
-Writing output files...
-WARNING:PhysDesignRules:368 - The signal <ADC_SPI_CLK_OBUF> is incomplete. The signal is not driven by any source pin in
-   the design.
-WARNING:PhysDesignRules:368 - The signal <ADC_SPI_CSB_OBUF> is incomplete. The signal is not driven by any source pin in
-   the design.
-WARNING:PhysDesignRules:368 - The signal <ADC_SPI_SDO_OBUF> is incomplete. The signal is not driven by any source pin in
-   the design.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[0].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[0].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[1].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[1].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[2].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[2].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[3].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[3].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[4].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[4].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[5].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[5].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[6].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[6].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
-WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration on
-   block:<adc_input[7].i_data_ddr>:<ILOGICE1_IFF>.  The IFFTYPE is DDR and the Q2 output pin of IFF is not used.
-WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration on
-   block:<adc_input[7].i_data_ddr>:<ILOGICE1_IFF>.  The SR pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset
-   value is not configured.
+Error found in mapping process, exiting...
+Errors found during the mapping phase.  Please see map report file for more
+details.  Output files will not be written.
 
 Design Summary
 --------------
-
-Design Summary:
-Number of errors:      0
-Number of warnings:   19
-Slice Logic Utilization:
-  Number of Slice Registers:                    62 out of 301,440    1%
-    Number used as Flip Flops:                  61
-    Number used as Latches:                      1
-    Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         85 out of 150,720    1%
-    Number used as logic:                       82 out of 150,720    1%
-      Number using O6 output only:              11
-      Number using O5 output only:              52
-      Number using O5 and O6:                   19
-      Number used as ROM:                        0
-    Number used as Memory:                       0 out of  58,400    0%
-    Number used exclusively as route-thrus:      3
-      Number with same-slice register load:      1
-      Number with same-slice carry load:         2
-      Number with other load:                    0
-
-Slice Logic Distribution:
-  Number of occupied Slices:                    30 out of  37,680    1%
-  Number of LUT Flip Flop pairs used:           87
-    Number with an unused Flip Flop:            26 out of      87   29%
-    Number with an unused LUT:                   2 out of      87    2%
-    Number of fully used LUT-FF pairs:          59 out of      87   67%
-    Number of unique control sets:               7
-    Number of slice register sites lost
-      to control set restrictions:              42 out of 301,440    1%
-
-  A LUT Flip Flop pair for this architecture represents one LUT paired with
-  one Flip Flop within a slice.  A control set is a unique combination of
-  clock, reset, set, and enable signals for a registered element.
-  The Slice Logic Distribution report is not meaningful if the design is
-  over-mapped for a non-slice resource or if Placement fails.
-  OVERMAPPING of BRAM resources should be ignored if the design is
-  over-mapped for a non-BRAM resource or if placement fails.
-
-IO Utilization:
-  Number of bonded IOBs:                        38 out of     600    6%
-    Number of LOCed IOBs:                       38 out of      38  100%
-    IOB Flip Flops:                             16
-    IOB Master Pads:                             1
-    IOB Slave Pads:                              1
-
-Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
-  Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
-  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
-    Number used as BUFGs:                        1
-    Number used as BUFGCTRLs:                    0
-  Number of ILOGICE1/ISERDESE1s:                 8 out of     720    1%
-    Number used as ILOGICE1s:                    8
-    Number used as ISERDESE1s:                   0
-  Number of OLOGICE1/OSERDESE1s:                 8 out of     720    1%
-    Number used as OLOGICE1s:                    8
-    Number used as OSERDESE1s:                   0
-  Number of BSCANs:                              0 out of       4    0%
-  Number of BUFHCEs:                             0 out of     144    0%
-  Number of BUFIODQSs:                           0 out of      72    0%
-  Number of BUFRs:                               1 out of      36    2%
-  Number of CAPTUREs:                            0 out of       1    0%
-  Number of DSP48E1s:                            0 out of     768    0%
-  Number of EFUSE_USRs:                          0 out of       1    0%
-  Number of FRAME_ECCs:                          0 out of       1    0%
-  Number of GTXE1s:                              0 out of      20    0%
-  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
-  Number of ICAPs:                               0 out of       2    0%
-  Number of IDELAYCTRLs:                         0 out of      18    0%
-  Number of IODELAYE1s:                          0 out of     720    0%
-  Number of MMCM_ADVs:                           1 out of      12    8%
-  Number of PCIE_2_0s:                           0 out of       2    0%
-  Number of STARTUPs:                            1 out of       1  100%
-  Number of SYSMONs:                             0 out of       1    0%
-  Number of TEMAC_SINGLEs:                       0 out of       4    0%
-
-Average Fanout of Non-Clock Nets:                2.59
-
-Peak Memory Usage:  794 MB
-Total REAL time to MAP completion:  41 secs 
-Total CPU time to MAP completion:   39 secs 
-
-Mapping completed.
-See MAP report file "top_map.mrp" for details.
+Number of errors   :   8
+Number of warnings :   0

@@ -138,26 +138,23 @@ NET "ML605_USB_UART_RX" LOC = "J25"; ## {OUT} U34.24 {IN}
 //NET "ML605_USB_UART_CTS_n" LOC = "T24"; ## {OUT} U34.22 {IN} Clear to Send (FPGA is able to receive data)  
 NET "ML605_USB_UART_*" IOSTANDARD = LVCMOS25; 
 
-## =============================================================================================================================================================
-## General Purpose I/O
-## =============================================================================================================================================================
-##
-## DIP-Switches
-## =============================================================================
-##	Bank:						13
-##		VCCO:					1,8V (VCC1V8_FPGA)
-##	Location:				SW2
-## -----------------------------------------------------------------------------
-NET "ML605_GPIO_Switches<0>"	LOC = "AV30";## SW2.1; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<1>"	LOC = "AY33";## SW2.2; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<2>"	LOC = "BA31";## SW2.3; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<3>"	LOC = "BA32";## SW2.4; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<4>"	LOC = "AW30";## SW2.5; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<5>"	LOC = "AY30";## SW2.6; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<6>"	LOC = "BA30";## SW2.7; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<7>"	LOC = "BB31";## SW2.8; high-active; external 4k7 pulldown resistor
-NET "ML605_GPIO_Switches<?>"	IOSTANDARD = LVCMOS18;
-NET "ML605_GPIO_Switches<?>"	TIG;
+
+NET "GPIO_SW_N" LOC = "A19";
+NET "GPIO_SW_S" LOC = "A18";
+NET "GPIO_SW_E" LOC = "G17";
+NET "GPIO_SW_W" LOC = "H17";
+NET "GPIO_SW_C" LOC = "G26";
+
+NET "GPIO_DIP_SW<0>"	LOC = "D22";
+NET "GPIO_DIP_SW<1>"	LOC = "C22";
+NET "GPIO_DIP_SW<2>"	LOC = "L21";
+NET "GPIO_DIP_SW<3>"	LOC = "L20";
+NET "GPIO_DIP_SW<4>"	LOC = "C18";
+NET "GPIO_DIP_SW<5>"	LOC = "B18";
+NET "GPIO_DIP_SW<6>"	LOC = "K22";
+NET "GPIO_DIP_SW<7>"	LOC = "K21";
+NET "GPIO_DIP_SW<?>"	IOSTANDARD = LVCMOS18;
+NET "GPIO_DIP_SW<?>"	TIG;
 
 ## =============================================================================================================================================================  
 ## Low Speed Bus  
@@ -175,12 +172,12 @@ NET "ML605_GPIO_Switches<?>"	TIG;
 ## Vendor: Sitronix  
 ## Device: ST7066U (compatible: Samsung KS0066U)  
 ## Size: 2 lines, 16 Characters, 40 Segments (5 x 8 Pixel)  
-NET "ML605_LCD_E"     LOC = "AK12"; ## J41.9  ; level shifted by U33 (ST2378E)  
-NET "ML605_LCD_RS"    LOC = "T28" ; ## J41.11 ; level shifted by U33 (ST2378E) ; Bank 14  
-NET "ML605_LCD_RW"    LOC = "AC14"; ## J41.10 ; level shifted by U33 (ST2378E)  
-NET "ML605_LCD_DB[4]" LOC = "AD14"; ## J41.4  ; level shifted by U33 (ST2378E)  
-NET "ML605_LCD_DB[5]" LOC = "Ak11"; ## J41.3  ; level shifted by U33 (ST2378E)  
-NET "ML605_LCD_DB[6]" LOC = "AJ11"; ## J41.2  ; level shifted by U33 (ST2378E)  
-NET "ML605_LCD_DB[7]" LOC = "AE12"; ## J41.1  ; level shifted by U33 (ST2378E)  
-NET "ML605_LCD_*" IOSTANDARD = LVCMOS25; ##  
-NET "ML605_LCD_*" TIG;  
+//NET "ML605_LCD_E"     LOC = "AK12"; ## J41.9  ; level shifted by U33 (ST2378E)  
+//NET "ML605_LCD_RS"    LOC = "T28" ; ## J41.11 ; level shifted by U33 (ST2378E) ; Bank 14  
+//NET "ML605_LCD_RW"    LOC = "AC14"; ## J41.10 ; level shifted by U33 (ST2378E)  
+//NET "ML605_LCD_DB[4]" LOC = "AD14"; ## J41.4  ; level shifted by U33 (ST2378E)  
+//NET "ML605_LCD_DB[5]" LOC = "Ak11"; ## J41.3  ; level shifted by U33 (ST2378E)  
+//NET "ML605_LCD_DB[6]" LOC = "AJ11"; ## J41.2  ; level shifted by U33 (ST2378E)  
+//NET "ML605_LCD_DB[7]" LOC = "AE12"; ## J41.1  ; level shifted by U33 (ST2378E)  
+//NET "ML605_LCD_*" IOSTANDARD = LVCMOS25; ##  
+//NET "ML605_LCD_*" TIG;  
