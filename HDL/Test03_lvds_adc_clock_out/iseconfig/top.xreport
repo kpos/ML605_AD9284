@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-01-29T01:29:14</DateModified>
+  <DateModified>2021-02-04T01:56:16</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2021-01-29T01:13:48</SummaryTimeStamp>
   <SavedFilePath>D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/iseconfig/top.xreport</SavedFilePath>
