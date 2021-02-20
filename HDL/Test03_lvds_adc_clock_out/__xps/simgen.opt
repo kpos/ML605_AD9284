@@ -1,0 +1,1 @@
+ -p virtex6 -lang vhdl$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT) -msg __xps/ise/xmsgprops.lst -s isim -X D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/
