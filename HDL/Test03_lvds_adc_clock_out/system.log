@@ -3,3 +3,8 @@ Xilinx EDK 14.7 Build EDK_P.20131013
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Save project successfully
+Writing filter settings....
+Done writing filter settings to:
+	D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\etc\system.filters
+Done writing Tab View settings to:
+	D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\etc\system.gui
