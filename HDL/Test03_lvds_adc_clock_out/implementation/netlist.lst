@@ -1,0 +1,19 @@
+D:\GIT\ML605_AD9284\HDL\Test03_lvds_adc_clock_out\implementation\system.ngc 1614902187
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_push_buttons_5bits_wrapper.ngc 1614901841
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_ethernet_lite_wrapper.ngc 1614902152
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_rs232_uart_1_wrapper.ngc 1614901829
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_proc_sys_reset_0_wrapper.ngc 1614901670
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_clock_generator_0_wrapper.ngc 1614902135
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_microblaze_0_ilmb_wrapper.ngc 1614902118
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_microblaze_0_dlmb_wrapper.ngc 1614902124
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_axi4lite_0_wrapper.ngc 1614902140
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_axi4_0_wrapper.ngc 1614902146
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_microblaze_0_wrapper.ngc 1614902129
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_ddr3_sdram_wrapper.ngc 1614902157
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_microblaze_0_i_bram_ctrl_wrapper.ngc 1614901688
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_microblaze_0_d_bram_ctrl_wrapper.ngc 1614901704
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_debug_module_wrapper.ngc 1614901775
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_leds_positions_wrapper.ngc 1614901853
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_leds_8bits_wrapper.ngc 1614901865
+D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/implementation/system_microblaze_0_bram_block_wrapper.ngc 1614901714
+OK

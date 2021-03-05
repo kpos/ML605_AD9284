@@ -1,0 +1,495 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:\GIT\ML605_AD9284\HDL\Test04\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_microblaze_0_wrapper_xst.prj"
+Verilog Include Directory          : {"D:\GIT\ML605_AD9284\HDL\Test04\pcores\" "C:\FPGA\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\FPGA\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc6vlx240tff1156-1
+Output File Name                   : "../implementation/system_microblaze_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_microblaze_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" into library microblaze_v8_50_c
+Parsing package <MicroBlaze_Types>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg_body.vhd" into library microblaze_v8_50_c
+Parsing package body <MicroBlaze_Types>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_isa_be_pkg.vhd" into library microblaze_v8_50_c
+Parsing package <MicroBlaze_ISA>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" into library microblaze_v8_50_c
+Parsing entity <MB_SRL16E>.
+Parsing architecture <IMP> of entity <mb_srl16e>.
+Parsing entity <MB_SRLC16E>.
+Parsing architecture <IMP> of entity <mb_srlc16e>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux_bus.vhd" into library microblaze_v8_50_c
+Parsing entity <mux_bus>.
+Parsing architecture <IMP> of entity <mux_bus>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/parity.vhd" into library microblaze_v8_50_c
+Parsing entity <Parity_Recursive_LUT6>.
+Parsing architecture <IMP> of entity <parity_recursive_lut6>.
+Parsing entity <Parity>.
+Parsing architecture <IMP> of entity <parity>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/comparator.vhd" into library microblaze_v8_50_c
+Parsing entity <comparator>.
+Parsing architecture <IMP> of entity <comparator>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_and.vhd" into library microblaze_v8_50_c
+Parsing entity <carry_and>.
+Parsing architecture <IMP> of entity <carry_and>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_or.vhd" into library microblaze_v8_50_c
+Parsing entity <carry_or>.
+Parsing architecture <IMP> of entity <carry_or>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_equal.vhd" into library microblaze_v8_50_c
+Parsing entity <carry_equal>.
+Parsing architecture <IMP> of entity <carry_equal>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare.vhd" into library microblaze_v8_50_c
+Parsing entity <carry_compare>.
+Parsing architecture <IMP> of entity <carry_compare>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare_mask.vhd" into library microblaze_v8_50_c
+Parsing entity <carry_compare_mask>.
+Parsing architecture <IMP> of entity <carry_compare_mask>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/carry_compare_const.vhd" into library microblaze_v8_50_c
+Parsing entity <carry_compare_const>.
+Parsing architecture <IMP> of entity <carry_compare_const>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/find_first_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <find_first_bit>.
+Parsing architecture <IMP> of entity <find_first_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux4_8.vhd" into library microblaze_v8_50_c
+Parsing entity <mux4_8>.
+Parsing architecture <IMP> of entity <mux4_8>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mux4.vhd" into library microblaze_v8_50_c
+Parsing entity <mux4>.
+Parsing architecture <IMP> of entity <mux4>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/vec_mux.vhd" into library microblaze_v8_50_c
+Parsing entity <vec_mux>.
+Parsing architecture <IMP> of entity <vec_mux>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/gen_srlfifo.vhd" into library microblaze_v8_50_c
+Parsing entity <srl_fifo>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <ALU_Bit>.
+Parsing architecture <IMP> of entity <alu_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/alu.vhd" into library microblaze_v8_50_c
+Parsing entity <ALU>.
+Parsing architecture <IMP> of entity <alu>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <MSR_Reg_Bit>.
+Parsing architecture <IMP> of entity <msr_reg_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg.vhd" into library microblaze_v8_50_c
+Parsing entity <MSR_Reg>.
+Parsing architecture <IMP> of entity <msr_reg>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/msr_reg_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <msr_reg_gti>.
+Parsing architecture <msr_reg> of entity <msr_reg_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dsp_module.vhd" into library microblaze_v8_50_c
+Parsing entity <dsp_module>.
+Parsing architecture <IMP> of entity <dsp_module>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mul_unit.vhd" into library microblaze_v8_50_c
+Parsing entity <mul_unit>.
+Parsing architecture <IMP> of entity <mul_unit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/div_unit.vhd" into library microblaze_v8_50_c
+Parsing entity <Div_unit>.
+Parsing architecture <IMP> of entity <div_unit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/div_unit_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Div_unit_gti>.
+Parsing architecture <IMP> of entity <div_unit_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <Operand_Select_Bit>.
+Parsing architecture <IMP> of entity <operand_select_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select.vhd" into library microblaze_v8_50_c
+Parsing entity <Operand_Select>.
+Parsing architecture <IMP> of entity <operand_select>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Operand_Select_gti>.
+Parsing architecture <IMP> of entity <operand_select_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <PC_Bit>.
+Parsing architecture <IMP> of entity <pc_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module.vhd" into library microblaze_v8_50_c
+Parsing entity <PC_Module>.
+Parsing architecture <IMP> of entity <pc_module>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pc_module_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <PC_Module_gti>.
+Parsing architecture <IMP> of entity <pc_module_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer.vhd" into library microblaze_v8_50_c
+Parsing entity <PreFetch_Buffer>.
+Parsing architecture <IMP> of entity <prefetch_buffer>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <PreFetch_Buffer_gti>.
+Parsing architecture <IMP> of entity <prefetch_buffer_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <Register_File_Bit>.
+Parsing architecture <IMP> of entity <register_file_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file.vhd" into library microblaze_v8_50_c
+Parsing entity <Register_File>.
+Parsing architecture <IMP> of entity <register_file>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Register_File_gti>.
+Parsing architecture <IMP> of entity <register_file_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/count_leading_zero.vhd" into library microblaze_v8_50_c
+Parsing entity <count_leading_zeros>.
+Parsing architecture <IMP> of entity <count_leading_zeros>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <Shift_Logic_Bit>.
+Parsing architecture <IMP> of entity <shift_logic_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic.vhd" into library microblaze_v8_50_c
+Parsing entity <Shift_Logic_Module>.
+Parsing architecture <IMP> of entity <shift_logic_module>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/shift_logic_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Shift_Logic_Module_gti>.
+Parsing architecture <IMP> of entity <shift_logic_module_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect.vhd" into library microblaze_v8_50_c
+Parsing entity <Zero_Detect>.
+Parsing architecture <IMP> of entity <zero_detect>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/zero_detect_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Zero_Detect_gti>.
+Parsing architecture <IMP> of entity <zero_detect_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter.vhd" into library microblaze_v8_50_c
+Parsing entity <barrel_shift>.
+Parsing architecture <IMP> of entity <barrel_shift>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/barrel_shifter_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Barrel_Shifter_gti>.
+Parsing architecture <IMP> of entity <barrel_shifter_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_bit_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <WB_Mux_Bit>.
+Parsing architecture <IMP> of entity <wb_mux_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/wb_mux_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <WB_Mux>.
+Parsing architecture <IMP> of entity <wb_mux>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_read_steering.vhd" into library microblaze_v8_50_c
+Parsing entity <Data_Read_Steering>.
+Parsing architecture <IMP> of entity <data_read_steering>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle.vhd" into library microblaze_v8_50_c
+Parsing entity <Byte_Doublet_Handle>.
+Parsing architecture <IMP> of entity <byte_doublet_handle>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Byte_Doublet_Handle_gti>.
+Parsing architecture <IMP> of entity <byte_doublet_handle_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_logic_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Data_Flow_Logic>.
+Parsing architecture <IMP> of entity <data_flow_logic>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fsl_module.vhd" into library microblaze_v8_50_c
+Parsing entity <FSL_Module>.
+Parsing architecture <IMP> of entity <fsl_module>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/streaming_axi.vhd" into library microblaze_v8_50_c
+Parsing entity <Streaming_AXI>.
+Parsing architecture <IMP> of entity <streaming_axi>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers.vhd" into library microblaze_v8_50_c
+Parsing entity <exception_registers>.
+Parsing architecture <IMP> of entity <exception_registers>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/exception_registers_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <exception_registers_gti>.
+Parsing architecture <IMP> of entity <exception_registers_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_addsub.vhd" into library microblaze_v8_50_c
+Parsing entity <FPU_ADDSUB>.
+Parsing architecture <IMP> of entity <fpu_addsub>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_div.vhd" into library microblaze_v8_50_c
+Parsing entity <FPU_DIV>.
+Parsing architecture <IMP> of entity <fpu_div>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_mul.vhd" into library microblaze_v8_50_c
+Parsing entity <FPU_MUL>.
+Parsing architecture <IMP> of entity <fpu_mul>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_conv.vhd" into library microblaze_v8_50_c
+Parsing entity <fpu_conv>.
+Parsing architecture <IMP> of entity <fpu_conv>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu_sqrt.vhd" into library microblaze_v8_50_c
+Parsing entity <fpu_sqrt>.
+Parsing architecture <IMP> of entity <fpu_sqrt>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/fpu.vhd" into library microblaze_v8_50_c
+Parsing entity <Fpu>.
+Parsing architecture <IMP> of entity <fpu>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/pvr.vhd" into library microblaze_v8_50_c
+Parsing entity <PVR>.
+Parsing architecture <IMP> of entity <pvr>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/result_mux_bit.vhd" into library microblaze_v8_50_c
+Parsing entity <Result_Mux_Bit>.
+Parsing architecture <IMP> of entity <result_mux_bit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/result_mux.vhd" into library microblaze_v8_50_c
+Parsing entity <Result_Mux>.
+Parsing architecture <IMP> of entity <result_mux>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/stack_protection.vhd" into library microblaze_v8_50_c
+Parsing entity <stack_protection>.
+Parsing architecture <IMP> of entity <stack_protection>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow.vhd" into library microblaze_v8_50_c
+Parsing entity <Data_Flow>.
+Parsing architecture <IMP> of entity <data_flow>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/data_flow_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Data_Flow_gti>.
+Parsing architecture <IMP> of entity <data_flow_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/jump_logic_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <jump_logic>.
+Parsing architecture <IMP> of entity <jump_logic>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode.vhd" into library microblaze_v8_50_c
+Parsing entity <Decode>.
+Parsing architecture <IMP> of entity <decode>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <Decode_gti>.
+Parsing architecture <IMP> of entity <decode_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_hit.vhd" into library microblaze_v8_50_c
+Parsing entity <address_hit>.
+Parsing architecture <IMP> of entity <address_hit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/address_data_hit.vhd" into library microblaze_v8_50_c
+Parsing entity <address_data_hit>.
+Parsing architecture <IMP> of entity <address_data_hit>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" into library microblaze_v8_50_c
+Parsing entity <Debug>.
+Parsing architecture <IMP> of entity <debug>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/iplb_interface.vhd" into library microblaze_v8_50_c
+Parsing entity <IPLB_Interface>.
+Parsing architecture <IMP> of entity <iplb_interface>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dplb_interface.vhd" into library microblaze_v8_50_c
+Parsing entity <DPLB_Interface>.
+Parsing architecture <IMP> of entity <dplb_interface>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/daxi_interface.vhd" into library microblaze_v8_50_c
+Parsing entity <DAXI_interface>.
+Parsing architecture <IMP> of entity <daxi_interface>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/iaxi_interface.vhd" into library microblaze_v8_50_c
+Parsing entity <IAXI_Interface>.
+Parsing architecture <IMP> of entity <iaxi_interface>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/ram_module.vhd" into library microblaze_v8_50_c
+Parsing entity <RAM_Module>.
+Parsing architecture <IMP> of entity <ram_module>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/victim_cache.vhd" into library microblaze_v8_50_c
+Parsing entity <LRU_Module>.
+Parsing architecture <LRU_Module> of entity <lru_module>.
+Parsing entity <victim_cache>.
+Parsing architecture <IMP> of entity <victim_cache>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/stream_cache.vhd" into library microblaze_v8_50_c
+Parsing entity <stream_cache>.
+Parsing architecture <IMP> of entity <stream_cache>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cache_interface.vhd" into library microblaze_v8_50_c
+Parsing entity <Cache_Interface>.
+Parsing architecture <IMP> of entity <cache_interface>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/icache.vhd" into library microblaze_v8_50_c
+Parsing entity <Icache>.
+Parsing architecture <IMP> of entity <icache>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache.vhd" into library microblaze_v8_50_c
+Parsing entity <DCache>.
+Parsing architecture <IMP> of entity <dcache>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <DCache_gti>.
+Parsing architecture <IMP> of entity <dcache_gti>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cache_valid_bit_detect.vhd" into library microblaze_v8_50_c
+Parsing entity <cache_valid_bit_detect>.
+Parsing architecture <IMP> of entity <cache_valid_bit_detect>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/cachehit_detect.vhd" into library microblaze_v8_50_c
+Parsing entity <cachehit_detect>.
+Parsing architecture <IMP> of entity <cachehit_detect>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/dcache_wb.vhd" into library microblaze_v8_50_c
+Parsing entity <DCache_wb>.
+Parsing architecture <IMP> of entity <dcache_wb>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/instr_mux.vhd" into library microblaze_v8_50_c
+Parsing entity <instr_mux>.
+Parsing architecture <IMP> of entity <instr_mux>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/read_data_mux_gti.vhd" into library microblaze_v8_50_c
+Parsing entity <read_data_mux>.
+Parsing architecture <IMP> of entity <read_data_mux>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/interrupt_mode_converter.vhd" into library microblaze_v8_50_c
+Parsing entity <interrupt_mode_converter>.
+Parsing architecture <IMP> of entity <interrupt_mode_converter>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_types_pkg.vhd" into library microblaze_v8_50_c
+Parsing package <MMU_Types>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_tlb.vhd" into library microblaze_v8_50_c
+Parsing entity <MMU_TLB>.
+Parsing architecture <IMP> of entity <mmu_tlb>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_utlb_ram.vhd" into library microblaze_v8_50_c
+Parsing entity <MMU_UTLB_RAM>.
+Parsing architecture <IMP> of entity <mmu_utlb_ram>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu_utlb.vhd" into library microblaze_v8_50_c
+Parsing entity <MMU_UTLB>.
+Parsing architecture <IMP> of entity <mmu_utlb>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/mmu.vhd" into library microblaze_v8_50_c
+Parsing entity <MMU>.
+Parsing architecture <IMP> of entity <mmu>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_core.vhd" into library microblaze_v8_50_c
+Parsing entity <MicroBlaze_Core>.
+Parsing architecture <IMP> of entity <microblaze_core>.
+Parsing VHDL file "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" into library microblaze_v8_50_c
+Parsing entity <MicroBlaze>.
+Parsing architecture <IMP> of entity <microblaze>.
+Parsing VHDL file "D:\GIT\ML605_AD9284\HDL\Test04\hdl\system_microblaze_0_wrapper.vhd" into library work
+Parsing entity <system_microblaze_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <system_microblaze_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system_microblaze_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+WARNING:HDLCompiler:760 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 164: Resolution function resolve_boolean without synthesis directive will use three-state wiring
+INFO:HDLCompiler:1408 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 158. resolve_boolean is declared here
+WARNING:HDLCompiler:760 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 173: Resolution function resolve_integer without synthesis directive will use three-state wiring
+INFO:HDLCompiler:1408 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_types_pkg.vhd" Line 170. resolve_integer is declared here
+
+Elaborating entity <MicroBlaze> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MicroBlaze_Core> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <interrupt_mode_converter> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Decode_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <PC_Module_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <PreFetch_Buffer_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:1127 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" Line 311: Assignment to jump_load ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/prefetch_buffer_gti.vhd" Line 317: Assignment to valid_fetch_i ignored, since the identifier is never used
+
+Elaborating entity <carry_and> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:1127 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 2089: Assignment to of_piperun_s ignored, since the identifier is never used
+
+Elaborating entity <jump_logic> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:1127 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 3014: Assignment to ex_ignore_delayslot_hold ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 4419: Assignment to ex_fpu_div_op ignored, since the identifier is never used
+
+Elaborating entity <carry_or> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:1127 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 4534: Assignment to mem_is_fsl_instr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/decode_gti.vhd" Line 5648: Assignment to ex_fsl_atomic ignored, since the identifier is never used
+
+Elaborating entity <Data_Flow_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Register_File_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:321 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/register_file_gti.vhd" Line 229: Comparison between arrays of unequal length always returns FALSE.
+
+Elaborating entity <Operand_Select_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+INFO:HDLCompiler:679 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 270. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 356. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/operand_select_gti.vhd" Line 428. Case statement is complete. others clause is never selected
+
+Elaborating entity <ALU> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <ALU_Bit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <ALU_Bit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Shift_Logic_Module_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <count_leading_zeros> (architecture <IMP>) from library <microblaze_v8_50_c>.
+
+Elaborating entity <carry_equal> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <mul_unit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <dsp_module> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <dsp_module> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <dsp_module> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Barrel_Shifter_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <WB_Mux> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <WB_Mux_Bit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Zero_Detect_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Byte_Doublet_Handle_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+INFO:HDLCompiler:679 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" Line 316. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/byte_doublet_handle_gti.vhd" Line 325. Case statement is complete. others clause is never selected
+
+Elaborating entity <Data_Flow_Logic> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <msr_reg_gti> (architecture <msr_reg>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <exception_registers_gti> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <mux_bus> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Fpu> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <PVR> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <read_data_mux> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <DAXI_interface> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <instr_mux> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <Debug> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:321 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" Line 134: Comparison between arrays of unequal length always returns FALSE.
+
+Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MB_SRL16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+INFO:HDLCompiler:679 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" Line 882. Case statement is complete. others clause is never selected
+
+Elaborating entity <address_hit> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+
+Elaborating entity <MB_SRLC16E> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:321 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze_primitives.vhd" Line 211: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:746 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/debug.vhd" Line 1975: Range is empty (null range)
+
+Elaborating entity <MMU> (architecture <IMP>) with generics from library <microblaze_v8_50_c>.
+WARNING:HDLCompiler:634 - "C:/FPGA/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_50_c/hdl/vhdl/microblaze.vhd" Line 2509: Net <local_sig[186]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_microblaze_0_wrapper>.
+    Related source file is "D:\GIT\ML605_AD9284\HDL\Test04\hdl\system_microblaze_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <system_microblaze_0_wrapper> synthesized.

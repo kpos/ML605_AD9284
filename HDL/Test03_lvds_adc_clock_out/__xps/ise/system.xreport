@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-02-20T23:39:09</DateModified>
+  <DateModified>2021-03-05T00:46:58</DateModified>
   <ModuleName>system</ModuleName>
-  <SummaryTimeStamp>2021-02-20T23:39:09</SummaryTimeStamp>
+  <SummaryTimeStamp>2021-03-05T00:46:58</SummaryTimeStamp>
   <SavedFilePath>D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
   <SavedFilterFilePath>D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/__xps/ise</SavedFilterFilePath>
