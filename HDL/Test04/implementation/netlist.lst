@@ -1,0 +1,18 @@
+D:\GIT\ML605_AD9284\HDL\Test04\implementation\system.ngc 1614903818
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_push_buttons_5bits_wrapper.ngc 1614903721
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_dip_switches_8bits_wrapper.ngc 1614903768
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_rs232_uart_1_wrapper.ngc 1614903710
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_proc_sys_reset_0_wrapper.ngc 1614903594
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_clock_generator_0_wrapper.ngc 1614903791
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_ilmb_wrapper.ngc 1614903774
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_dlmb_wrapper.ngc 1614903779
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_axi4lite_0_wrapper.ngc 1614903796
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_wrapper.ngc 1614903785
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_i_bram_ctrl_wrapper.ngc 1614903606
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_d_bram_ctrl_wrapper.ngc 1614903620
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_debug_module_wrapper.ngc 1614903677
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_leds_positions_wrapper.ngc 1614903732
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_leds_8bits_wrapper.ngc 1614903740
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_iic_fmc_wrapper.ngc 1614903757
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_bram_block_wrapper.ngc 1614903628
+OK

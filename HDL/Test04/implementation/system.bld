@@ -1,0 +1,128 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\FPGA\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+xc6vlx240tff1156-1 -nt timestamp -bm system.bmm
+D:/GIT/ML605_AD9284/HDL/Test04/implementation/system.ngc -uc system.ucf
+system.ngd
+
+Reading NGO file "D:/GIT/ML605_AD9284/HDL/Test04/implementation/system.ngc" ...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_push_buttons_5bits_wrapper
+.ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_dip_switches_8bits_wrapper
+.ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_rs232_uart_1_wrapper.ngc".
+..
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_proc_sys_reset_0_wrapper.n
+gc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_clock_generator_0_wrapper.
+ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_ilmb_wrapper.
+ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_dlmb_wrapper.
+ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_axi4lite_0_wrapper.ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_wrapper.ngc".
+..
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_i_bram_ctrl_w
+rapper.ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_d_bram_ctrl_w
+rapper.ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_debug_module_wrapper.ngc".
+..
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_leds_positions_wrapper.ngc
+"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_leds_8bits_wrapper.ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_iic_fmc_wrapper.ngc"...
+Loading design module
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_bram_block_wr
+apper.ngc"...
+Applying constraints in
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_ilmb_wrapper.
+ncf" to module "microblaze_0_ilmb"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_dlmb_wrapper.
+ncf" to module "microblaze_0_dlmb"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_axi4lite_0_wrapper.ncf" to
+module "axi4lite_0"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/GIT/ML605_AD9284/HDL/Test04/implementation/system_microblaze_0_wrapper.ncf"
+to module "microblaze_0"...
+Checking Constraint Associations...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:135 - Constraint <INST
+   /system/EXPANDED/system/axi4lite_0/axi4lite_0\/si_converter_bank\/gen_conv_sl
+   ot[0].clock_conv_inst\/interconnect_aresetn_resync<2>_inv1_INV_0 TNM =
+   FFS:axi4lite_0_reset_resync>: No instances of type FFS were found under block
+   "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/int
+   erconnect_aresetn_resync<2>_inv1_INV_0" (type=INV).
+
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP axi4lite_0_reset_source = FFS
+   PADS CPUS;>: CPUS "*" does not match any design objects.
+
+WARNING:ConstraintSystem:194 - The TNM 'axi4lite_0_reset_resync', does not
+   directly or indirectly drive any flip-flops, latches and/or RAMs and is not
+   actively used by any referencing constraint.
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into MMCM_ADV instance
+   clock_generator_0/MMCM1_INST/MMCM_ADV_inst. The following new TNM groups and
+   period specifications were generated at the MMCM_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_MMCM1_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_MMCM1_CLKOUT0" TS_sys_clk_pin
+   * 0.5 HIGH 50%>
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.
+   Gen_Bits[27].MEM_EX_Result_Inst' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'IIC_FMC/IIC_FMC/X_IIC/X_AXI_IPIF_SSP1/X_SOFT_RESET/FF_WRACK' has unconnected
+   output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   5
+
+Total memory usage is 264152 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  48 sec
+Total CPU time to NGDBUILD completion:   48 sec
+
+Writing NGDBUILD log file "system.bld"...

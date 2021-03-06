@@ -1,0 +1,38 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\proc_sys_reset_0.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_ilmb.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_ilmb.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\microblaze_0_ilmb.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_i_bram_ctrl.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_i_bram_ctrl.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\microblaze_0_i_bram_ctrl.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_dlmb.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_dlmb.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\microblaze_0_dlmb.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_d_bram_ctrl.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_d_bram_ctrl.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\microblaze_0_d_bram_ctrl.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_bram_block.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0_bram_block.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\microblaze_0_bram_block.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\microblaze_0.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\microblaze_0.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\debug_module.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\debug_module.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\debug_module.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\clock_generator_0.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\clock_generator_0.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\clock_generator_0.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\axi4lite_0.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\axi4lite_0.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\axi4lite_0.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\RS232_Uart_1.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\RS232_Uart_1.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\RS232_Uart_1.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\Push_Buttons_5Bits.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\Push_Buttons_5Bits.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\Push_Buttons_5Bits.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\LEDs_Positions.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\LEDs_Positions.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\LEDs_Positions.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\LEDs_8Bits.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\LEDs_8Bits.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\LEDs_8Bits.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\IIC_FMC.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\IIC_FMC.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\IIC_FMC.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\DIP_Switches_8Bits.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\DIP_Switches_8Bits.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\DIP_Switches_8Bits.svg"/>
+
+  <RENDERIMG RASNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\system_blkd.jpg" SVGNAME="D:\GIT\ML605_AD9284\HDL\Test04\SDK\SDK_Export\hw\imgs\system_blkd.svg" TMPSVGFN="D:\GIT\ML605_AD9284\HDL\Test04\__xps\.dswkshop\system_blkd.svg"/>
+
+</RENDERBATCH>

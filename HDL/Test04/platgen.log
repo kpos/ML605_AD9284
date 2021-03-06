@@ -193,3 +193,40 @@ INSTANCE:microblaze_0_bram_block - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs
 line 72 - Running XST synthesis
 INSTANCE:microblaze_0 - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 79 -
 Running XST synthesis
+INSTANCE:debug_module - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 102 -
+Running XST synthesis
+INSTANCE:clock_generator_0 - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 115
+- Running XST synthesis
+INSTANCE:axi4lite_0 - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 127 -
+Running XST synthesis
+INSTANCE:rs232_uart_1 - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 135 -
+Running XST synthesis
+INSTANCE:push_buttons_5bits - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 150
+- Running XST synthesis
+INSTANCE:leds_positions - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 164 -
+Running XST synthesis
+INSTANCE:leds_8bits - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 178 -
+Running XST synthesis
+INSTANCE:iic_fmc - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 192 - Running
+XST synthesis
+INSTANCE:dip_switches_8bits - D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 205
+- Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:system_microblaze_0_ilmb_wrapper INSTANCE:microblaze_0_ilmb -
+D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 40 - Running NGCBUILD
+IPNAME:system_microblaze_0_dlmb_wrapper INSTANCE:microblaze_0_dlmb -
+D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 56 - Running NGCBUILD
+IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
+D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 79 - Running NGCBUILD
+IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 115 - Running NGCBUILD
+IPNAME:system_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
+D:\GIT\ML605_AD9284\HDL\Test04\system.mhs line 127 - Running NGCBUILD
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/system.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 214.00 seconds
