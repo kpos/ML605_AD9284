@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>adc_controller - microblaze_mcs_v1_4 (D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/ipcore_dir/microblaze_mcs_v1_4.xco)</SelectedItem>
+         <SelectedItem>top (D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/top.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b0000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b00000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>adc_controller - microblaze_mcs_v1_4 (D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/ipcore_dir/microblaze_mcs_v1_4.xco)</CurrentItem>
+      <CurrentItem>top (D:/GIT/ML605_AD9284/HDL/Test03_lvds_adc_clock_out/top.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -54,7 +54,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000010000000000000000000000000000000000000196000000010001000100000000000000000000000064ffffffff000000810000000000000001000001960000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000010000000000000000000000000000000000000185000000010001000100000000000000000000000064ffffffff000000810000000000000001000001850000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>top.v</CurrentItem>
    </ItemView>
